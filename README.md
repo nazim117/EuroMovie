@@ -54,41 +54,56 @@ Navigate through various movie and user related features.
 ### Roadmap
 
 Phase 1: (Weeks 1-2)
+
 -	Brainstorming
 -	Project plan
 -	URS
+
 Phase 2: (Weeks 3-4)
+
 -	Wireframes
 -	Implementing empty pages
 -	Implementing empty forms
+
 Phase 3: (Weeks 5-7)
+
 -	Implementing layering for both desktop and web app
 -	Database connection and creating the necessary tables
 -	Implement Login system
 -	CRUD for users
 -	Implement sessions
+
 Phase 4: (Weeks 8-9)
+
 -	Design desktop application
 -	Design web application
 -	UML class diagram
 -	Create more tables if needed and update database table diagram
+
 Phase 5: (Weeks 10-11)
+
 -	Improve UML class diagram after teacher feedback
 -	Improve Desktop application after teacher feedback
 -	Improve Web application after teacher feedback
 -	Profile page working (CRUD) with profile picture for user
+
 Phase 6: (Weeks 13-14)
+
 -	Improve UML class diagram after teacher feedback
 -	Improve Desktop application after teacher feedback
 -	Improve Web application after teacher feedback
 -	Get feedback and see the clients desire for more functionalities
+
 Phase 7: (Weeks 15-16)
+
 -	Improve UML class diagram after teacher feedback
 -	Improve Desktop application after teacher feedback
 -	Improve Web application after teacher feedback
 -	Full CRUD implementation in the web application
 -	Search algorithm for top rated movies
+
 Phase 8: (Weeks 17-18)
+
 -	Cleanup code
 -	Salting/hashing
 -	Unit testing
