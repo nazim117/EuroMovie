@@ -1,11 +1,13 @@
-EuroMovie
+## EuroMovie
+
 Where European Cinema Shines
 
-Overview
+### Overview
+
 The project is going to be about movie reviews. Most of the time people are very skeptical with the movies they want to watch because they are not sure if a movie is good enough for them to waste their time on. This web application will serve as a place to store reviews of a specific movie so that users would have a better understanding of the movie and make a better choice when choosing a movie. 
 
 
-Features
+### Features
 
 Web Application:
 
