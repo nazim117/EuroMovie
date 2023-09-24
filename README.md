@@ -1,92 +1,127 @@
-# Individual-Project-Nazim-Ahmedov-S2
+EuroMovie
+Where European Cinema Shines
+
+Overview
+The project is going to be about movie reviews. Most of the time people are very skeptical with the movies they want to watch because they are not sure if a movie is good enough for them to waste their time on. This web application will serve as a place to store reviews of a specific movie so that users would have a better understanding of the movie and make a better choice when choosing a movie. 
 
 
+Features
 
-## Getting started
+Web Application:
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+This is where the user will operate. First, he has to create an account for himself or log in to an existing one. He will be able to search for movies by sorting them by desired genre or by using the search bar. After the client is able to find their desired movie they will be able to press on the image of the movie and it will take them to the movie page. There the customer is able to read the reviews of a film and/or leave a review himself. If he is not pleased with what he has written he can edit or delete the review. The movie will also have a release date and it will be shown where it is available to watch.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Win Forms Application:
 
-## Add your files
+Only the Admin (Moderator, Manager) will have access to the application. Creating a user account is possible by the app. Moreover, the Admin will have the ability to edit the account details or delete a desired account. He can also choose on which account to do operations on. The same use cases apply for movies. Only the Admin is able to create a movie, unlike the user where the actual user has the ability to create an account in the web application. Furthermore, the admin has the ability to view statistics such as highest rated movie and users that has rated the most movies.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### Technologies Used
 
-```
-cd existing_repo
-git remote add origin https://git.fhict.nl/I499773/individual-project-nazim-ahmedov-s2.git
-git branch -M main
-git push -uf origin main
-```
+Web Application:
 
-## Integrate with your tools
+Frontend: HTML, CSS, JavaScript
+Backend: .NET
+Database: MSSQL
 
-- [ ] [Set up project integrations](https://git.fhict.nl/I499773/individual-project-nazim-ahmedov-s2/-/settings/integrations)
+Win Forms Application:
 
-## Collaborate with your team
+Programming Language: C#
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### Getting Started
 
-## Test and Deploy
+Web Application
+Clone the repository.
+Navigate to the web-app directory.
+Install dependencies with npm install.
+Start the application with npm start.
+Win Forms Application
+Clone the repository.
+Open the win-forms-app.sln solution file in Visual Studio.
+Build and run the application.
+Usage
+Provide instructions on how to use your applications. Include screenshots or examples if possible. For instance:
 
-Use the built-in continuous integration in GitLab.
+Web Application
+Register or log in to access the movie database.
+Search for movies, view details, and rate them.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+Win Forms Application
+Launch the application.
+Navigate through various movie and user related features.
 
-***
+### Roadmap
 
-# Editing this README
+Phase 1: (Weeks 1-2)
+-	Brainstorming
+-	Project plan
+-	URS
+Phase 2: (Weeks 3-4)
+-	Wireframes
+-	Implementing empty pages
+-	Implementing empty forms
+Phase 3: (Weeks 5-7)
+-	Implementing layering for both desktop and web app
+-	Database connection and creating the necessary tables
+-	Implement Login system
+-	CRUD for users
+-	Implement sessions
+Phase 4: (Weeks 8-9)
+-	Design desktop application
+-	Design web application
+-	UML class diagram
+-	Create more tables if needed and update database table diagram
+Phase 5: (Weeks 10-11)
+-	Improve UML class diagram after teacher feedback
+-	Improve Desktop application after teacher feedback
+-	Improve Web application after teacher feedback
+-	Profile page working (CRUD) with profile picture for user
+Phase 6: (Weeks 13-14)
+-	Improve UML class diagram after teacher feedback
+-	Improve Desktop application after teacher feedback
+-	Improve Web application after teacher feedback
+-	Get feedback and see the clients desire for more functionalities
+Phase 7: (Weeks 15-16)
+-	Improve UML class diagram after teacher feedback
+-	Improve Desktop application after teacher feedback
+-	Improve Web application after teacher feedback
+-	Full CRUD implementation in the web application
+-	Search algorithm for top rated movies
+Phase 8: (Weeks 17-18)
+-	Cleanup code
+-	Salting/hashing
+-	Unit testing
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Contributing
+Thank you for considering contributing to Euro Movie! We welcome contributions from the community to help make this project even better
 
-## Name
-Choose a self-explaining name for your project.
+You can contribute to Euro Movie in several ways, including but not limited to:
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+- Reporting bugs and issues.
+- Enhancing documentation.
+- Adding new features or improvements.
+- Fixing bugs or issues in the codebase.
+- Design and user interface enhancements.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### License
+MIT
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Authors
+Nazim Ahmedov
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Acknowledgments
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### Open Source Projects and Libraries
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Euro Movie has benefited from several open-source projects and libraries, including:
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- [Bootstrap](https://getbootstrap.com/)
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+We are grateful for the hard work put into these projects by their respective maintainers and contributors.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+### Inspiration
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Our project was inspired by the user interface design of https://www.pinterest.com/pin/311381761733320809/ and the functionality of IMDB and Rotten Tomatoes. These projects provided valuable insights that guided our development process.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+### Contact
+i499773@student.fontys.nl
