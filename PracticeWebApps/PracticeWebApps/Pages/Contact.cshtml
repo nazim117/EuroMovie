@@ -1,0 +1,36 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+@if (User.Identity.IsAuthenticated)
+{
+    Layout = "~/Pages/Shared/_LoggedInLayout.cshtml";
+}
+else
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="/css/LogIn.css" asp-append-version="true" />
+
+@if (TempData["Success"] != null)
+{
+    <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
+}
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="UserModel.Name">Name</label>
+        <input asp-for="UserModel.Name"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="UserModel.Email">Email address</label>
+        <input asp-for="UserModel.Email" />
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputCountry" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="exampleInputSubject" aria-describedby="emailSubject">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-secondary">Cancel</button>
+</form>

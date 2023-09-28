@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj": {}
+  },
+  "projects": {
+    "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj",
+        "projectName": "PracticeWebApps_DAL_Library",
+        "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj",
+        "packagesPath": "C:\\Users\\nahme\\.nuget\\packages\\",
+        "outputPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nahme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj": {
+                "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj"
+              },
+              "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj": {
+                "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj",
+        "projectName": "PracticeWebApps_Domain",
+        "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj",
+        "packagesPath": "C:\\Users\\nahme\\.nuget\\packages\\",
+        "outputPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nahme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj",
+        "projectName": "PracticeWebApps_LogicLibrary",
+        "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj",
+        "packagesPath": "C:\\Users\\nahme\\.nuget\\packages\\",
+        "outputPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nahme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj": {
+                "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

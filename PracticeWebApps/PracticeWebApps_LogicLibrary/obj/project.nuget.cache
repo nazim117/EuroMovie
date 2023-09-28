@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "trclG7sobV/bUjv6sn8iIV/8HTgcQlBM3jiw0yqKq95JpAGucIrOMiuicXQNL99EwS2Y8wYx7f9MFJMrF7Dyxg==",
+  "success": true,
+  "projectFilePath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nahme\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

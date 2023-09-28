@@ -1,0 +1,56 @@
+﻿@page
+@model PracticeWebApps.Pages.CreateAccountModel
+@{
+    
+}
+
+<h1>@Model.PageTitle</h1>
+
+<link rel="stylesheet" href="/css/LogIn.css" asp-append-version="true" />
+<link rel="stylesheet" href="/css/Layout.css" asp-append-version="true" />
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
+    </div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <span asp-validation-for="CreateAccountDTO.Name" class="text-danger"></span>
+        <input type="text" class="form-control" asp-for="CreateAccountDTO.Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <span asp-validation-for="CreateAccountDTO.Email" class="text-danger"></span>
+        <input type="email" class="form-control" asp-for="CreateAccountDTO.Email" />
+    </div>
+
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        <span asp-validation-for="CreateAccountDTO.Phone" class="text-danger"></span>
+        <input type="tel" class="form-control" asp-for="CreateAccountDTO.Phone" />
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <span asp-validation-for="CreateAccountDTO.Password" class="text-danger"></span>
+        <input type="password" class="form-control" asp-for="CreateAccountDTO.Password" />
+    </div>
+
+    <div class="form-group">
+        <label for="ConfirmPassword">Confirm Password</label>
+        <span asp-validation-for="CreateAccountDTO.ConfirmPassword" class="text-danger"></span>
+        <input type="password" class="form-control" asp-for="CreateAccountDTO.ConfirmPassword" />
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="create-account">
+           <a asp-page="/LogIn" class="btn btn-secondary">Cancel</a>
+        </div>
+    </div>
+</form>

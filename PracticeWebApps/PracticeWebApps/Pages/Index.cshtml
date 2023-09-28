@@ -1,0 +1,131 @@
+﻿@page
+@model IndexModel
+@{
+
+    ViewData["Title"] = "Home page";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    Layout = "~/Pages/Shared/_LoggedInLayout.cshtml";
+}
+else
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+
+
+<div class="featured-content">
+    <img class="featured-title">
+    <p class="featured-desc">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
+        deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
+        minima voluptatibus incidunt. Accusamus, provident.
+    </p>
+    <button class="featured-button">WATCH</button>
+</div>
+<div class="movie-list-container">
+    <h1 class="movie-list-title">ACTION</h1>
+    <div class="movie-list-wrapper">
+        <div class="movie-list">
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="\images\Terminator.jpeg" alt="">
+                <span class="movie-list-item-title">Terminator</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="\images\Transformers.jpg" alt="">
+                <span class="movie-list-item-title">Transformers</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="\images\images.jpeg" alt="">
+                <span class="movie-list-item-title">Avengers</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="\images\Flash.jpg" alt="">
+                <span class="movie-list-item-title">Flash</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="\images\Rambo.jpg" alt="">
+                <span class="movie-list-item-title">Rambo</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="movie-list-container">
+    <h1 class="movie-list-title">NEW RELEASES</h1>
+    <div class="movie-list-wrapper">
+        <div class="movie-list">
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="img/8.jpg" alt="">
+                <span class="movie-list-item-title">Title</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="img/9.jpg" alt="">
+                <span class="movie-list-item-title">Title</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="img/10.jpg" alt="">
+                <span class="movie-list-item-title">Title</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="img/11.jpg" alt="">
+                <span class="movie-list-item-title">Title</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+            <div class="movie-list-item">
+                <img class="movie-list-item-img" src="img/12.jpg" alt="">
+                <span class="movie-list-item-title">Title</span>
+                <p class="movie-list-item-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    hic fugit similique accusantium.
+                </p>
+                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
+            </div>
+        </div>
+    </div>
+</div>

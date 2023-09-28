@@ -1,0 +1,12 @@
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\bin\Debug\net6.0\PracticeWebApps_Domain.deps.json
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\bin\Debug\net6.0\PracticeWebApps_Domain.dll
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\bin\Debug\net6.0\PracticeWebApps_Domain.pdb
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\PracticeWebApps_Domain.csproj.AssemblyReference.cache
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\PracticeWebApps_Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\PracticeWebApps_Domain.AssemblyInfoInputs.cache
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\PracticeWebApps_Domain.AssemblyInfo.cs
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\PracticeWebApps_Domain.csproj.CoreCompileInputs.cache
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\PracticeWebApps_Domain.dll
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\refint\PracticeWebApps_Domain.dll
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\PracticeWebApps_Domain.pdb
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Domain\obj\Debug\net6.0\ref\PracticeWebApps_Domain.dll

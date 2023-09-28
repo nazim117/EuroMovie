@@ -1,0 +1,17 @@
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Debug\net6.0\PracticeWebApps_DAL_Library.deps.json
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Debug\net6.0\PracticeWebApps_DAL_Library.dll
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Debug\net6.0\PracticeWebApps_DAL_Library.pdb
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Debug\net6.0\PracticeWebApps_Domain.dll
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Debug\net6.0\PracticeWebApps_LogicLibrary.dll
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Debug\net6.0\PracticeWebApps_Domain.pdb
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Debug\net6.0\PracticeWebApps_LogicLibrary.pdb
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\PracticeWebApps_DAL_Library.csproj.AssemblyReference.cache
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\PracticeWebApps_DAL_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\PracticeWebApps_DAL_Library.AssemblyInfoInputs.cache
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\PracticeWebApps_DAL_Library.AssemblyInfo.cs
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\PracticeWebApps_DAL_Library.csproj.CoreCompileInputs.cache
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\PracticeWebApps_DAL_Library.csproj.CopyComplete
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\PracticeWebApps_DAL_Library.dll
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\refint\PracticeWebApps_DAL_Library.dll
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\PracticeWebApps_DAL_Library.pdb
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Debug\net6.0\ref\PracticeWebApps_DAL_Library.dll

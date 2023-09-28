@@ -1,0 +1,27 @@
+﻿@page
+@model PracticeWebApps.Pages.ProductPageModel
+@{
+
+}
+@if (User.Identity.IsAuthenticated)
+{
+    Layout = "~/Pages/Shared/_LoggedInLayout.cshtml";
+}
+else
+{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="/css/Product.css" asp-append-version="true" />
+
+
+<h1 class="display-4">Terminator</h1>
+<div class="content">
+    <img src="/images/Terminator.jpeg" alt="Terminator">
+    <div class="card-body">
+        <h5 class="card-title">Terminator</h5>
+        <p class="card-text">Movie description goes here</p>
+        <p class="card-rating">5/5</p>
+        <p class="card-text">PG-13</p>
+        <a href="#" class="btn btn-primary">Rate Movie</a>
+    </div>
+</div>
