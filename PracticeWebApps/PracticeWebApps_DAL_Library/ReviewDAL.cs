@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_DAL_Library
 {
-    internal class ReviewDAL
+    public class ReviewDAL
     {
     }
 }

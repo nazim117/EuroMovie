@@ -34,3 +34,4 @@ C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\n
 C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\net6.0-windows\PracticeWebApps_Desktop.AddUserForm.resources
 C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\net6.0-windows\PracticeWebApps_Desktop.CheckMovieForm.resources
 C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\net6.0-windows\PracticeWebApps_Desktop.CheckUserForm.resources
+C:\sem2-practice-assignments\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\net6.0-windows\PracticeWebApps_Desktop.UserForm.resources

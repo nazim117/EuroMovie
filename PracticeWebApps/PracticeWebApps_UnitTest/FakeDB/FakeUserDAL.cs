@@ -1,4 +1,4 @@
-﻿using PracticeWebApps_Domain.Models.Users;
+﻿using PracticeWebApps_Domain.Models;
 using PracticeWebApps_LogicLibrary.Interfaces;
 using System;
 using System.Collections.Generic;

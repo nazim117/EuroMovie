@@ -9,21 +9,32 @@ namespace PracticeWebApps_Domain.Models.Products
 {
     public class Product
     {
-        public Product(int id, string name, string description, byte[] picture)
+        private static int id = 1;
+
+        public Product()
         {
-            Id = id;
+            
+        }
+        public Product(string name, string description, Rating movieRating, int duration, byte[] picture) : this()
+        {
+            Id = id++;
             Name = name;
             Description = description;
+            MovieRating = movieRating;
+            Duration = duration;
             Picture = picture;
+
+            StreamedPlatform = new List<string>();
+            Reviews = new List<Review>();
         }
 
-        [Required]
         public int Id { get; set; }
-        [Required]
         public string Name { get; set; }
-        [Required]
         public string Description { get; set; }
-        [Required]
+        public Rating MovieRating { get; set; }
+        public int Duration { get; set; }
         public byte[] Picture { get; set; }
+        public List<string> StreamedPlatform { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

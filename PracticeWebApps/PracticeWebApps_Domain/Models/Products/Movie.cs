@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_Domain.Models.Products
 {
-    public class Movie
+    public class Movie : Product
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int Rating { get; set; }
+        public Movie(string name, string description, Rating movieRating, int duration, byte[] picture) 
+            : base(name, description, movieRating, duration, picture)
+        {
+        }
     }
 }

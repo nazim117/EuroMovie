@@ -1,6 +1,6 @@
 ﻿using PracticeWebApps_LogicLibrary.Interfaces;
 using PracticeWebApps_Domain.Exceptions;
-using PracticeWebApps_Domain.Models.Users;
+using PracticeWebApps_Domain.Models;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {

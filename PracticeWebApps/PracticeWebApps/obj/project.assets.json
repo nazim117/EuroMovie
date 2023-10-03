@@ -5414,11 +5414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps\\PracticeWebApps.csproj",
+      "projectUniqueName": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\PracticeWebApps.csproj",
       "projectName": "PracticeWebApps",
-      "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps\\PracticeWebApps.csproj",
+      "projectPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\PracticeWebApps.csproj",
       "packagesPath": "C:\\Users\\nahme\\.nuget\\packages\\",
-      "outputPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps\\obj\\",
+      "outputPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nahme\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5435,17 +5435,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj": {
-              "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj"
+            "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj": {
+              "projectPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj"
             },
-            "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj": {
-              "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj"
+            "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj": {
+              "projectPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_Domain\\PracticeWebApps_Domain.csproj"
             },
-            "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj": {
-              "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj"
+            "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj": {
+              "projectPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_LogicLibrary\\PracticeWebApps_LogicLibrary.csproj"
             },
-            "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_UnitTest\\PracticeWebApps_UnitTest.csproj": {
-              "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_UnitTest\\PracticeWebApps_UnitTest.csproj"
+            "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_UnitTest\\PracticeWebApps_UnitTest.csproj": {
+              "projectPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_UnitTest\\PracticeWebApps_UnitTest.csproj"
             }
           }
         }

@@ -1,4 +1,4 @@
-﻿using PracticeWebApps_Domain.Models.Users;
+﻿using PracticeWebApps_Domain.Models;
 using PracticeWebApps_LogicLibrary.Interfaces;
 using PracticeWebApps_LogicLibrary.Managers;
 using System;
@@ -56,8 +56,12 @@ namespace PracticeWebApps_DAL_Library
                         {
                             if (reader.Read())
                             {
-                                UserModel user = new UserModel(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetBoolean(4), reader.GetString(5), reader.GetString(6));
-                                return user;
+                                return new UserModel(reader.GetString(1), 
+                                    reader.GetString(2), 
+                                    reader.GetString(3), 
+                                    reader.GetBoolean(4), 
+                                    reader.GetString(5), 
+                                    reader.GetString(6));
                             }
                         }
                     }

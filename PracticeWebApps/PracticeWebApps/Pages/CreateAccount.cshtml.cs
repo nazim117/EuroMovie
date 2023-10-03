@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PracticeWebApps.DTOs;
 using PracticeWebApps_DAL_Library;
-using PracticeWebApps_Domain;
 using PracticeWebApps_LogicLibrary.Managers;
 
 namespace PracticeWebApps.Pages

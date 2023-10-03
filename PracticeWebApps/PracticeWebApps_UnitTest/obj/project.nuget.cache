@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aTsUJxuF2+3+0meg8Grd5dk5SPzmT8QiL+wK0vjX/19IWhJuWHMGSwhktDjYZKEzUN/RA1Vr5nvEkQjFPmESUA==",
+  "dgSpecHash": "WEpQfs6WsahKYAdM5DJdGMLL82q4SMmK4Fy330DWh02KTu58expMXDAxTZfi8Lp7hY2YvSW2vLb8F1YsC+kA+w==",
   "success": true,
-  "projectFilePath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_UnitTest\\PracticeWebApps_UnitTest.csproj",
+  "projectFilePath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_UnitTest\\PracticeWebApps_UnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nahme\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\nahme\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",

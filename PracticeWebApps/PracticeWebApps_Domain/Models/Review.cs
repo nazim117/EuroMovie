@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_Domain.Models
 {
-    internal class Review
+    public class Review
     {
+        public Review(int rating, string description)
+        {
+            Rating = rating;
+            Description = description;
+        }
+
+        public int Rating { get; set; }
+        public string Description { get; set; }
     }
 }

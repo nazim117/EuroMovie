@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {
-    internal class ReviewManager
+    public class ReviewManager
     {
     }
 }

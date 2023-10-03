@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PracticeWebApps_Domain.Models.Products
+﻿namespace PracticeWebApps_Domain.Models.Products
 {
-    internal class Serie
+    public class Serie:Product
     {
+        public Serie(string name, string description, Rating movieRating, int duration, byte[] picture, int season, int episodes) 
+            : base(name, description, movieRating, duration, picture)
+        {
+            Seasons = season;
+            Episodes = episodes;
+        }
+
+        public int Seasons { get; set; }
+        public int Episodes { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1jp14OG7UVS3uDOsD1nsHE0QP8tG9VUcHeefMC1raHR/Q78pti/E+iA6o9w6BNqCvuLwgfiBpmq4MXDC9sLNvQ==",
+  "dgSpecHash": "LW3be+jrJlH2Bey0Wy8SvMqX4LMS999/0eR2iEdeptMlqWHp3L1l8iPXTa6YXdDb2KdWSjTtrwWaYD12vcxOKA==",
   "success": true,
-  "projectFilePath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps\\PracticeWebApps.csproj",
+  "projectFilePath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\PracticeWebApps.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nahme\\.nuget\\packages\\azure.core\\1.34.0\\azure.core.1.34.0.nupkg.sha512",
     "C:\\Users\\nahme\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

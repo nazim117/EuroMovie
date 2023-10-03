@@ -1,5 +1,5 @@
 ﻿using PracticeWebApps_Domain.Exceptions;
-using PracticeWebApps_Domain.Models.Users;
+using PracticeWebApps_Domain.Models;
 using PracticeWebApps_LogicLibrary.Managers;
 using PracticeWebApps_UnitTest.FakeDB;
 

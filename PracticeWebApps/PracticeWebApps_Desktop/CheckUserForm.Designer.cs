@@ -28,7 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            lbUsers = new ListBox();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // lbUsers
+            // 
+            lbUsers.FormattingEnabled = true;
+            lbUsers.ItemHeight = 20;
+            lbUsers.Location = new Point(97, 76);
+            lbUsers.Name = "lbUsers";
+            lbUsers.Size = new Size(591, 264);
+            lbUsers.TabIndex = 0;
+            lbUsers.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.HotTrack;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(55, 37);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(689, 360);
+            dataGridView1.TabIndex = 1;
             // 
             // CheckUserForm
             // 
@@ -36,11 +60,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbUsers);
+            Controls.Add(dataGridView1);
             Name = "CheckUserForm";
             Text = "CheckUserForm";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private ListBox lbUsers;
+        private DataGridView dataGridView1;
     }
 }

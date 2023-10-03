@@ -573,11 +573,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Desktop\\PracticeWebApps_Desktop.csproj",
+      "projectUniqueName": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_Desktop\\PracticeWebApps_Desktop.csproj",
       "projectName": "PracticeWebApps_Desktop",
-      "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Desktop\\PracticeWebApps_Desktop.csproj",
+      "projectPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_Desktop\\PracticeWebApps_Desktop.csproj",
       "packagesPath": "C:\\Users\\nahme\\.nuget\\packages\\",
-      "outputPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_Desktop\\obj\\",
+      "outputPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_Desktop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nahme\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -594,8 +594,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj": {
-              "projectPath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj"
+            "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj": {
+              "projectPath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj"
             }
           }
         }

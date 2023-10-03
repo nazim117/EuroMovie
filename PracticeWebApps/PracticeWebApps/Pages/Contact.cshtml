@@ -13,24 +13,41 @@ else
 }
 <link rel="stylesheet" href="/css/LogIn.css" asp-append-version="true" />
 
-@if (TempData["Success"] != null)
-{
-    <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
-}
+<div class="mb-3">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+</div>
 <form method="post">
     <div class="mb-3">
-        <label asp-for="UserModel.Name">Name</label>
-        <input asp-for="UserModel.Name"/>
+        <label asp-for="ContactDTO.Name">Name</label>
+        <input asp-for="ContactDTO.Name" />
     </div>
     <div class="mb-3">
-        <label asp-for="UserModel.Email">Email address</label>
-        <input asp-for="UserModel.Email" />
+        <label asp-for="ContactDTO.Email">Email address</label>
+        <input asp-for="ContactDTO.Email" />
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="mb-3">
-        <label for="exampleInputCountry" class="form-label">Subject</label>
-        <input type="text" class="form-control" id="exampleInputSubject" aria-describedby="emailSubject">
+        <label asp-for="ContactDTO.Subject">Subject</label>
+        <input asp-for="ContactDTO.Subject" />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <button type="reset" class="btn btn-secondary">Cancel</button>
+    <div class = "mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-secondary">Cancel</button>
+    </div>
 </form>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

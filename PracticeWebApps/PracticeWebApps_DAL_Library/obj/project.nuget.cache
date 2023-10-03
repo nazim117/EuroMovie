@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7TPtFJK0YznswDKM0npiI/heqOyQep1FpOujD7aArFRitOQU0CRm0Hk8jM0xI9sykDXd80RjdTgUXGF4DqfxHw==",
+  "dgSpecHash": "lH05ZEpI96F2k2vO8ksoQGN2nzoc+zTv42kLsHwBr7SJeqMFUNVzADij+hsAQLgK9BvGiVClhn+TTOvYBA9JQg==",
   "success": true,
-  "projectFilePath": "C:\\sem2-practice-assignments\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj",
+  "projectFilePath": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps_DAL_Library\\PracticeWebApps_DAL_Library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nahme\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\nahme\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

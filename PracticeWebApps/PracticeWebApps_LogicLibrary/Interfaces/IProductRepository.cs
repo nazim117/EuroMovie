@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticeWebApps_Domain.Models.Products;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,6 @@ namespace PracticeWebApps_LogicLibrary.Interfaces
     {
         public T[] LoadProduct();
         public T GetProductById(int id);
+        public bool Create(T t);
     }
 }

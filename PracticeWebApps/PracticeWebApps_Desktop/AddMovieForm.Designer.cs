@@ -28,7 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridView1 = new DataGridView();
+            txtName = new TextBox();
+            txtDescription = new TextBox();
+            txtDuration = new TextBox();
+            cbbMovieRating = new ComboBox();
+            btnBrowse = new Button();
+            btnAddMovie = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.HotTrack;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(38, 32);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(687, 369);
+            dataGridView1.TabIndex = 0;
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(232, 65);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(319, 27);
+            txtName.TabIndex = 1;
+            // 
+            // txtDescription
+            // 
+            txtDescription.Location = new Point(232, 115);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(319, 81);
+            txtDescription.TabIndex = 2;
+            // 
+            // txtDuration
+            // 
+            txtDuration.Location = new Point(232, 264);
+            txtDuration.Name = "txtDuration";
+            txtDuration.Size = new Size(319, 27);
+            txtDuration.TabIndex = 3;
+            // 
+            // cbbMovieRating
+            // 
+            cbbMovieRating.FormattingEnabled = true;
+            cbbMovieRating.Location = new Point(232, 220);
+            cbbMovieRating.Name = "cbbMovieRating";
+            cbbMovieRating.Size = new Size(319, 28);
+            cbbMovieRating.TabIndex = 4;
+            // 
+            // btnBrowse
+            // 
+            btnBrowse.Location = new Point(232, 306);
+            btnBrowse.Name = "btnBrowse";
+            btnBrowse.Size = new Size(94, 29);
+            btnBrowse.TabIndex = 5;
+            btnBrowse.Text = "Browse";
+            btnBrowse.UseVisualStyleBackColor = true;
+            // 
+            // btnAddMovie
+            // 
+            btnAddMovie.Location = new Point(303, 360);
+            btnAddMovie.Name = "btnAddMovie";
+            btnAddMovie.Size = new Size(178, 29);
+            btnAddMovie.TabIndex = 6;
+            btnAddMovie.Text = "Add Movie";
+            btnAddMovie.UseVisualStyleBackColor = true;
+            btnAddMovie.Click += btnAddMovie_Click;
             // 
             // AddMovieForm
             // 
@@ -36,11 +104,28 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAddMovie);
+            Controls.Add(btnBrowse);
+            Controls.Add(cbbMovieRating);
+            Controls.Add(txtDuration);
+            Controls.Add(txtDescription);
+            Controls.Add(txtName);
+            Controls.Add(dataGridView1);
             Name = "AddMovieForm";
             Text = "AddMovieForm";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private TextBox txtName;
+        private TextBox txtDescription;
+        private TextBox txtDuration;
+        private ComboBox cbbMovieRating;
+        private Button btnBrowse;
+        private Button btnAddMovie;
     }
 }
