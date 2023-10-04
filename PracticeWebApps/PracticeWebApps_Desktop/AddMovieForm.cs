@@ -1,6 +1,7 @@
 ﻿using PracticeWebApps_DAL_Library;
 using PracticeWebApps_Domain.Exceptions;
 using PracticeWebApps_Domain.Models;
+using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Managers;
 using System;
 using System.Collections.Generic;
@@ -24,14 +25,14 @@ namespace PracticeWebApps_Desktop
         private void btnAddMovie_Click(object sender, EventArgs e)
         {
             ProductManager productManager = new ProductManager(new ProductDAL());
-            byte[] picture = null;
             try
             {
-                productManager.Create(txtName.Text, 
-                    txtDescription.Text, 
-                    (Rating)cbbMovieRating.SelectedItem, 
-                    int.Parse(txtDuration.Text), 
-                    picture);
+                productManager.CreateObject(
+                    new Movie(txtName.Text,
+                    txtDescription.Text,
+                    (Rating)cbbMovieRating.SelectedItem,
+                    int.Parse(txtDuration.Text),
+                    txtURL.Text));
 
                 MessageBox.Show("Account created successfully");
             }

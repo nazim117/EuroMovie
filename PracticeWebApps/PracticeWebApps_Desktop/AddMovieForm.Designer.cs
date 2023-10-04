@@ -33,8 +33,8 @@
             txtDescription = new TextBox();
             txtDuration = new TextBox();
             cbbMovieRating = new ComboBox();
-            btnBrowse = new Button();
             btnAddMovie = new Button();
+            txtURL = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -79,15 +79,6 @@
             cbbMovieRating.Size = new Size(319, 28);
             cbbMovieRating.TabIndex = 4;
             // 
-            // btnBrowse
-            // 
-            btnBrowse.Location = new Point(232, 306);
-            btnBrowse.Name = "btnBrowse";
-            btnBrowse.Size = new Size(94, 29);
-            btnBrowse.TabIndex = 5;
-            btnBrowse.Text = "Browse";
-            btnBrowse.UseVisualStyleBackColor = true;
-            // 
             // btnAddMovie
             // 
             btnAddMovie.Location = new Point(303, 360);
@@ -98,14 +89,21 @@
             btnAddMovie.UseVisualStyleBackColor = true;
             btnAddMovie.Click += btnAddMovie_Click;
             // 
+            // txtURL
+            // 
+            txtURL.Location = new Point(232, 317);
+            txtURL.Name = "txtURL";
+            txtURL.Size = new Size(319, 27);
+            txtURL.TabIndex = 7;
+            // 
             // AddMovieForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtURL);
             Controls.Add(btnAddMovie);
-            Controls.Add(btnBrowse);
             Controls.Add(cbbMovieRating);
             Controls.Add(txtDuration);
             Controls.Add(txtDescription);
@@ -125,7 +123,7 @@
         private TextBox txtDescription;
         private TextBox txtDuration;
         private ComboBox cbbMovieRating;
-        private Button btnBrowse;
         private Button btnAddMovie;
+        private TextBox txtURL;
     }
 }

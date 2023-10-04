@@ -9,7 +9,7 @@ namespace PracticeWebApps_DAL_Library
 {
     public class Connection
     {
-        public const string connect = "Data Source=NAZIM\\SQLEXPRESS;Initial Catalog=EcommerceSite;Integrated Security=True;TrustServerCertificate=True";
+        public const string connect = "Server=mssqlstud.fhict.local;Database=dbi499773;User Id=dbi499773;Password=Fml01HwD33;";
 
         public SqlConnection GetSQLConnection()
         {

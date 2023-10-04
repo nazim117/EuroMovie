@@ -1,5 +1,6 @@
 ﻿using PracticeWebApps_DAL_Library;
 using PracticeWebApps_Domain.Exceptions;
+using PracticeWebApps_Domain.Models;
 using PracticeWebApps_LogicLibrary.Managers;
 using System;
 using System.Collections.Generic;
@@ -40,10 +41,17 @@ namespace PracticeWebApps_Desktop
 
             try
             {
-                userManager.CreateUser(txtName.Text, txtEmail.Text, txtPhone.Text, false, passHash, salt);
+                userManager.CreateObject(
+                    new UserModel(
+                        txtName.Text,
+                        txtEmail.Text, 
+                        txtPhone.Text, 
+                        false, 
+                        passHash, 
+                        salt));
 
                 MessageBox.Show("Account created successfully");
-            }
+            } 
             catch (UserException ex)
             {
                 MessageBox.Show(ex.Message);

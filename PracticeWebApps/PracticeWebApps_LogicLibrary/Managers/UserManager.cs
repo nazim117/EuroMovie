@@ -4,29 +4,33 @@ using PracticeWebApps_Domain.Models;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {
-    public class UserManager
+    public class UserManager : IOperations<UserModel>
     {
-        private IUserRepository<UserModel> userRepository;
+        private IOperations<UserModel> operationsRepository;
 
-        public UserManager(IUserRepository<UserModel> userRepository)
+        public UserManager(IOperations<UserModel> operationsRepository)
         {
-            this.userRepository = userRepository;
+            this.operationsRepository = operationsRepository;
         }
-        public bool CreateUser(string name, string email, string phone, bool isAdmin, string password, string salt)
+        public bool CreateObject(UserModel user)
         {
-            if (!GetUsers().Any(u => u.Email.Equals(email)))
+            if (!LoadObjects().Any(u => u.Email.Equals(user.Email)))
             {
-                UserModel user = new UserModel(name, email, phone, isAdmin, password, salt);
-                return userRepository.CreateUser(user);
+                return operationsRepository.CreateObject(user);
             }
             else
             {
                 throw new UserException();
             }
         }
-        public UserModel[] GetUsers()
+        public UserModel[] LoadObjects()
         {
-            return userRepository.LoadUsers();
+            return operationsRepository.LoadObjects();
         }
+        public UserModel GetObject(string stringForSearch)
+        {
+            return operationsRepository.GetObject(stringForSearch);
+        }
+
     }
 }

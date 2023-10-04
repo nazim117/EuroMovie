@@ -20,7 +20,7 @@ namespace PracticeWebApps_Desktop
         {
             InitializeComponent();
             userManager = new UserManager(new UserDAL());
-            lbUsers.DataSource = userManager.GetUsers();
+            lbUsers.DataSource = userManager.LoadObjects();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

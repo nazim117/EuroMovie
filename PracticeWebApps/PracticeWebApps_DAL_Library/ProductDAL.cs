@@ -6,9 +6,9 @@ using System.Data.SqlTypes;
 
 namespace PracticeWebApps_DAL_Library
 {
-    public class ProductDAL : Connection, IProductRepository<Product>
+    public class ProductDAL : Connection, IOperations<Product>
     {
-        public Product[] LoadProduct()
+        public Product[] LoadObjects()
         {
             List<Product> products = new List<Product>();
             using (GetSQLConnection())
@@ -20,7 +20,7 @@ namespace PracticeWebApps_DAL_Library
                     {
                         while (reader.Read())
                         {
-                            Product product = GetProductById(reader.GetInt32(0));
+                            Product product = GetObject(reader.GetString(1));
                             if (product != null)
                             {
                                 products.Add(product);
@@ -31,26 +31,26 @@ namespace PracticeWebApps_DAL_Library
             }
             return products.ToArray();
         }
-        public Product GetProductById(int id)
+        public Product GetObject(string name)
         {
             using (GetSQLConnection())
             {
                 try
                 {
-                    string sql = $"SELECT * FROM [Product] WHERE Id = @id";
+                    string sql = $"SELECT * FROM [Product] WHERE Name = @name";
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
-                        command.Parameters.AddWithValue("@Id", id);
+                        command.Parameters.AddWithValue("@Name", name);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                return new Product(reader.GetString(1),
+                                return new Movie(reader.GetString(1),
                                     reader.GetString(2),
                                     (Rating)reader.GetInt32(3),
                                     reader.GetInt32(4),
-                                    (byte[])reader[5]); ;
+                                    reader.GetString(5)); ;
                             }
                         }
                     }
@@ -79,19 +79,17 @@ namespace PracticeWebApps_DAL_Library
             }
             return null;
         }
-        public bool Create(Product product)
+        public bool CreateObject(Product product)
         {
             try
             {
                 using (GetSQLConnection())
                 {
-                    string sql = $"INSERT INTO [User](Id,Name, Email, Phone, IsAdmin, Password, Salt) " +
-                        $"values(@Id, @Name, @Email, @Phone, @IsAdmin, @Password, @Salt)";
+                    string sql = $"INSERT INTO [User](Name, Email, Phone, IsAdmin, Password, Salt) " +
+                        $"values(@Name, @Email, @Phone, @IsAdmin, @Password, @Salt)";
 
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
-
-                        command.Parameters.AddWithValue("@Id", product.Id);
                         command.Parameters.AddWithValue("@Name", product.Name);
                         command.Parameters.AddWithValue("@Description", product.Description);
                         command.Parameters.AddWithValue("@MovieRating", product.MovieRating);

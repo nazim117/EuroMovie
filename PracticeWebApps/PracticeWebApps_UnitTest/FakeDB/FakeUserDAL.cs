@@ -10,17 +10,19 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_UnitTest.FakeDB
 {
-    public class FakeUserDAL : IUserRepository<UserModel>
+    public class FakeUserDAL : IOperations<UserModel>
     {
         List<UserModel> users;
         public FakeUserDAL()
         {
             users = new List<UserModel>
             {
+                new UserModel("name", "example@gmail.com", "0213456789", false, "New12345", "salt"),
+                new UserModel("name", "example@gmail.com", "0213456789", false, "New12345", "salt"),
                 new UserModel("name", "example@gmail.com", "0213456789", false, "New12345", "salt")
             };
         }
-        public UserModel[] LoadUsers()
+        public UserModel[] LoadObjects()
         {
             if (users != null)
             {
@@ -28,7 +30,7 @@ namespace PracticeWebApps_UnitTest.FakeDB
             }
             return null;
         }
-        public UserModel GetUser(string email)
+        public UserModel GetObject(string email)
         {
             if (email != string.Empty)
             {
@@ -39,7 +41,7 @@ namespace PracticeWebApps_UnitTest.FakeDB
             }
             return null;
         }
-        public bool CreateUser(UserModel user)
+        public bool CreateObject(UserModel user)
         {
             if (user != null)
             {

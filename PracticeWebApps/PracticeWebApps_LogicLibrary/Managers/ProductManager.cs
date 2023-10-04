@@ -5,29 +5,28 @@ using PracticeWebApps_LogicLibrary.Interfaces;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {
-    public class ProductManager
+    public class ProductManager : IOperations<Product>
     {
-        private IProductRepository<Product> productRepository;
+        private IOperations<Product> operationRepository;
 
-        public ProductManager(IProductRepository<Product> productRepository)
+        public ProductManager(IOperations<Product> operationRepository)
         {
-            this.productRepository = productRepository;
+            this.operationRepository = operationRepository;
         }
 
-        public Product[] LoadProduct()
+        public Product[] LoadObjects()
         {
-            return productRepository.LoadProduct();
+            return operationRepository.LoadObjects();
         }
-        public Product GetProductById(int id)
+        public Product GetObject(string name)
         {
-            return productRepository.GetProductById(id);
+            return operationRepository.GetObject(name);
         }
-        public bool Create(string name, string description, Rating movieRating, int duration, byte[] picture)
+        public bool CreateObject(Product movie)
         {
-            if (!LoadProduct().Any(u => u.Name.Equals(name)))
+            if (!LoadObjects().Any(u => u.Name.Equals(movie.Name)))
             {
-                Product product = new Product(name, description, movieRating, duration, picture);
-                return productRepository.Create(product);
+                return operationRepository.CreateObject(movie);
             }
             else
             {

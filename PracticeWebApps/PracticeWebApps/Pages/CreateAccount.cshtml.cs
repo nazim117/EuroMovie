@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PracticeWebApps.DTOs;
 using PracticeWebApps_DAL_Library;
+using PracticeWebApps_Domain.Models;
 using PracticeWebApps_LogicLibrary.Managers;
 
 namespace PracticeWebApps.Pages
@@ -17,7 +18,7 @@ namespace PracticeWebApps.Pages
         public CreateAccountModel(ILogger<CreateAccountModel> logger)
 		{
             _logger = logger;
-			PageTitle = "Create Account";
+			PageTitle = "CreateObject Account";
             ErrorMessage = string.Empty;
 		}
         public IActionResult OnGet()
@@ -40,8 +41,8 @@ namespace PracticeWebApps.Pages
             PasswordHashingManager passwordHashing = new PasswordHashingManager();
             string salt = passwordHashing.GetSalt();
             string passHash = passwordHashing.GetHash(CreateAccountDTO.Password, salt);
-            
-            userManager.CreateUser(CreateAccountDTO.Name, CreateAccountDTO.Email, CreateAccountDTO.Phone, false, passHash, salt);
+
+            userManager.CreateObject(new UserModel(CreateAccountDTO.Name, CreateAccountDTO.Email, CreateAccountDTO.Phone, false, passHash, salt));
 
             return RedirectToPage("/LogIn");
         }

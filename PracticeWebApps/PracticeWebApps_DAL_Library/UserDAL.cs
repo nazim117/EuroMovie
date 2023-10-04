@@ -13,9 +13,9 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_DAL_Library
 {
-    public class UserDAL : Connection, IUserRepository<UserModel>
+    public class UserDAL : Connection, IOperations<UserModel>
     {
-        public UserModel[] LoadUsers()
+        public UserModel[] LoadObjects()
         {
             List<UserModel> users = new List<UserModel>();
             using (GetSQLConnection())
@@ -29,7 +29,7 @@ namespace PracticeWebApps_DAL_Library
                     {
                         while (reader.Read())
                         {
-                            UserModel user = GetUser(reader.GetString(1));
+                            UserModel user = GetObject(reader.GetString(1));
                             if (user != null)
                             {
                                 users.Add(user);
@@ -40,7 +40,7 @@ namespace PracticeWebApps_DAL_Library
             }
             return users.ToArray();
         }
-        public UserModel GetUser(string emailToFind)
+        public UserModel GetObject(string emailToFind)
         {
 
             using (GetSQLConnection())
@@ -56,7 +56,8 @@ namespace PracticeWebApps_DAL_Library
                         {
                             if (reader.Read())
                             {
-                                return new UserModel(reader.GetString(1), 
+                                return new UserModel(
+                                    reader.GetString(1), 
                                     reader.GetString(2), 
                                     reader.GetString(3), 
                                     reader.GetBoolean(4), 
@@ -91,19 +92,17 @@ namespace PracticeWebApps_DAL_Library
             return null;
         }
 
-        public bool CreateUser(UserModel user)
+        public bool CreateObject(UserModel user)
         {
             try
             {
                 using (GetSQLConnection())
                 {
-                    string sql = $"INSERT INTO [User](Id,Name, Email, Phone, IsAdmin, Password, Salt) " +
-                        $"values(@Id, @Name, @Email, @Phone, @IsAdmin, @Password, @Salt)";
+                    string sql = $"INSERT INTO [User](Name, Email, Phone, IsAdmin, Password, Salt) " +
+                        $"values(@Name, @Email, @Phone, @IsAdmin, @Password, @Salt)";
 
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
-
-                        command.Parameters.AddWithValue("@Id", user.Id);
                         command.Parameters.AddWithValue("@Name", user.Name);
                         command.Parameters.AddWithValue("@Email", user.Email);
                         command.Parameters.AddWithValue("@Phone", user.Phone);

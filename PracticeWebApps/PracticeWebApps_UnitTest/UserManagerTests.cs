@@ -19,7 +19,7 @@ namespace PracticeWebApps_UnitTest
         [TestMethod]
         public void LoadUsers_ReturnsUserArray()
         {
-            UserModel[] users = userManager.GetUsers();
+            UserModel[] users = userManager.LoadObjects();
 
             Assert.IsNotNull(users);
             Assert.AreEqual(3, users.Length);
@@ -27,8 +27,8 @@ namespace PracticeWebApps_UnitTest
         [TestMethod]
         public void CreateUser_ValidUser_ReturnsTrue()
         {
-
-            bool created = userManager.CreateUser("Valid", "true@email.com", "0612345678", false, "Pass1234", "salt");
+            UserModel user = new UserModel("Valid", "true@email.com", "0612345678", false, "Pass1234", "salt");
+            bool created = userManager.CreateObject(user);
 
             Assert.IsTrue(created);
         }
