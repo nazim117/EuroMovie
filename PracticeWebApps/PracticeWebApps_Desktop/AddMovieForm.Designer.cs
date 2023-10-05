@@ -35,6 +35,7 @@
             cbbMovieRating = new ComboBox();
             btnAddMovie = new Button();
             txtURL = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -96,12 +97,23 @@
             txtURL.Size = new Size(319, 27);
             txtURL.TabIndex = 7;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(303, 145);
+            label1.Name = "label1";
+            label1.Size = new Size(155, 20);
+            label1.TabIndex = 8;
+            label1.Text = "Not implemented yet!";
+            // 
             // AddMovieForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(txtURL);
             Controls.Add(btnAddMovie);
             Controls.Add(cbbMovieRating);
@@ -125,5 +137,6 @@
         private ComboBox cbbMovieRating;
         private Button btnAddMovie;
         private TextBox txtURL;
+        private Label label1;
     }
 }

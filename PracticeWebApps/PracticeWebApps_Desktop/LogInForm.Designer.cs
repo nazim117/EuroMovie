@@ -41,6 +41,7 @@
             txtName.Name = "txtName";
             txtName.Size = new Size(251, 27);
             txtName.TabIndex = 0;
+            txtName.Text = "Michael";
             // 
             // txtPassword
             // 
@@ -48,6 +49,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(251, 27);
             txtPassword.TabIndex = 1;
+            txtPassword.Text = "Michael12345";
             // 
             // btnLogIn
             // 

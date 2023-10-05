@@ -28,22 +28,30 @@ else
     }
 </div>
 <form method="post">
-    <div class="mb-3">
-        <label asp-for="ContactDTO.Name">Name</label>
-        <input asp-for="ContactDTO.Name" />
+    <div class="form-group">
+        <div class="create-account">
+            <label asp-for="ContactDTO.Name">Name</label>
+            <input asp-for="ContactDTO.Name" />
+        </div>
     </div>
-    <div class="mb-3">
-        <label asp-for="ContactDTO.Email">Email address</label>
-        <input asp-for="ContactDTO.Email" />
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div class="form-group">
+        <div class="create-account">
+
+            <label asp-for="ContactDTO.Email">Email address</label>
+            <input asp-for="ContactDTO.Email" />
+        </div>
     </div>
-    <div class="mb-3">
-        <label asp-for="ContactDTO.Subject">Subject</label>
-        <input asp-for="ContactDTO.Subject" />
+    <div class="form-group">
+        <div class="create-account">
+            <label asp-for="ContactDTO.Subject">Subject</label>
+            <input asp-for="ContactDTO.Subject" />
+        </div>
     </div>
-    <div class = "mb-3">
+    <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-secondary">Cancel</button>
+        <div class="create-account">
+            <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+        </div>
     </div>
 </form>
 @section Scripts{

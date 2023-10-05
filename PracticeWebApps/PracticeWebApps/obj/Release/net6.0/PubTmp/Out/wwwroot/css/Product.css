@@ -1,0 +1,11 @@
+﻿body {
+    background-color:black;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-body {
+    color: white;
+}

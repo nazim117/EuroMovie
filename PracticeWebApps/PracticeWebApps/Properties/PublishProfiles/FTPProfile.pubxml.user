@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>
+    </EncryptedPassword>
+    <_PublishTargetUrl>ftps://luna.fhict.nl/domains/i499773.luna.fhict.nl</_PublishTargetUrl>
+    <History>False|2023-10-05T11:42:28.5992596Z;False|2023-10-05T13:35:10.1836239+02:00;False|2023-10-05T13:33:08.8798255+02:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>08/08/2023 13:32:37</publishTime>
+    </File>
+    <File Include="Azure.Core.dll">
+      <publishTime>07/12/2023 18:15:28</publishTime>
+    </File>
+    <File Include="Azure.Identity.dll">
+      <publishTime>04/05/2022 22:26:00</publishTime>
+    </File>
+    <File Include="BCrypt.Net-Next.dll">
+      <publishTime>03/03/2022 17:10:20</publishTime>
+    </File>
+    <File Include="cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="cs/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:19:00</publishTime>
+    </File>
+    <File Include="cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:19:02</publishTime>
+    </File>
+    <File Include="de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="de/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:19:00</publishTime>
+    </File>
+    <File Include="de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:14</publishTime>
+    </File>
+    <File Include="de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:08</publishTime>
+    </File>
+    <File Include="de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:19:02</publishTime>
+    </File>
+    <File Include="es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="es/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:19:02</publishTime>
+    </File>
+    <File Include="es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:19:04</publishTime>
+    </File>
+    <File Include="fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:12</publishTime>
+    </File>
+    <File Include="fr/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:18:58</publishTime>
+    </File>
+    <File Include="fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:12</publishTime>
+    </File>
+    <File Include="fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:12</publishTime>
+    </File>
+    <File Include="fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:18:54</publishTime>
+    </File>
+    <File Include="it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:12</publishTime>
+    </File>
+    <File Include="it/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:18:58</publishTime>
+    </File>
+    <File Include="it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:14</publishTime>
+    </File>
+    <File Include="it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:12</publishTime>
+    </File>
+    <File Include="it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:18:54</publishTime>
+    </File>
+    <File Include="ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:14</publishTime>
+    </File>
+    <File Include="ja/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:18:56</publishTime>
+    </File>
+    <File Include="ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:16</publishTime>
+    </File>
+    <File Include="ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:16</publishTime>
+    </File>
+    <File Include="ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:18:58</publishTime>
+    </File>
+    <File Include="ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:16</publishTime>
+    </File>
+    <File Include="ko/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:18:58</publishTime>
+    </File>
+    <File Include="ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:18</publishTime>
+    </File>
+    <File Include="ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:06</publishTime>
+    </File>
+    <File Include="ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:19:00</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>04/15/2020 00:39:12</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>03/31/2023 19:51:28</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>06/20/2023 00:56:18</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>06/20/2023 00:56:34</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>06/20/2023 00:56:44</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <publishTime>06/20/2023 00:56:52</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Abstractions.dll">
+      <publishTime>10/18/2022 18:31:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Memory.dll">
+      <publishTime>10/18/2022 18:31:44</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Abstractions.dll">
+      <publishTime>10/18/2022 18:19:14</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>10/18/2022 18:19:10</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>10/18/2022 18:19:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>10/18/2022 18:19:52</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.dll">
+      <publishTime>10/18/2022 18:20:18</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.dll">
+      <publishTime>10/18/2022 18:19:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Primitives.dll">
+      <publishTime>10/18/2022 18:19:10</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>06/22/2022 21:59:58</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.Extensions.Msal.dll">
+      <publishTime>11/19/2021 23:02:00</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Abstractions.dll">
+      <publishTime>07/01/2022 20:47:38</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>07/01/2022 20:25:52</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>07/01/2022 20:27:42</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>07/01/2022 20:29:14</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>07/01/2022 20:39:00</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>07/01/2022 20:33:46</publishTime>
+    </File>
+    <File Include="Microsoft.SqlServer.Server.dll">
+      <publishTime>01/27/2022 18:19:08</publishTime>
+    </File>
+    <File Include="Microsoft.TestPlatform.AdapterUtilities.dll">
+      <publishTime>02/16/2022 03:59:44</publishTime>
+    </File>
+    <File Include="Microsoft.TestPlatform.CommunicationUtilities.dll">
+      <publishTime>02/21/2023 09:31:06</publishTime>
+    </File>
+    <File Include="Microsoft.TestPlatform.CoreUtilities.dll">
+      <publishTime>02/21/2023 09:18:54</publishTime>
+    </File>
+    <File Include="Microsoft.TestPlatform.CrossPlatEngine.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="Microsoft.TestPlatform.PlatformAbstractions.dll">
+      <publishTime>02/21/2023 09:18:56</publishTime>
+    </File>
+    <File Include="Microsoft.TestPlatform.Utilities.dll">
+      <publishTime>02/21/2023 09:31:06</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.CodeCoverage.Shim.dll">
+      <publishTime>12/20/2022 10:02:56</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.TestPlatform.Common.dll">
+      <publishTime>02/21/2023 09:31:00</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll">
+      <publishTime>04/26/2022 15:53:30</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll">
+      <publishTime>04/26/2022 15:50:56</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll">
+      <publishTime>04/26/2022 15:49:26</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.TestPlatform.ObjectModel.dll">
+      <publishTime>02/21/2023 09:18:54</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.TestPlatform.TestFramework.dll">
+      <publishTime>04/26/2022 15:51:04</publishTime>
+    </File>
+    <File Include="Microsoft.Win32.SystemEvents.dll">
+      <publishTime>10/19/2020 20:40:26</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>03/17/2021 21:03:36</publishTime>
+    </File>
+    <File Include="NuGet.Frameworks.dll">
+      <publishTime>06/01/2021 22:46:32</publishTime>
+    </File>
+    <File Include="pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:02</publishTime>
+    </File>
+    <File Include="pl/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:19:02</publishTime>
+    </File>
+    <File Include="pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:04</publishTime>
+    </File>
+    <File Include="pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:02</publishTime>
+    </File>
+    <File Include="pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:19:00</publishTime>
+    </File>
+    <File Include="PracticeWebApps.deps.json">
+      <publishTime>10/05/2023 13:47:06</publishTime>
+    </File>
+    <File Include="PracticeWebApps.dll">
+      <publishTime>10/05/2023 13:47:02</publishTime>
+    </File>
+    <File Include="PracticeWebApps.exe">
+      <publishTime>10/05/2023 13:47:02</publishTime>
+    </File>
+    <File Include="PracticeWebApps.pdb">
+      <publishTime>10/05/2023 13:47:02</publishTime>
+    </File>
+    <File Include="PracticeWebApps.runtimeconfig.json">
+      <publishTime>10/05/2023 13:47:02</publishTime>
+    </File>
+    <File Include="PracticeWebApps_DAL_Library.dll">
+      <publishTime>10/05/2023 13:46:58</publishTime>
+    </File>
+    <File Include="PracticeWebApps_DAL_Library.pdb">
+      <publishTime>10/05/2023 13:46:58</publishTime>
+    </File>
+    <File Include="PracticeWebApps_Domain.dll">
+      <publishTime>10/05/2023 13:46:57</publishTime>
+    </File>
+    <File Include="PracticeWebApps_Domain.pdb">
+      <publishTime>10/05/2023 13:46:57</publishTime>
+    </File>
+    <File Include="PracticeWebApps_LogicLibrary.dll">
+      <publishTime>10/05/2023 13:46:58</publishTime>
+    </File>
+    <File Include="PracticeWebApps_LogicLibrary.pdb">
+      <publishTime>10/05/2023 13:46:58</publishTime>
+    </File>
+    <File Include="PracticeWebApps_UnitTest.deps.json">
+      <publishTime>10/05/2023 13:46:59</publishTime>
+    </File>
+    <File Include="PracticeWebApps_UnitTest.dll">
+      <publishTime>10/05/2023 13:46:59</publishTime>
+    </File>
+    <File Include="PracticeWebApps_UnitTest.pdb">
+      <publishTime>10/05/2023 13:46:59</publishTime>
+    </File>
+    <File Include="PracticeWebApps_UnitTest.runtimeconfig.json">
+      <publishTime>10/05/2023 13:46:59</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:02</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:19:02</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:30:40</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:06</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:19:02</publishTime>
+    </File>
+    <File Include="ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:00</publishTime>
+    </File>
+    <File Include="ru/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:19:02</publishTime>
+    </File>
+    <File Include="ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:06</publishTime>
+    </File>
+    <File Include="ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:02</publishTime>
+    </File>
+    <File Include="ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:19:04</publishTime>
+    </File>
+    <File Include="runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll">
+      <publishTime>10/18/2022 18:40:14</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll">
+      <publishTime>10/18/2022 01:26:02</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll">
+      <publishTime>10/19/2020 20:49:58</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>03/31/2023 19:51:28</publishTime>
+    </File>
+    <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/04/2022 00:45:42</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/04/2022 00:45:32</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/sni.dll">
+      <publishTime>07/12/2017 13:24:24</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/04/2022 00:45:32</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/sni.dll">
+      <publishTime>07/12/2017 13:24:22</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>10/04/2022 00:45:32</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/sni.dll">
+      <publishTime>07/12/2017 13:24:22</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll">
+      <publishTime>10/18/2022 01:26:08</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll">
+      <publishTime>10/19/2020 20:52:12</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll">
+      <publishTime>10/19/2020 20:53:02</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll">
+      <publishTime>10/19/2020 20:53:36</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>03/31/2023 19:51:44</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll">
+      <publishTime>10/19/2020 20:52:44</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>10/19/2020 20:49:30</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>10/19/2020 20:52:30</publishTime>
+    </File>
+    <File Include="System.Data.SqlClient.dll">
+      <publishTime>10/18/2022 01:16:04</publishTime>
+    </File>
+    <File Include="System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>02/16/2023 01:32:04</publishTime>
+    </File>
+    <File Include="System.Drawing.Common.dll">
+      <publishTime>10/19/2020 20:50:02</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>07/01/2022 20:23:04</publishTime>
+    </File>
+    <File Include="System.Memory.Data.dll">
+      <publishTime>04/08/2021 18:45:54</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>10/19/2020 20:52:34</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>10/19/2020 20:52:26</publishTime>
+    </File>
+    <File Include="System.Security.Permissions.dll">
+      <publishTime>10/19/2020 20:52:36</publishTime>
+    </File>
+    <File Include="System.Text.Encodings.Web.dll">
+      <publishTime>10/18/2022 18:19:30</publishTime>
+    </File>
+    <File Include="System.Text.Json.dll">
+      <publishTime>10/18/2022 18:30:30</publishTime>
+    </File>
+    <File Include="System.Windows.Extensions.dll">
+      <publishTime>10/19/2020 20:53:38</publishTime>
+    </File>
+    <File Include="testhost.dll">
+      <publishTime>02/21/2023 09:31:08</publishTime>
+    </File>
+    <File Include="testhost.exe">
+      <publishTime>02/21/2023 09:01:16</publishTime>
+    </File>
+    <File Include="tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:06</publishTime>
+    </File>
+    <File Include="tr/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:19:04</publishTime>
+    </File>
+    <File Include="tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:04</publishTime>
+    </File>
+    <File Include="tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:02</publishTime>
+    </File>
+    <File Include="tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:18:56</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>10/05/2023 13:47:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/Layout.css">
+      <publishTime>09/24/2023 21:07:50</publishTime>
+    </File>
+    <File Include="wwwroot/css/LogIn.css">
+      <publishTime>09/24/2023 14:40:20</publishTime>
+    </File>
+    <File Include="wwwroot/css/Product.css">
+      <publishTime>09/24/2023 22:42:47</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>09/24/2023 18:36:12</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/images/Aquaman.jpg">
+      <publishTime>09/19/2023 00:38:17</publishTime>
+    </File>
+    <File Include="wwwroot/images/Avengers.jpeg">
+      <publishTime>09/19/2023 00:35:47</publishTime>
+    </File>
+    <File Include="wwwroot/images/f-1.jpg">
+      <publishTime>09/23/2023 12:37:59</publishTime>
+    </File>
+    <File Include="wwwroot/images/f-t-1.png">
+      <publishTime>09/23/2023 12:00:17</publishTime>
+    </File>
+    <File Include="wwwroot/images/Flash.jpg">
+      <publishTime>09/19/2023 00:48:20</publishTime>
+    </File>
+    <File Include="wwwroot/images/images.jpeg">
+      <publishTime>09/24/2023 21:12:06</publishTime>
+    </File>
+    <File Include="wwwroot/images/Rambo.jpg">
+      <publishTime>09/19/2023 00:52:33</publishTime>
+    </File>
+    <File Include="wwwroot/images/Terminator.jpeg">
+      <publishTime>09/19/2023 00:50:41</publishTime>
+    </File>
+    <File Include="wwwroot/images/Transformers.jpg">
+      <publishTime>09/19/2023 00:55:11</publishTime>
+    </File>
+    <File Include="wwwroot/images/Transformers2.jpg">
+      <publishTime>09/23/2023 11:58:46</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>09/24/2023 18:30:39</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css">
+      <publishTime>09/24/2023 15:37:26</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>07/10/2023 19:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/PracticeWebApps.styles.css">
+      <publishTime>10/05/2023 13:32:57</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:02</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:18:54</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:00</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:00</publishTime>
+    </File>
+    <File Include="zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:18:54</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll">
+      <publishTime>02/21/2023 09:18:54</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <publishTime>02/21/2023 09:31:10</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <publishTime>02/21/2023 09:31:08</publishTime>
+    </File>
+    <File Include="zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <publishTime>02/21/2023 09:18:56</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

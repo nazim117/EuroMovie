@@ -1,0 +1,12 @@
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\bin\Release\net6.0\PracticeWebApps_Domain.deps.json
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\bin\Release\net6.0\PracticeWebApps_Domain.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\bin\Release\net6.0\PracticeWebApps_Domain.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\PracticeWebApps_Domain.csproj.AssemblyReference.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\PracticeWebApps_Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\PracticeWebApps_Domain.AssemblyInfoInputs.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\PracticeWebApps_Domain.AssemblyInfo.cs
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\PracticeWebApps_Domain.csproj.CoreCompileInputs.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\PracticeWebApps_Domain.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\refint\PracticeWebApps_Domain.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\PracticeWebApps_Domain.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Domain\obj\Release\net6.0\ref\PracticeWebApps_Domain.dll

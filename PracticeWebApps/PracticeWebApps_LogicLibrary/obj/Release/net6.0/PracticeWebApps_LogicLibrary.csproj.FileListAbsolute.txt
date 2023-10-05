@@ -1,0 +1,15 @@
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\bin\Release\net6.0\PracticeWebApps_LogicLibrary.deps.json
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\bin\Release\net6.0\PracticeWebApps_LogicLibrary.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\bin\Release\net6.0\PracticeWebApps_LogicLibrary.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\bin\Release\net6.0\PracticeWebApps_Domain.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\bin\Release\net6.0\PracticeWebApps_Domain.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\PracticeWebApps_LogicLibrary.csproj.AssemblyReference.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\PracticeWebApps_LogicLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\PracticeWebApps_LogicLibrary.AssemblyInfoInputs.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\PracticeWebApps_LogicLibrary.AssemblyInfo.cs
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\PracticeWebApps_LogicLibrary.csproj.CoreCompileInputs.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\PracticeWebApps_LogicLibrary.csproj.CopyComplete
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\PracticeWebApps_LogicLibrary.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\refint\PracticeWebApps_LogicLibrary.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\PracticeWebApps_LogicLibrary.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_LogicLibrary\obj\Release\net6.0\ref\PracticeWebApps_LogicLibrary.dll

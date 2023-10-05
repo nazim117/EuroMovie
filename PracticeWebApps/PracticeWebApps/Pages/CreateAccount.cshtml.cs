@@ -18,7 +18,7 @@ namespace PracticeWebApps.Pages
         public CreateAccountModel(ILogger<CreateAccountModel> logger)
 		{
             _logger = logger;
-			PageTitle = "CreateObject Account";
+			PageTitle = "Create Account";
             ErrorMessage = string.Empty;
 		}
         public IActionResult OnGet()

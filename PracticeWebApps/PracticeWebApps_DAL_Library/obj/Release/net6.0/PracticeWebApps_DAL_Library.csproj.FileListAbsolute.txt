@@ -1,0 +1,17 @@
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Release\net6.0\PracticeWebApps_DAL_Library.deps.json
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Release\net6.0\PracticeWebApps_DAL_Library.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Release\net6.0\PracticeWebApps_DAL_Library.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Release\net6.0\PracticeWebApps_Domain.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Release\net6.0\PracticeWebApps_LogicLibrary.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Release\net6.0\PracticeWebApps_Domain.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\bin\Release\net6.0\PracticeWebApps_LogicLibrary.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\PracticeWebApps_DAL_Library.csproj.AssemblyReference.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\PracticeWebApps_DAL_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\PracticeWebApps_DAL_Library.AssemblyInfoInputs.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\PracticeWebApps_DAL_Library.AssemblyInfo.cs
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\PracticeWebApps_DAL_Library.csproj.CoreCompileInputs.cache
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\PracticeWebApps_DAL_Library.csproj.CopyComplete
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\PracticeWebApps_DAL_Library.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\refint\PracticeWebApps_DAL_Library.dll
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\PracticeWebApps_DAL_Library.pdb
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_DAL_Library\obj\Release\net6.0\ref\PracticeWebApps_DAL_Library.dll
