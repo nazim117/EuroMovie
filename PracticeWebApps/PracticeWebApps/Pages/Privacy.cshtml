@@ -2,13 +2,6 @@
 @model PrivacyModel
 @{
     ViewData["Title"] = "Privacy Policy";
-}
-@if (User.Identity.IsAuthenticated)
-{
-    Layout = "~/Pages/Shared/_LoggedInLayout.cshtml";
-}
-else
-{
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />

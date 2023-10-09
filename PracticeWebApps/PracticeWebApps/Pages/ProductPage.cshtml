@@ -2,13 +2,6 @@
 @model PracticeWebApps.Pages.ProductPageModel
 @{
 
-}
-@if (User.Identity.IsAuthenticated)
-{
-    Layout = "~/Pages/Shared/_LoggedInLayout.cshtml";
-}
-else
-{
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 <link rel="stylesheet" href="/css/Product.css" asp-append-version="true" />

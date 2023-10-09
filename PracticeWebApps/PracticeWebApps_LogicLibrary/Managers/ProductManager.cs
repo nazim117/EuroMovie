@@ -22,11 +22,11 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationRepository.GetObject(name);
         }
-        public bool CreateObject(Product movie)
+        public bool CreateObject(Product product)
         {
-            if (!LoadObjects().Any(u => u.Name.Equals(movie.Name)))
+            if (!LoadObjects().Any(u => u.Name.Equals(product.Name)))
             {
-                return operationRepository.CreateObject(movie);
+                return operationRepository.CreateObject(product);
             }
             else
             {

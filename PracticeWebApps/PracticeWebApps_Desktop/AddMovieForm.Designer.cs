@@ -34,8 +34,8 @@
             txtDuration = new TextBox();
             cbbMovieRating = new ComboBox();
             btnAddMovie = new Button();
-            txtURL = new TextBox();
             label1 = new Label();
+            btnSelectAFile = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -90,13 +90,6 @@
             btnAddMovie.UseVisualStyleBackColor = true;
             btnAddMovie.Click += btnAddMovie_Click;
             // 
-            // txtURL
-            // 
-            txtURL.Location = new Point(232, 317);
-            txtURL.Name = "txtURL";
-            txtURL.Size = new Size(319, 27);
-            txtURL.TabIndex = 7;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -107,14 +100,24 @@
             label1.TabIndex = 8;
             label1.Text = "Not implemented yet!";
             // 
+            // btnSelectAFile
+            // 
+            btnSelectAFile.Location = new Point(232, 306);
+            btnSelectAFile.Name = "btnSelectAFile";
+            btnSelectAFile.Size = new Size(94, 29);
+            btnSelectAFile.TabIndex = 9;
+            btnSelectAFile.Text = "Browse";
+            btnSelectAFile.UseVisualStyleBackColor = true;
+            btnSelectAFile.Click += btnSelectAFile_Click;
+            // 
             // AddMovieForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSelectAFile);
             Controls.Add(label1);
-            Controls.Add(txtURL);
             Controls.Add(btnAddMovie);
             Controls.Add(cbbMovieRating);
             Controls.Add(txtDuration);
@@ -136,7 +139,7 @@
         private TextBox txtDuration;
         private ComboBox cbbMovieRating;
         private Button btnAddMovie;
-        private TextBox txtURL;
         private Label label1;
+        private Button btnSelectAFile;
     }
 }
