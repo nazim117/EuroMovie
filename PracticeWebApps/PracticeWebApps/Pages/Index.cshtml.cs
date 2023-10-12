@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PracticeWebApps_Domain.Models.Products;
+using PracticeWebApps_LogicLibrary.Managers;
+using PracticeWebApps_DAL_Library;
 
 namespace PracticeWebApps.Pages
 {
@@ -10,9 +12,13 @@ namespace PracticeWebApps.Pages
 		[BindProperty(SupportsGet =true)]
         public string Name { get; set; }
 
-		[BindProperty]
-		public List<Movie> Movies { get; set; }
+		public List<Movie> Movies = new List<Movie>();
+		private ProductManager productManager;
 
+        public IndexModel()
+        {
+			productManager = new ProductManager(new ProductDAL());
+        }
         public void OnGet()
 		{
 			if (string.IsNullOrWhiteSpace(Name))
@@ -24,12 +30,14 @@ namespace PracticeWebApps.Pages
             // Use the cookie value as needed
             ViewData["CookieValue"] = cookieValue;
 
-
+			foreach (Product movie in productManager.LoadObjects())
+			{
+				if (movie is Movie)
+				{
+					Movies.Add((Movie)movie);
+				}
+			}
 
         }
-
-		public void OnPost() 
-		{
-		}
 	}
 }

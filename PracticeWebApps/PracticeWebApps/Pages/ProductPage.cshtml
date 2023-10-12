@@ -1,20 +1,17 @@
 ﻿@page
 @model PracticeWebApps.Pages.ProductPageModel
 @{
-
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 <link rel="stylesheet" href="/css/Product.css" asp-append-version="true" />
 
-
-<h1 class="display-4">Terminator</h1>
 <div class="content">
-    <img src="/images/Terminator.jpeg" alt="Terminator">
+    <img src="@Model.Movie.Picture" alt="">
     <div class="card-body">
-        <h5 class="card-title">Terminator</h5>
-        <p class="card-text">Movie description goes here</p>
-        <p class="card-rating">5/5</p>
-        <p class="card-text">PG-13</p>
+        <h5 class="card-title">@Model.Movie.Name</h5>
+        <p class="card-text">Description: @Model.Movie.Description</p>
+        <p class="card-rating">Rating: @Model.Movie.MovieRating</p>
+        <p class="card-text">Genre: @Model.Movie.Genre</p>
         <a href="#" class="btn btn-primary">Rate Movie</a>
     </div>
 </div>

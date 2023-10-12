@@ -8,8 +8,12 @@ namespace PracticeWebApps_Domain.Models.Products
 {
     public class Movie : Product
     {
-        public Movie(string name, string description, Rating movieRating, int duration, string picture) 
-            : base(name, description, movieRating, duration, picture)
+        public Movie()
+        {
+            
+        }
+        public Movie(string name, string description, Rating movieRating,Genre genre, int duration, string picture) 
+            : base(name, description, movieRating, genre, duration, picture)
         {
         }
     }

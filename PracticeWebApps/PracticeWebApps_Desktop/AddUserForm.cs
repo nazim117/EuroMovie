@@ -28,7 +28,7 @@ namespace PracticeWebApps_Desktop
 
         private void btnCreateUser_Click(object sender, EventArgs e)
         {
-            
+
             if (txtPassword.Text != txtConfirmPassword.Text)
             {
                 MessageBox.Show("Passwords do not match");
@@ -44,14 +44,14 @@ namespace PracticeWebApps_Desktop
                 userManager.CreateObject(
                     new UserModel(
                         txtName.Text,
-                        txtEmail.Text, 
-                        txtPhone.Text, 
-                        false, 
-                        passHash, 
+                        txtEmail.Text,
+                        txtPhone.Text,
+                        false,
+                        passHash,
                         salt));
 
                 MessageBox.Show("Account created successfully");
-            } 
+            }
             catch (UserException ex)
             {
                 MessageBox.Show(ex.Message);

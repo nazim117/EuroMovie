@@ -84,7 +84,7 @@
             btnCreateUser.Name = "btnCreateUser";
             btnCreateUser.Size = new Size(224, 38);
             btnCreateUser.TabIndex = 5;
-            btnCreateUser.Text = "CreateObject User";
+            btnCreateUser.Text = "Create User";
             btnCreateUser.UseVisualStyleBackColor = true;
             btnCreateUser.Click += btnCreateUser_Click;
             // 

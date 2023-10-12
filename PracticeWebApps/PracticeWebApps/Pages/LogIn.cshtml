@@ -4,6 +4,7 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 <link rel="stylesheet" href="/css/LogIn.css"asp-append-version="true"/>
+
 <h1>@Model.PageTitle</h1>
 
 @if (!string.IsNullOrEmpty(Model.ErrorMessage))
@@ -12,6 +13,7 @@
         @Model.ErrorMessage
     </div>
 }
+
 <form method="post">
     <div class="form-group">
         <label for="LogIn.UserName">Username</label>

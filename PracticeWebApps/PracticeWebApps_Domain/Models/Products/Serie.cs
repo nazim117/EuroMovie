@@ -2,8 +2,12 @@
 {
     public class Serie:Product
     {
-        public Serie(string name, string description, Rating movieRating, int duration, string picture, int season, int episodes) 
-            : base(name, description, movieRating, duration, picture)
+        public Serie()
+        {
+            
+        }
+        public Serie(string name, string description, Rating movieRating,Genre genre, int duration, string picture, int season, int episodes) 
+            : base(name, description, movieRating, genre, duration, picture)
         {
             Seasons = season;
             Episodes = episodes;

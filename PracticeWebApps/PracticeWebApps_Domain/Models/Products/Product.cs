@@ -13,11 +13,12 @@ namespace PracticeWebApps_Domain.Models.Products
         {
             
         }
-        public Product(string name, string description, Rating movieRating, int duration, string picture) : this()
+        public Product(string name, string description, Rating movieRating, Genre genre, int duration, string picture) : this()
         {
             Name = name;
             Description = description;
             MovieRating = movieRating;
+            Genre = genre;
             Duration = duration;
             Picture = picture;
 
@@ -27,6 +28,7 @@ namespace PracticeWebApps_Domain.Models.Products
         public string Name { get; set; }
         public string Description { get; set; }
         public Rating MovieRating { get; set; }
+        public Genre Genre { get; set; }
         public int Duration { get; set; }
         public string Picture { get; set; }
         public List<string> StreamedPlatform { get; set; }

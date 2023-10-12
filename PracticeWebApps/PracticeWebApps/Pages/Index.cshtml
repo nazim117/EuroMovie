@@ -21,6 +21,19 @@
     <h1 class="movie-list-title">ACTION</h1>
     <div class="movie-list-wrapper">
         <div class="movie-list">
+            @foreach (var movie in Model.Movies.OrderBy(x=>x.Name).Take(5))
+            {
+                <form asp-page="ProductPage" asp-route-name="@movie.Name" method="post">
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="@movie.Picture" alt="">
+                        <span class="movie-list-item-title">@movie.Name</span>
+                        <p class="movie-list-item-desc">@movie.Description</p>
+                        <a asp-page="ProductPage" asp-route-name="@movie.Name" class="movie-list-item-button">Watch</a>
+                    </div>
+                </form>
+            }
+        </div>
+        <div class="movie-list">
             <div class="movie-list-item">
                 <img class="movie-list-item-img" src="\images\Terminator.jpeg" alt="">
                 <span class="movie-list-item-title">Terminator</span>

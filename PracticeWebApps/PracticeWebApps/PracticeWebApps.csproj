@@ -30,4 +30,8 @@
     <ProjectReference Include="..\PracticeWebApps_UnitTest\PracticeWebApps_UnitTest.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Shared\images\" />
+  </ItemGroup>
+
 </Project>
