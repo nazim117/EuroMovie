@@ -1,4 +1,9 @@
-﻿nav {
+﻿body{
+    display:flex;
+    flex-direction:column;
+}
+
+nav {
     font-family: Arial, sans-serif;
     background-color: black;
     padding:70px;
@@ -27,12 +32,17 @@ label {
     font-weight: bold;
     color: #555;
 }
+main{
+    flex:1;
+}
 footer {
-    line-height: 50px;
     color: white;
+    /*line-height: 50px;
     background-color: black;
     margin-top: auto;
     margin-bottom: auto;
+    text-align:center;*/
+    padding:10px;
 }
 button {
     width: 50%;
