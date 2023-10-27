@@ -91,7 +91,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.BackColor = SystemColors.HotTrack;
+            lblName.BackColor = Color.Red;
             lblName.ForeColor = SystemColors.ButtonFace;
             lblName.Location = new Point(167, 68);
             lblName.Name = "lblName";
@@ -102,7 +102,7 @@
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.BackColor = SystemColors.HotTrack;
+            lblEmail.BackColor = Color.Red;
             lblEmail.ForeColor = SystemColors.ButtonFace;
             lblEmail.Location = new Point(163, 138);
             lblEmail.Name = "lblEmail";
@@ -113,7 +113,7 @@
             // lblPhone
             // 
             lblPhone.AutoSize = true;
-            lblPhone.BackColor = SystemColors.HotTrack;
+            lblPhone.BackColor = Color.Red;
             lblPhone.ForeColor = SystemColors.ButtonFace;
             lblPhone.Location = new Point(163, 207);
             lblPhone.Name = "lblPhone";
@@ -124,7 +124,7 @@
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.BackColor = SystemColors.HotTrack;
+            lblPassword.BackColor = Color.Red;
             lblPassword.ForeColor = SystemColors.ButtonFace;
             lblPassword.Location = new Point(167, 277);
             lblPassword.Name = "lblPassword";
@@ -135,7 +135,7 @@
             // lblConfirmPassword
             // 
             lblConfirmPassword.AutoSize = true;
-            lblConfirmPassword.BackColor = SystemColors.HotTrack;
+            lblConfirmPassword.BackColor = Color.Red;
             lblConfirmPassword.ForeColor = SystemColors.ButtonFace;
             lblConfirmPassword.Location = new Point(167, 336);
             lblConfirmPassword.Name = "lblConfirmPassword";
@@ -145,7 +145,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = SystemColors.HotTrack;
+            dataGridView1.BackgroundColor = Color.Red;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(123, 53);
             dataGridView1.Name = "dataGridView1";

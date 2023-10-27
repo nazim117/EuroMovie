@@ -10,11 +10,11 @@ namespace PracticeWebApps_Desktop
 {
     public partial class AddMovieForm : Form
     {
-		string relativeDestinationFilePath;
+        string relativeDestinationFilePath;
         public AddMovieForm()
         {
             InitializeComponent();
-			relativeDestinationFilePath = string.Empty;
+            relativeDestinationFilePath = string.Empty;
             foreach (var item in Enum.GetValues(typeof(Rating)))
             {
                 cbbMovieRating.Items.Add(item);
@@ -49,18 +49,18 @@ namespace PracticeWebApps_Desktop
                     (Rating)cbbMovieRating.SelectedItem,
                     (Genre)cbbGenre.SelectedItem,
                     duration,
-					relativeDestinationFilePath));
+                    relativeDestinationFilePath));
 
                 MessageBox.Show("Movie added successfully");
 
             }
-            catch (MovieException ex) {MessageBox.Show(ex.Message);}
-            catch (NumberOutOfRangeException ex) {MessageBox.Show(ex.Message);}
-            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message);}
-            catch (InvalidOperationException ex) {MessageBox.Show(ex.Message);}
-            catch (SqlException ex) {MessageBox.Show(ex.Message);}
-            catch (TimeoutException ex) {MessageBox.Show(ex.Message);}
-            catch (Exception ex) {MessageBox.Show(ex.Message);}
+            catch (MovieException ex) { MessageBox.Show(ex.Message); }
+            catch (NumberOutOfRangeException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
+            catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void btnSelectAFile_Click(object sender, EventArgs e)
@@ -76,12 +76,12 @@ namespace PracticeWebApps_Desktop
                 string relativeFileLocation = Path.GetRelativePath(currentDirectory, selectedFilePath);
                 MessageBox.Show("File selected successfully");
 
-				string destinationFolderPath = Path.GetRelativePath(currentDirectory, "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\Pages\\Shared\\images\\");
+                string destinationFolderPath = Path.GetRelativePath(currentDirectory, "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\Pages\\Shared\\images\\");
 
                 try
                 {
                     string fileName = Path.GetFileName(relativeFileLocation);
-                    relativeDestinationFilePath = Path.Combine(destinationFolderPath,fileName);
+                    relativeDestinationFilePath = Path.Combine(destinationFolderPath, fileName);
 
                     File.Copy(selectedFilePath, relativeDestinationFilePath);
 

@@ -14,7 +14,7 @@ namespace PracticeWebApps_Domain.Models
             Description = description;
         }
 
-        public int Rating { get; set; }
-        public string Description { get; set; }
+        public int Rating { get; private set; }
+        public string Description { get; private set; }
     }
 }

@@ -25,13 +25,13 @@ namespace PracticeWebApps_Domain.Models.Products
             StreamedPlatform = new List<string>();
             Reviews = new List<Review>();
         }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public Rating MovieRating { get; set; }
-        public Genre Genre { get; set; }
-        public int Duration { get; set; }
-        public string Picture { get; set; }
-        public List<string> StreamedPlatform { get; set; }
-        public List<Review> Reviews { get; set; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        public Rating MovieRating { get; private set; }
+        public Genre Genre { get; private set; }
+        public int Duration { get; private set; }
+        public string Picture { get; private set; }
+        public List<string> StreamedPlatform { get; private set; }
+        public List<Review> Reviews { get; private set; }
     }
 }

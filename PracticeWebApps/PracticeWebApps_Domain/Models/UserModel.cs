@@ -20,15 +20,15 @@ namespace PracticeWebApps_Domain.Models
             Reviews = new List<Review>();
             WatchList = new List<Product>();
         }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        public bool IsAdmin { get; set; }
-        public string Password { get; set; }
-        public string ConfirmPassword { get; set; }
-        public string Salt { get; set; }
-        public List<Review> Reviews { get; set; }
-        public List<Product> WatchList { get; set; }   
+        public string Name { get; private set; }
+        public string Email { get; private set; }
+        public string Phone { get; private set; }
+        public bool IsAdmin { get; private set; }
+        public string Password { get; private set; }
+        public string ConfirmPassword { get; private set; }
+        public string Salt { get; private set; }
+        public List<Review> Reviews { get; private set; }
+        public List<Product> WatchList { get; private set; }   
 
         public override string ToString()
         {

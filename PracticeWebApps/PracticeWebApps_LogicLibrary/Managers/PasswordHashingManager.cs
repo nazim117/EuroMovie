@@ -22,7 +22,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
             {
                 random.GetNonZeroBytes(salt);
             }
-
+             
             return Convert.ToBase64String(salt);
         }
 

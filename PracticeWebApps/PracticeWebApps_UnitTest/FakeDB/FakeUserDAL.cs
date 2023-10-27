@@ -17,9 +17,9 @@ namespace PracticeWebApps_UnitTest.FakeDB
         {
             users = new List<UserModel>
             {
-                new UserModel("name", "example@gmail.com", "0213456789", false, "New12345", "salt"),
-                new UserModel("name", "example@gmail.com", "0213456789", false, "New12345", "salt"),
-                new UserModel("name", "example@gmail.com", "0213456789", false, "New12345", "salt")
+                new UserModel("name1", "example1@gmail.com", "0213456789", false, "New12345", "salt"),
+                new UserModel("name2", "example2@gmail.com", "0213456789", false, "New12345", "salt"),
+                new UserModel("name3", "example3@gmail.com", "0213456789", false, "New12345", "salt")
             };
         }
         public UserModel[] LoadObjects()

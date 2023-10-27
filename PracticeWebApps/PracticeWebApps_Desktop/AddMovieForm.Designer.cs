@@ -47,7 +47,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = SystemColors.HotTrack;
+            dataGridView1.BackgroundColor = Color.Red;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(38, 32);
             dataGridView1.Name = "dataGridView1";
@@ -73,7 +73,7 @@
             // 
             // txtDuration
             // 
-            txtDuration.Location = new Point(516, 181);
+            txtDuration.Location = new Point(516, 192);
             txtDuration.Name = "txtDuration";
             txtDuration.Size = new Size(319, 27);
             txtDuration.TabIndex = 3;
@@ -117,7 +117,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.BackColor = SystemColors.HotTrack;
+            lblName.BackColor = Color.Red;
             lblName.ForeColor = SystemColors.ButtonFace;
             lblName.Location = new Point(65, 40);
             lblName.Name = "lblName";
@@ -128,7 +128,7 @@
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.BackColor = SystemColors.HotTrack;
+            lblDescription.BackColor = Color.Red;
             lblDescription.ForeColor = SystemColors.ButtonFace;
             lblDescription.Location = new Point(65, 106);
             lblDescription.Name = "lblDescription";
@@ -139,7 +139,7 @@
             // lblMovieRating
             // 
             lblMovieRating.AutoSize = true;
-            lblMovieRating.BackColor = SystemColors.HotTrack;
+            lblMovieRating.BackColor = Color.Red;
             lblMovieRating.ForeColor = SystemColors.ButtonFace;
             lblMovieRating.Location = new Point(516, 40);
             lblMovieRating.Name = "lblMovieRating";
@@ -150,7 +150,7 @@
             // lblGenre
             // 
             lblGenre.AutoSize = true;
-            lblGenre.BackColor = SystemColors.HotTrack;
+            lblGenre.BackColor = Color.Red;
             lblGenre.ForeColor = SystemColors.ButtonFace;
             lblGenre.Location = new Point(516, 104);
             lblGenre.Name = "lblGenre";
@@ -161,9 +161,9 @@
             // lblDuration
             // 
             lblDuration.AutoSize = true;
-            lblDuration.BackColor = SystemColors.HotTrack;
+            lblDuration.BackColor = Color.Red;
             lblDuration.ForeColor = SystemColors.ButtonFace;
-            lblDuration.Location = new Point(516, 158);
+            lblDuration.Location = new Point(516, 169);
             lblDuration.Name = "lblDuration";
             lblDuration.Size = new Size(67, 20);
             lblDuration.TabIndex = 15;
@@ -172,7 +172,7 @@
             // lblPicture
             // 
             lblPicture.AutoSize = true;
-            lblPicture.BackColor = SystemColors.HotTrack;
+            lblPicture.BackColor = Color.Red;
             lblPicture.ForeColor = SystemColors.ButtonFace;
             lblPicture.Location = new Point(510, 222);
             lblPicture.Name = "lblPicture";
