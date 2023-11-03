@@ -16,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeWebApps_UnitTest", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeWebApps_DAL_Library", "PracticeWebApps_DAL_Library\PracticeWebApps_DAL_Library.csproj", "{1F309F65-25A9-4339-8ECB-A6606CF501F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeWebApps_Desktop", "PracticeWebApps_Desktop\PracticeWebApps_Desktop.csproj", "{B2FF41A5-1386-40FE-A850-BD57F3FD3024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeWebApps_Desktop", "PracticeWebApps_Desktop\PracticeWebApps_Desktop.csproj", "{B2FF41A5-1386-40FE-A850-BD57F3FD3024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

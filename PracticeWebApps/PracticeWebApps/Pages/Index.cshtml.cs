@@ -8,23 +8,21 @@ using PracticeWebApps_DAL_Library;
 namespace PracticeWebApps.Pages
 {
     public class IndexModel : PageModel
-	{	
-		[BindProperty(SupportsGet =true)]
-        public string Name { get; set; }
-
-		public List<Movie> Movies = new List<Movie>();
+	{
+		[BindProperty]
+        public string SearchQuery { get; set; }
+        public List<Movie> Movies { get; private set; }
+        public List<Serie> Series { get; private set; }
 		private ProductManager productManager;
 
         public IndexModel()
         {
+			Movies = new List<Movie>();
+			Series = new List<Serie>();
 			productManager = new ProductManager(new ProductDAL());
         }
         public void OnGet()
 		{
-			if (string.IsNullOrWhiteSpace(Name))
-			{
-				Name = "User";
-			}
             string cookieValue = Request.Cookies["MyCookie"];
 
             // Use the cookie value as needed
@@ -36,8 +34,16 @@ namespace PracticeWebApps.Pages
 				{
 					Movies.Add((Movie)movie);
 				}
+				else
+				{
+					Series.Add((Serie)movie);
+				}
 			}
 
         }
+		public IActionResult OnPost()
+		{
+			return RedirectToPage("/Search", new { query = SearchQuery});
+		}
 	}
 }

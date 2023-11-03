@@ -33,5 +33,37 @@ namespace PracticeWebApps_LogicLibrary.Managers
                 throw new MovieException();
             }
         }
+        private delegate int NameComparisonDelegate(Product product, string targetName);
+        public List<Product> BinarySearch(string searchQuery)
+        {
+            List<Product> result = new List<Product>();
+            List<Product> products = LoadObjects().ToList();
+            int left = 0;
+            int right = products.Count - 1;
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+                Product midProduct = products[mid];
+
+                NameComparisonDelegate comparer = (midProduct, searchQuery) => string.Compare(midProduct.Name,searchQuery, StringComparison.Ordinal);
+                
+                int comparison = comparer(midProduct, searchQuery);
+
+                if (comparison == 0)
+                {
+                    result.Add(midProduct);
+                }
+                if (comparison < 0)
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
+                }
+            }
+            return result;
+        }
+
     }
 }

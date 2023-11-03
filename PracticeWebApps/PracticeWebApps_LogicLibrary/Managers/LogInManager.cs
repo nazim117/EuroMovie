@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {
-    public class LogInManager : ILogInRepository<UserModel>
+    public class LogInManager
     {
         private ILogInRepository<UserModel> logInRepository;
 

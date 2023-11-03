@@ -14,9 +14,9 @@
 
             <a class="navbar-brand" href="/Index">EuroMovie</a>
 
-            <form class="d-flex custom-search-form" role="search">
-                <input class="form-control me-2 custom-search-input" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn custom-search-button" type="submit">Search</button>
+            <form class="d-flex custom-search-form" role="search" method="post">
+                <input id="searchQuery" name="searchQuery" class="form-control me-2 custom-search-input" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn custom-search-button" type="submit" name="handler">Search</button>
             </form>
             @if (User.Identity.IsAuthenticated)
             {

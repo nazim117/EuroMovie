@@ -4,7 +4,7 @@ using PracticeWebApps_Domain.Models;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {
-    public class UserManager : IOperations<UserModel>
+    public class UserManager
     {
         private IOperations<UserModel> operationsRepository;
 
