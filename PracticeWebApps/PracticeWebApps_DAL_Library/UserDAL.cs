@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_DAL_Library
 {
-    public class UserDAL : Connection, IOperations<UserModel>
+    public class UserDAL : Connection, IUserOperations<UserModel>
     {
         public UserModel[] LoadObjects()
         {
@@ -59,10 +59,8 @@ namespace PracticeWebApps_DAL_Library
                                 return new UserModel(
                                     reader.GetString(1), 
                                     reader.GetString(2), 
-                                    reader.GetString(3), 
-                                    reader.GetBoolean(4), 
-                                    reader.GetString(5), 
-                                    reader.GetString(6));
+                                    reader.GetString(3),
+                                    reader.GetString(5));
                             }
                         }
                     }
@@ -92,23 +90,66 @@ namespace PracticeWebApps_DAL_Library
             return null;
         }
 
-        public bool CreateObject(UserModel user)
+        public bool CreateObject(UserModel user, string salt)
         {
             try
             {
                 using (GetSQLConnection())
                 {
-                    string sql = $"INSERT INTO [User](Name, Email, Phone, IsAdmin, Password, Salt) " +
-                        $"values(@Name, @Email, @Phone, @IsAdmin, @Password, @Salt)";
+                    string sql = $"INSERT INTO [User](Name, Email, Phone, Password, Salt) " +
+                        $"values(@Name, @Email, @Phone, @Password, @Salt)";
 
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
                         command.Parameters.AddWithValue("@Name", user.Name);
                         command.Parameters.AddWithValue("@Email", user.Email);
                         command.Parameters.AddWithValue("@Phone", user.Phone);
-                        command.Parameters.AddWithValue("@IsAdmin", user.IsAdmin);
                         command.Parameters.AddWithValue("@Password", user.Password);
-                        command.Parameters.AddWithValue("@Salt", user.Salt);
+                        command.Parameters.AddWithValue("@Salt", salt);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                return true;
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. :" + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. : " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete, and the timeout period is exceeded.  " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        public bool EditObject(UserModel user, string previousEmail)
+        {
+            try
+            {
+                using (GetSQLConnection())
+                {
+                    string sql = $"UPDATE [User] " +
+                        $"SET Name = @Name, Email = @Email, Phone = @Phone " +
+                        $"WHERE Email = @previousEmail";
+
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@Name", user.Name);
+                        command.Parameters.AddWithValue("@Email", user.Email);
+                        command.Parameters.AddWithValue("@Phone", user.Phone);
+                        command.Parameters.AddWithValue("@previousEmail", previousEmail);
 
                         command.ExecuteNonQuery();
                     }
@@ -119,6 +160,45 @@ namespace PracticeWebApps_DAL_Library
             {
                 throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
 
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. :" + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. : " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete, and the timeout period is exceeded.  " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        public bool DeleteObject(UserModel user)
+        {
+            try
+            {
+                using (GetSQLConnection())
+                {
+                    string sql = $"DELETE FROM [User] WHERE Email = @email";
+
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@email", user.Email);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                return true;
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
             }
             catch (InvalidOperationException ex)
             {

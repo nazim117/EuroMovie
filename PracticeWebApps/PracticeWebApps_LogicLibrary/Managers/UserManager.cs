@@ -6,17 +6,17 @@ namespace PracticeWebApps_LogicLibrary.Managers
 {
     public class UserManager
     {
-        private IOperations<UserModel> operationsRepository;
+        private IUserOperations<UserModel> operationsRepository;
 
-        public UserManager(IOperations<UserModel> operationsRepository)
+        public UserManager(IUserOperations<UserModel> operationsRepository)
         {
             this.operationsRepository = operationsRepository;
         }
-        public bool CreateObject(UserModel user)
+        public bool CreateObject(UserModel user, string salt)
         {
             if (!LoadObjects().Any(u => u.Email.Equals(user.Email)))
             {
-                return operationsRepository.CreateObject(user);
+                return operationsRepository.CreateObject(user, salt);
             }
             else
             {
@@ -30,6 +30,14 @@ namespace PracticeWebApps_LogicLibrary.Managers
         public UserModel GetObject(string stringForSearch)
         {
             return operationsRepository.GetObject(stringForSearch);
+        }
+        public bool EditObject(UserModel user, string previousEmail) 
+        {
+            return operationsRepository.EditObject(user, previousEmail);
+        }
+        public bool DeleteObject(UserModel user)
+        {
+            return operationsRepository.DeleteObject(user);
         }
 
     }

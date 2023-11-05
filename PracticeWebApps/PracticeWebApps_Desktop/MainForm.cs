@@ -20,25 +20,33 @@ namespace PracticeWebApps_Desktop
         private void btnAddMovie_Click(object sender, EventArgs e)
         {
             AddMovieForm addMovieForm = new AddMovieForm();
-            addMovieForm.Show();
+            this.Hide();
+            addMovieForm.ShowDialog();
+            this.Show();
         }
 
         private void btnCheckMovie_Click(object sender, EventArgs e)
         {
             CheckMovieForm checkMovieForm = new CheckMovieForm();
-            checkMovieForm.Show();
+            this.Hide();
+            checkMovieForm.ShowDialog();
+            this.Show();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             AddUserForm addUserForm = new AddUserForm();
-            addUserForm.Show();
+            this.Hide();
+            addUserForm.ShowDialog();
+            this.Show();
         }
 
         private void btnCheckUser_Click(object sender, EventArgs e)
         {
             CheckUserForm checkUserForm = new CheckUserForm();
-            checkUserForm.Show();
+            this.Hide();
+            checkUserForm.ShowDialog();
+            this.Show();
         }
     }
 }

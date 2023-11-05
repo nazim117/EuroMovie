@@ -42,7 +42,7 @@ namespace PracticeWebApps.Pages
             string salt = passwordHashing.GetSalt();
             string passHash = passwordHashing.GetHash(CreateAccountDTO.Password, salt);
 
-            userManager.CreateObject(new UserModel(CreateAccountDTO.Name, CreateAccountDTO.Email, CreateAccountDTO.Phone, false, passHash, salt));
+            userManager.CreateObject(new UserModel(CreateAccountDTO.Name, CreateAccountDTO.Email, CreateAccountDTO.Phone, passHash), salt);
 
             return RedirectToPage("/LogIn");
         }

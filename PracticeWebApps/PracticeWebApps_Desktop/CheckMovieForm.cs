@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PracticeWebApps_DAL_Library;
+using PracticeWebApps_LogicLibrary.Managers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace PracticeWebApps_Desktop
 {
     public partial class CheckMovieForm : Form
     {
+        ProductManager productManager;
         public CheckMovieForm()
         {
             InitializeComponent();
+            productManager = new ProductManager(new ProductDAL());
+            lbMovies.DataSource = productManager.LoadObjects();
         }
     }
 }

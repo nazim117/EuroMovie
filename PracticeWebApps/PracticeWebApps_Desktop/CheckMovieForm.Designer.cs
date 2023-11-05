@@ -28,7 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridView1 = new DataGridView();
+            lbMovies = new ListBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.Red;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(56, 45);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(689, 360);
+            dataGridView1.TabIndex = 2;
+            // 
+            // lbMovies
+            // 
+            lbMovies.FormattingEnabled = true;
+            lbMovies.ItemHeight = 20;
+            lbMovies.Location = new Point(105, 93);
+            lbMovies.Name = "lbMovies";
+            lbMovies.Size = new Size(591, 264);
+            lbMovies.TabIndex = 3;
             // 
             // CheckMovieForm
             // 
@@ -36,11 +59,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbMovies);
+            Controls.Add(dataGridView1);
             Name = "CheckMovieForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CheckMovieForm";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private ListBox lbMovies;
     }
 }

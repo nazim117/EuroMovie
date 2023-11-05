@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbUsers = new ListBox();
             dataGridView1 = new DataGridView();
+            lbUsers = new ListBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // lbUsers
-            // 
-            lbUsers.FormattingEnabled = true;
-            lbUsers.ItemHeight = 20;
-            lbUsers.Location = new Point(97, 76);
-            lbUsers.Name = "lbUsers";
-            lbUsers.Size = new Size(591, 264);
-            lbUsers.TabIndex = 0;
-            lbUsers.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // dataGridView1
             // 
@@ -54,6 +44,16 @@
             dataGridView1.Size = new Size(689, 360);
             dataGridView1.TabIndex = 1;
             // 
+            // lbUsers
+            // 
+            lbUsers.FormattingEnabled = true;
+            lbUsers.ItemHeight = 20;
+            lbUsers.Location = new Point(83, 53);
+            lbUsers.Name = "lbUsers";
+            lbUsers.Size = new Size(621, 324);
+            lbUsers.TabIndex = 2;
+            lbUsers.SelectedIndexChanged += lbUsers_SelectedIndexChanged;
+            // 
             // CheckUserForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -63,14 +63,14 @@
             Controls.Add(lbUsers);
             Controls.Add(dataGridView1);
             Name = "CheckUserForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CheckUserForm";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private ListBox lbUsers;
         private DataGridView dataGridView1;
+        private ListBox lbUsers;
     }
 }

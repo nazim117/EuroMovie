@@ -65,5 +65,16 @@ namespace PracticeWebApps_LogicLibrary.Managers
             return result;
         }
 
+        public bool EditObject(Product product)
+        {
+            if (!LoadObjects().Any(u => u.Name.Equals(product.Name)))
+            {
+                return operationRepository.EditObject(product);
+            }
+            else
+            {
+                throw new MovieException();
+            }
+        }
     }
 }

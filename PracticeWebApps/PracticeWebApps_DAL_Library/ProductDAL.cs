@@ -213,5 +213,10 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
+
+        public bool EditObject(Product t)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

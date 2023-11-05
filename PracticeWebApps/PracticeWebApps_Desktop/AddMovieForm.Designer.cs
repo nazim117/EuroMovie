@@ -201,6 +201,7 @@
             Controls.Add(txtName);
             Controls.Add(dataGridView1);
             Name = "AddMovieForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Movie";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -41,21 +43,46 @@ namespace PracticeWebApps_Desktop
 
             try
             {
-                userManager.CreateObject(
+                if (userManager.CreateObject(
                     new UserModel(
                         txtName.Text,
                         txtEmail.Text,
                         txtPhone.Text,
-                        false,
-                        passHash,
-                        salt));
+                        passHash), salt))
+                {
+                    MessageBox.Show("Account created successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Error occurred");
+                }
 
-                MessageBox.Show("Account created successfully");
+            }
+            catch (SqlNullValueException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (TimeoutException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             catch (UserException ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            this.Close();
         }
     }
 }
