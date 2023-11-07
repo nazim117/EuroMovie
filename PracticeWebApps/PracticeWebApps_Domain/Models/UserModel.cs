@@ -36,7 +36,7 @@ namespace PracticeWebApps_Domain.Models
         /*public string ConfirmPassword { get; private set; }
         public string Salt { get; private set; }*/
         public List<Review> Reviews { get; private set; }
-        public List<Product> WatchList { get; private set; }   
+        public List<Product> WatchList { get; private set; }
 
         public override string ToString()
         {

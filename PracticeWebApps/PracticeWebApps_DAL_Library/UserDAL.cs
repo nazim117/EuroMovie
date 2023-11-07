@@ -68,7 +68,6 @@ namespace PracticeWebApps_DAL_Library
                 catch (SqlNullValueException ex)
                 {
                     throw new SqlNullValueException("Error, reading null values. :" + ex.ToString());
-
                 }
                 catch (InvalidOperationException ex)
                 {
@@ -159,7 +158,6 @@ namespace PracticeWebApps_DAL_Library
             catch (SqlNullValueException ex)
             {
                 throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
-
             }
             catch (InvalidOperationException ex)
             {

@@ -17,7 +17,7 @@ namespace PracticeWebApps.Pages
         }
         public IActionResult OnGet(string query)
         {
-            SearchResults = _productManager.BinarySearch(query);
+            SearchResults = _productManager.Search(query);
 
             return Page();
         }

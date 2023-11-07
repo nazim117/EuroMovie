@@ -2,8 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PracticeWebApps.DTOs;
 using PracticeWebApps_DAL_Library;
+using PracticeWebApps_Domain.Exceptions;
 using PracticeWebApps_Domain.Models;
 using PracticeWebApps_LogicLibrary.Managers;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
 
 namespace PracticeWebApps.Pages
 {
@@ -42,7 +45,22 @@ namespace PracticeWebApps.Pages
             string salt = passwordHashing.GetSalt();
             string passHash = passwordHashing.GetHash(CreateAccountDTO.Password, salt);
 
-            userManager.CreateObject(new UserModel(CreateAccountDTO.Name, CreateAccountDTO.Email, CreateAccountDTO.Phone, passHash), salt);
+            try
+            {
+                userManager.CreateObject(
+                    new UserModel(CreateAccountDTO.Name, CreateAccountDTO.Email, CreateAccountDTO.Phone, passHash), salt);
+            }
+            catch(UserException ex){ _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+            catch (SqlNullValueException ex){ _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+            catch (InvalidOperationException ex){ _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+            catch (SqlException ex){ _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+            catch (TimeoutException ex){ _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+            catch (Exception ex){ _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
 
             return RedirectToPage("/LogIn");
         }

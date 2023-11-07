@@ -6,6 +6,9 @@ using System.Security.Claims;
 using PracticeWebApps.DTOs;
 using PracticeWebApps_LogicLibrary.Managers;
 using PracticeWebApps_DAL_Library;
+using PracticeWebApps_Domain.Exceptions;
+using System.Data.SqlTypes;
+using System.Data.SqlClient;
 
 namespace PracticeWebApps.Pages
 {
@@ -36,26 +39,40 @@ namespace PracticeWebApps.Pages
                 return Page();
             }
             LogInManager logInManager = new LogInManager(new LogInDAL());
-            string salt = logInManager.GetSalt(LogIn.UserName);
-            string hashedPass = logInManager.GetHashedPassword(LogIn.UserName);
-
-            PasswordHashingManager passwordHashing = new PasswordHashingManager();
-
-            if (passwordHashing.ValidatePassword(LogIn.Password, salt, hashedPass))
+            try
             {
-                //HttpContext.Session.SetString("ID", abbreviation);
+                string salt = logInManager.GetSalt(LogIn.UserName);
+                string hashedPass = logInManager.GetHashedPassword(LogIn.UserName);
+                PasswordHashingManager passwordHashing = new PasswordHashingManager();
 
-                List<Claim> claims = new List<Claim>();
-                claims.Add(new Claim(ClaimTypes.Name, LogIn.UserName));
-                claims.Add(new Claim("id", "1"));
+                if (passwordHashing.ValidatePassword(LogIn.Password, salt, hashedPass))
+                {
+                    //HttpContext.Session.SetString("ID", abbreviation);
 
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity));
+                    List<Claim> claims = new List<Claim>();
+                    claims.Add(new Claim(ClaimTypes.Name, LogIn.UserName));
+                    claims.Add(new Claim("id", "1"));
 
-                return Redirect("/Index");
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity));
+
+                    return Redirect("/Index");
+                }
+
+                ErrorMessage = "Login failed. Please check your username and password.";
             }
+            catch (SqlNullValueException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
 
-            ErrorMessage = "Login failed. Please check your username and password.";
+            catch (InvalidOperationException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+            catch (SqlException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+            catch (TimeoutException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+            catch (Exception ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+
+
             return Page();
 
         }

@@ -5,7 +5,7 @@ using PracticeWebApps_LogicLibrary.Interfaces;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {
-    public class ProductManager : IOperations<Product>
+    public class ProductManager
     {
         private IOperations<Product> operationRepository;
 
@@ -33,41 +33,71 @@ namespace PracticeWebApps_LogicLibrary.Managers
                 throw new MovieException();
             }
         }
-        private delegate int NameComparisonDelegate(Product product, string targetName);
-        public List<Product> BinarySearch(string searchQuery)
-        {
-            List<Product> result = new List<Product>();
-            List<Product> products = LoadObjects().ToList();
-            int left = 0;
-            int right = products.Count - 1;
-            while (left <= right)
-            {
-                int mid = left + (right - left) / 2;
-                Product midProduct = products[mid];
-
-                NameComparisonDelegate comparer = (midProduct, searchQuery) => string.Compare(midProduct.Name,searchQuery, StringComparison.Ordinal);
-                
-                int comparison = comparer(midProduct, searchQuery);
-
-                if (comparison == 0)
-                {
-                    result.Add(midProduct);
-                }
-                if (comparison < 0)
-                {
-                    left = mid + 1;
-                }
-                else
-                {
-                    right = mid - 1;
-                }
-            }
-            return result;
-        }
-
         public bool EditObject(Product product)
         {
             return operationRepository.EditObject(product);
         }
-    }
+        public List<Product> MergeSort(List<Product> products)
+        {
+            if (products.Count <= 1)
+            {
+                return products;
+            }
+
+            int middle = products.Count / 2;
+
+            List<Product> left = new List<Product>(products.GetRange(0, middle));
+            List<Product> right = new List<Product>(products.GetRange(middle, products.Count - middle));
+
+            left = MergeSort(left);
+            right = MergeSort(right);
+
+            int i = 0, j = 0, k = 0;
+
+            while (i < left.Count && j < right.Count)
+            {
+                if (string.Compare(left[i].Name, right[i].Name, StringComparison.OrdinalIgnoreCase) < 0)
+                {
+                    products[k] = left[i];
+                    i++;
+                }
+                else
+                {
+                    products[k] = right[j];
+                    j++;
+                }
+                k++;
+            }
+            while (i < left.Count)
+            {
+                products[k] = left[i];
+                i++;
+                k++;
+            }
+            while (j < right.Count)
+            {
+                products[k] = right[j];
+                j++;
+                k++;
+            }
+            return products;
+
+        }
+        public List<Product> Search(string searchQuery)
+        {
+            List<Product> result = new List<Product>();
+            List<Product> products = LoadObjects().ToList();
+            products = MergeSort(products);
+
+            foreach (var product in products)
+            {
+                if (product.Name.StartsWith(searchQuery,StringComparison.OrdinalIgnoreCase))
+                {
+                    result.Add(product);
+                }
+            }
+            return result;
+        }
+        
+    } 
 }

@@ -33,7 +33,12 @@ namespace PracticeWebApps_UnitTest.FakeDB
         }
         public bool EditObject(UserModel user, string previousEmail)
         {
-
+            int index = users.FindIndex(u=>u.Email == previousEmail);
+            if (index == -1)
+            {
+                return false;
+            }
+            users[index] = user;
             return true;
         }
 

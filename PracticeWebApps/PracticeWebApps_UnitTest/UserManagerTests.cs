@@ -47,9 +47,17 @@ namespace PracticeWebApps_UnitTest
             
             Assert.IsNotNull(user);
         }
+        [TestMethod]
+        public void EditUser_ValidUser_ReturnsTrue()
+        {
+            UserModel newUser = new UserModel("newName", "newEmail@gmail.com", "0683215693");
+
+            bool edited = userManager.EditObject(newUser, "example3@gmail.com");
+
+            Assert.IsTrue(edited);
+        }
 
         // link between review and product
-        // update user
         // get user review
         // delete user review
         // update user review
