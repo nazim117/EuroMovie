@@ -214,7 +214,8 @@ namespace PracticeWebApps_DAL_Library
             }
         }
 
-        public bool EditObject(Product t)
+//TODO: IMPLEMENT
+        public bool EditObject(Product product, string previousName)
         {
             throw new NotImplementedException();
         }

@@ -33,5 +33,10 @@ namespace PracticeWebApps_Domain.Models.Products
         public string Picture { get; private set; }
         public List<string> StreamedPlatform { get; private set; }
         public List<Review> Reviews { get; private set; }
+
+        public override string ToString()
+        {
+            return $"{Name} | Genre: {Genre} | Rating: {MovieRating} | Duration: {Duration}";
+        }
     }
 }

@@ -33,9 +33,9 @@ namespace PracticeWebApps_LogicLibrary.Managers
                 throw new MovieException();
             }
         }
-        public bool EditObject(Product product)
+        public bool EditObject(Product product, string previousName)
         {
-            return operationRepository.EditObject(product);
+            return operationRepository.EditObject(product, previousName);
         }
         public List<Product> MergeSort(List<Product> products)
         {

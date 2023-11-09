@@ -17,7 +17,7 @@ namespace PracticeWebApps_UnitTest
         }
 
         [TestMethod]
-        public void LoadUsers_ReturnsUserArray()
+        public void LoadUsers_ReturnsUserArrayAndNotNull()
         {
             UserModel[] users = userManager.LoadObjects();
 
@@ -41,7 +41,7 @@ namespace PracticeWebApps_UnitTest
             Assert.IsTrue(deleted);
         }
         [TestMethod]
-        public void GetUser_ValidUser_ReturnsTrue()
+        public void GetUser_ValidUser_ReturnsNotNull()
         {
             UserModel user = userManager.GetObject("example3@gmail.com");
             
