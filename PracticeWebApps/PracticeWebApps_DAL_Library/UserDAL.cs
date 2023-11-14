@@ -40,17 +40,17 @@ namespace PracticeWebApps_DAL_Library
             }
             return users.ToArray();
         }
-        public UserModel GetObject(string emailToFind)
+        public UserModel GetObject(string name)
         {
 
             using (GetSQLConnection())
             {
                 try
                 {
-                    string sql = $"SELECT * FROM [User] WHERE name = @emailToFind";
+                    string sql = $"SELECT * FROM [User] WHERE name = @name";
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
-                        command.Parameters.AddWithValue("@emailToFind", emailToFind);
+                        command.Parameters.AddWithValue("@name", name);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {

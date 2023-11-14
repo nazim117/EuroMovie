@@ -12,6 +12,8 @@
         <p class="card-text">Description: @Model.Movie.Description</p>
         <p class="card-rating">Rating: @Model.Movie.MovieRating</p>
         <p class="card-text">Genre: @Model.Movie.Genre</p>
-        <a href="#" class="btn btn-primary">Rate Movie</a>
+        <a href="../Pages/AddReview.cshtml" class="btn btn-primary">Rate Movie</a>
+        <a asp-page="AddReview" asp-route-name="@Model.Movie.Name" class="movie-list-item-button">RateMovie</a>
+
     </div>
 </div>

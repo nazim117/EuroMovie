@@ -22,7 +22,7 @@
             {
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-page="/UserProfile">Hello, @User.Identity.Name</a>
+                        <a class="nav-link" asp-area="" asp-route-name="@User.Identity.Name" asp-page="/UserProfile">Hello, @User.Identity.Name</a>
                     </li>
                     <li>
                         <a class="nav-link" asp-area="" asp-page="/LogOut">Log Out</a>

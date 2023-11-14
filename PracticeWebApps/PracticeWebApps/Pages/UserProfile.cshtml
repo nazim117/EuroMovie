@@ -1,5 +1,55 @@
 ﻿@page
 @model PracticeWebApps.Pages.UserProfileModel
 @{
-    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="/css/Product.css" asp-append-version="true" />
+
+<h1>@Model.User.Name's Profile</h1>
+
+<form method="post" asp-page-handler="OnPost">
+    <div>
+        <lable for="Name">Name:</lable>
+        <input type="text" id="User_Name" name="name" value="@Model.User.Name" asp-for="User.Name"/>
+    </div>
+    <div>
+        <lable for="Email">Email:</lable>
+        <input type="text" id="User_Email" name="email" value="@Model.User.Email" asp-for="User.Email" />
+    </div>
+    <div>
+        <lable for="Phone">Phone:</lable>
+        <input type="text" id="User_Phone" name="phone" value="@Model.User.Phone" asp-for="User.Phone" />
+    </div>
+
+    <input type="hidden" name="previousEmail" value="@Model.User.Email"/>
+    <button type="submit">Save Changes</button>
+</form>
+
+@if (Model.User.Reviews.Count > 0)
+{
+    <h2>Reviews:</h2>
+    <ul>
+        @foreach(var review in Model.User.Reviews)
+        {
+            <li>@review.Rating</li>
+            <li>@review.Description</li>
+        }
+    </ul>
+}
+else
+{
+    <h2>No Reviews</h2>
+}
+
+@if (Model.User.WatchList.Count > 0)
+{
+    <h2>Watchlist:</h2>
+    <ul>
+        @foreach(var product in Model.User.WatchList)
+        {
+            <li>@product.Name</li>
+        }
+    </ul>
+}
+else{
+    <h2>No Movies Added To Watchlist</h2>
 }

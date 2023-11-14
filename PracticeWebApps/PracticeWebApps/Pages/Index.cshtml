@@ -22,6 +22,7 @@
             @foreach (var movie in Model.Movies.OrderBy(x=>x.Name))
             {
                 <div class="movie-list-item">
+                    
                     <img class="movie-list-item-img" src="@movie.Picture" alt="">
                     <span class="movie-list-item-title">@movie.Name</span>
                     <p class="movie-list-item-desc">@movie.Description</p>

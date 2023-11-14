@@ -76,14 +76,15 @@ namespace PracticeWebApps_Desktop
                 string relativeFileLocation = Path.GetRelativePath(currentDirectory, selectedFilePath);
                 MessageBox.Show("File selected successfully");
 
-                string destinationFolderPath = Path.GetRelativePath(currentDirectory, "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\Pages\\Shared\\images\\");
+                string destinationFolderPath = Path.GetRelativePath(currentDirectory, 
+                    "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\Pages\\Shared\\images\\");
 
                 try
                 {
                     string fileName = Path.GetFileName(relativeFileLocation);
                     relativeDestinationFilePath = Path.Combine(destinationFolderPath, fileName);
 
-                    File.Copy(selectedFilePath, relativeDestinationFilePath);
+                    File.Copy(selectedFilePath, relativeDestinationFilePath, true);
 
                     MessageBox.Show($"File copied successfully to: {relativeDestinationFilePath}");
                 }

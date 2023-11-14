@@ -18,6 +18,7 @@ namespace PracticeWebApps.Pages
         public IActionResult OnPost()
         {
             HttpContext.SignOutAsync().Wait(); // Wait for the task to complete
+            Response.Cookies.Delete("MyCookie");
             //HttpContext.Session.Clear();
             return RedirectToPage("/Index"); // Redirect after logout
         }

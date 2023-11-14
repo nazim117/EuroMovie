@@ -182,7 +182,7 @@ namespace PracticeWebApps_DAL_Library
                 using (GetSQLConnection())
                 {
                     string sql = $"INSERT INTO [Movie](ProductId) " +
-                        $"values((SELECT MAX(Id)) From [Product])";
+                        $"VALUES((SELECT MAX(Id)) FROM [Product])";
 
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
