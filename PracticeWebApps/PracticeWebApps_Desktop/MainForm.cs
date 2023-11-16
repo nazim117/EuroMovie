@@ -48,5 +48,21 @@ namespace PracticeWebApps_Desktop
             checkUserForm.ShowDialog();
             this.Show();
         }
+
+        private void btnAddSeries_Click(object sender, EventArgs e)
+        {
+            AddSeriesForm addSeriesForm = new AddSeriesForm();
+            this.Hide();
+            addSeriesForm.ShowDialog();
+            this.Show();
+        }
+
+        private void btnCheckSeries_Click(object sender, EventArgs e)
+        {
+            CheckSeriesForm checkSeriesForm = new CheckSeriesForm();
+            this.Hide();
+            checkSeriesForm.ShowDialog();
+            this.Show();
+        }
     }
 }

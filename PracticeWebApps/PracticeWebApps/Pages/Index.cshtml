@@ -19,7 +19,7 @@
     <h1 class="movie-list-title">ACTION</h1>
     <div class="movie-list-wrapper">
         <div class="movie-list">
-            @foreach (var movie in Model.Movies.OrderBy(x=>x.Name))
+            @foreach (var movie in Model.Movies.OrderBy(x=>x.Name).Take(5))
             {
                 <div class="movie-list-item">
                     

@@ -33,6 +33,8 @@
             btnAddUser = new Button();
             btnCheckUser = new Button();
             dataGridView1 = new DataGridView();
+            btnAddSeries = new Button();
+            btnCheckSeries = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             // 
             // btnAddUser
             // 
-            btnAddUser.Location = new Point(104, 186);
+            btnAddUser.Location = new Point(104, 308);
             btnAddUser.Name = "btnAddUser";
             btnAddUser.Size = new Size(158, 89);
             btnAddUser.TabIndex = 2;
@@ -68,7 +70,7 @@
             // 
             // btnCheckUser
             // 
-            btnCheckUser.Location = new Point(334, 186);
+            btnCheckUser.Location = new Point(334, 308);
             btnCheckUser.Name = "btnCheckUser";
             btnCheckUser.Size = new Size(158, 89);
             btnCheckUser.TabIndex = 3;
@@ -84,15 +86,37 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(459, 277);
+            dataGridView1.Size = new Size(459, 391);
             dataGridView1.TabIndex = 4;
+            // 
+            // btnAddSeries
+            // 
+            btnAddSeries.Location = new Point(104, 173);
+            btnAddSeries.Name = "btnAddSeries";
+            btnAddSeries.Size = new Size(158, 89);
+            btnAddSeries.TabIndex = 5;
+            btnAddSeries.Text = "Add Series";
+            btnAddSeries.UseVisualStyleBackColor = true;
+            btnAddSeries.Click += btnAddSeries_Click;
+            // 
+            // btnCheckSeries
+            // 
+            btnCheckSeries.Location = new Point(334, 173);
+            btnCheckSeries.Name = "btnCheckSeries";
+            btnCheckSeries.Size = new Size(158, 89);
+            btnCheckSeries.TabIndex = 6;
+            btnCheckSeries.Text = "Check Series";
+            btnCheckSeries.UseVisualStyleBackColor = true;
+            btnCheckSeries.Click += btnCheckSeries_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(606, 356);
+            ClientSize = new Size(606, 490);
+            Controls.Add(btnCheckSeries);
+            Controls.Add(btnAddSeries);
             Controls.Add(btnCheckUser);
             Controls.Add(btnAddUser);
             Controls.Add(btnCheckMovie);
@@ -112,5 +136,7 @@
         private Button btnAddUser;
         private Button btnCheckUser;
         private DataGridView dataGridView1;
+        private Button btnAddSeries;
+        private Button btnCheckSeries;
     }
 }

@@ -8,12 +8,12 @@ namespace PracticeWebApps.Pages
 {
     public class SearchModel : PageModel
     {
-        public List<Product> SearchResults { get; private set; }
+        public HashSet<Product> SearchResults { get; private set; }
         private ProductManager _productManager;
         public SearchModel()
         {
             _productManager = new ProductManager(new ProductDAL());
-            SearchResults = new List<Product>();
+            SearchResults = new HashSet<Product>();
         }
         public IActionResult OnGet(string query)
         {

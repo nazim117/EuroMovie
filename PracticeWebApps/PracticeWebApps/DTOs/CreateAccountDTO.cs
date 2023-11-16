@@ -5,6 +5,16 @@ namespace PracticeWebApps.DTOs
 {
     public class CreateAccountDTO
     {
+        [Required,
+            StringLength
+            (
+            maximumLength:15, 
+            MinimumLength=3, 
+            ErrorMessage = "Name should be longer than 2 characters"
+            )
+        ]
+        [RegularExpression(@"^[A-Za-z]+(?: [A-Za-z]+)?$", 
+            ErrorMessage ="Invalid Name")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Email required")]
         [RegularExpression(@"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-]+)(\.[a-zA-Z]{2,5}){1,2}$",

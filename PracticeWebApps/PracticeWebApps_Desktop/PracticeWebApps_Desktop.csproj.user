@@ -10,6 +10,12 @@
     <Compile Update="CheckMovieForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AddSeriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CheckSeriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CheckUserForm.cs">
       <SubType>Form</SubType>
     </Compile>

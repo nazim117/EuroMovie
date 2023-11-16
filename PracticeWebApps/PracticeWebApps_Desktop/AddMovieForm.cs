@@ -71,26 +71,19 @@ namespace PracticeWebApps_Desktop
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string selectedFilePath = openFileDialog.FileName;
-                string currentDirectory = Environment.CurrentDirectory;
-                string relativeFileLocation = Path.GetRelativePath(currentDirectory, selectedFilePath);
-                MessageBox.Show("File selected successfully");
-
-                string destinationFolderPath = Path.GetRelativePath(currentDirectory, 
-                    "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\Pages\\Shared\\images\\");
-
                 try
                 {
-                    string fileName = Path.GetFileName(relativeFileLocation);
-                    relativeDestinationFilePath = Path.Combine(destinationFolderPath, fileName);
+                    FileManager fileManager = new FileManager();
+                    relativeDestinationFilePath = fileManager.SaveFilePath(openFileDialog.FileName);
 
-                    File.Copy(selectedFilePath, relativeDestinationFilePath, true);
+                    pbMovie.Image = Image.FromFile(relativeDestinationFilePath);
+                    pbMovie.SizeMode = PictureBoxSizeMode.StretchImage;
 
-                    MessageBox.Show($"File copied successfully to: {relativeDestinationFilePath}");
+                    MessageBox.Show("File selected successfully");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occured: {ex.Message}");
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

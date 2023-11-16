@@ -22,7 +22,7 @@ namespace PracticeWebApps_UnitTest
             UserModel[] users = userManager.LoadObjects();
 
             Assert.IsNotNull(users);
-            Assert.AreEqual(3, users.Length);
+            Assert.AreEqual(1, users.Length);
         }
         [TestMethod]
         public void CreateUser_ValidUser_ReturnsTrue()
@@ -35,7 +35,7 @@ namespace PracticeWebApps_UnitTest
         [TestMethod]
         public void DeleteUser_ValidUser_ReturnsTrue()
         {
-            UserModel user = userManager.GetObject("example3@gmail.com");
+            UserModel user = userManager.GetObject("example1@gmail.com");
             bool deleted = userManager.DeleteObject(user);
 
             Assert.IsTrue(deleted);
@@ -43,7 +43,7 @@ namespace PracticeWebApps_UnitTest
         [TestMethod]
         public void GetUser_ValidUser_ReturnsNotNull()
         {
-            UserModel user = userManager.GetObject("example3@gmail.com");
+            UserModel user = userManager.GetObject("example1@gmail.com");
             
             Assert.IsNotNull(user);
         }

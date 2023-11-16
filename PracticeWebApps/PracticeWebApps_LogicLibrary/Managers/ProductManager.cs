@@ -1,5 +1,4 @@
 ﻿using PracticeWebApps_Domain.Exceptions;
-using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
 
@@ -37,7 +36,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationRepository.EditObject(product, previousName);
         }
-        public List<Product> MergeSort(List<Product> products)
+        private List<Product> MergeSort(List<Product> products)
         {
             if (products.Count <= 1)
             {
@@ -83,17 +82,16 @@ namespace PracticeWebApps_LogicLibrary.Managers
             return products;
 
         }
-        public List<Product> Search(string searchQuery)
+        public HashSet<Product> Search(string searchQuery)
         {
-            List<Product> result = new List<Product>();
-            List<Product> products = LoadObjects().ToList();
-            products = MergeSort(products);
+            HashSet<Product> result = new HashSet<Product>();
+            result = MergeSort(LoadObjects().ToList()).ToHashSet();
 
-            foreach (var product in products)
+            foreach (var product in result)
             {
-                if (product.Name.StartsWith(searchQuery,StringComparison.OrdinalIgnoreCase))
+                if (!product.Name.StartsWith(searchQuery,StringComparison.OrdinalIgnoreCase))
                 {
-                    result.Add(product);
+                    result.Remove(product);
                 }
             }
             return result;

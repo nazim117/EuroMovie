@@ -42,7 +42,9 @@
             lblGenre = new Label();
             lblDuration = new Label();
             lblPicture = new Label();
+            pbMovie = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbMovie).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -53,7 +55,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(858, 348);
+            dataGridView1.Size = new Size(1146, 348);
             dataGridView1.TabIndex = 0;
             // 
             // txtName
@@ -180,12 +182,22 @@
             lblPicture.TabIndex = 16;
             lblPicture.Text = "Picture";
             // 
+            // pbMovie
+            // 
+            pbMovie.BackColor = Color.Red;
+            pbMovie.Location = new Point(889, 62);
+            pbMovie.Name = "pbMovie";
+            pbMovie.Size = new Size(253, 283);
+            pbMovie.TabIndex = 17;
+            pbMovie.TabStop = false;
+            // 
             // AddMovieForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(941, 416);
+            ClientSize = new Size(1246, 416);
+            Controls.Add(pbMovie);
             Controls.Add(lblPicture);
             Controls.Add(lblDuration);
             Controls.Add(lblGenre);
@@ -204,6 +216,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Movie";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbMovie).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -224,5 +237,6 @@
         private Label lblGenre;
         private Label lblDuration;
         private Label lblPicture;
+        private PictureBox pbMovie;
     }
 }
