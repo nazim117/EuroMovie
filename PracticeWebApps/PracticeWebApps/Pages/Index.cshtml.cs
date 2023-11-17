@@ -10,7 +10,7 @@ namespace PracticeWebApps.Pages
     public class IndexModel : PageModel
 	{
 		[BindProperty]
-        public string SearchQuery { get; set; }
+        public string searchQuery { get; set; }
         public List<Movie> Movies { get; private set; }
         public List<Serie> Series { get; private set; }
 		private ProductManager productManager;
@@ -25,7 +25,6 @@ namespace PracticeWebApps.Pages
 		{
             string cookieValue = Request.Cookies["MyCookie"];
 
-            // Use the cookie value as needed
             ViewData["CookieValue"] = cookieValue;
 
 			foreach (Product movie in productManager.LoadObjects())
@@ -43,7 +42,7 @@ namespace PracticeWebApps.Pages
         }
 		public IActionResult OnPost()
 		{
-			return RedirectToPage("/Search", new { query = SearchQuery});
+            return RedirectToPage("/Search", new { query = searchQuery});
 		}
 	}
 }

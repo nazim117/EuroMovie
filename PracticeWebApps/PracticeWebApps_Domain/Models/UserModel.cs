@@ -22,8 +22,6 @@ namespace PracticeWebApps_Domain.Models
             Email = email;
             Phone = phone;
             Password = password;
-            //IsAdmin = isAdmin;
-            //Salt = salt;
 
             Reviews = new List<Review>();
             WatchList = new List<Product>();
@@ -32,9 +30,6 @@ namespace PracticeWebApps_Domain.Models
         public string Email { get; private set; }
         public string Phone { get; private set; }
         public string Password { get; private set; }
-        //public bool IsAdmin { get; private set; }
-        /*public string ConfirmPassword { get; private set; }
-        public string Salt { get; private set; }*/
         public List<Review> Reviews { get; private set; }
         public List<Product> WatchList { get; private set; }
 

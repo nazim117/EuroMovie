@@ -52,11 +52,11 @@ namespace PracticeWebApps_UnitTest
         {
             UserModel newUser = new UserModel("newName", "newEmail@gmail.com", "0683215693");
 
-            bool edited = userManager.EditObject(newUser, "example3@gmail.com");
+            bool edited = userManager.EditObject(newUser, "example1@gmail.com");
 
             Assert.IsTrue(edited);
         }
-
+//TODO: ReviewManager Tests
         // link between review and product
         // get user review
         // delete user review

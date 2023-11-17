@@ -5,14 +5,12 @@ namespace PracticeWebApps_UnitTest.FakeDB
 {
     public class FakeUserDAL : IUserOperations<UserModel>
     {
-        List<UserModel> users;
+        private List<UserModel> users;
         public FakeUserDAL()
         {
             users = new List<UserModel>
             {
-                new UserModel("name1", "example1@gmail.com", "0684123452", "New12345"),
-                // new UserModel("name2", "example2@gmail.com", "0674231235", "Old12345"),
-                // new UserModel("name3", "example3@gmail.com", "0682434412", "Current12345")
+                new UserModel("name1", "example1@gmail.com", "0684123452", "New12345")
             };
         }
         public UserModel[] LoadObjects()

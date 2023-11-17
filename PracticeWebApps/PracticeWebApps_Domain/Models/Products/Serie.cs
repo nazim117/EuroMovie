@@ -13,7 +13,7 @@
             Episodes = episodes;
         }
 
-        public int Seasons { get; set; }
-        public int Episodes { get; set; }
+        public int Seasons { get; private set; }
+        public int Episodes { get; private set; }
     }
 }

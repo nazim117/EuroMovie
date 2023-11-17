@@ -7,6 +7,9 @@ body {
     padding: 50px;
     background: linear-gradient(to bottom, rgba(0,0,0,0), black), url('/images/f-1.jpg');
 }
+.redirect-anchor{
+
+}
 
 .featured-title {
     width: 200px;

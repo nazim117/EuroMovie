@@ -25,14 +25,14 @@ namespace PracticeWebApps_Domain.Models.Products
             StreamedPlatform = new List<string>();
             Reviews = new List<Review>();
         }
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public Rating MovieRating { get; private set; }
-        public Genre Genre { get; private set; }
-        public int Duration { get; private set; }
-        public string Picture { get; private set; }
-        public List<string> StreamedPlatform { get; private set; }
-        public List<Review> Reviews { get; private set; }
+        public string Name { get; protected set; }
+        public string Description { get; protected set; }
+        public Rating MovieRating { get; protected set; }
+        public Genre Genre { get; protected set; }
+        public int Duration { get; protected set; }
+        public string Picture { get; protected set; }
+        public List<string> StreamedPlatform { get; protected set; }
+        public List<Review> Reviews { get; protected set; }
 
         public override string ToString()
         {

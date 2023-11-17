@@ -29,7 +29,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
             }
             else
             {
-                throw new MovieException();
+                throw new ProductException();
             }
         }
         public bool EditObject(Product product, string previousName)
@@ -87,6 +87,10 @@ namespace PracticeWebApps_LogicLibrary.Managers
             HashSet<Product> result = new HashSet<Product>();
             result = MergeSort(LoadObjects().ToList()).ToHashSet();
 
+            if (searchQuery == null)
+            {
+                return new HashSet<Product>();
+            }
             foreach (var product in result)
             {
                 if (!product.Name.StartsWith(searchQuery,StringComparison.OrdinalIgnoreCase))
@@ -94,6 +98,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
                     result.Remove(product);
                 }
             }
+            
             return result;
         }
         

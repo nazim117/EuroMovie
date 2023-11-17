@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace PracticeWebApps_Domain.Exceptions
 {
-    public class MovieException : Exception
+    public class ProductException : Exception
     {
-        public MovieException(string message) : base($"There has been an error with the movie information {message}")
+        public ProductException(string message) : base($"There has been an error with the information {message}")
         {
             
         }
 
-        public MovieException() : base("The movie already exists")
+        public ProductException() : base("This movie/series already exists")
         {
             
         }

@@ -54,7 +54,7 @@ namespace PracticeWebApps_Desktop
                 MessageBox.Show("Movie added successfully");
 
             }
-            catch (MovieException ex) { MessageBox.Show(ex.Message); }
+            catch (ProductException ex) { MessageBox.Show(ex.Message); }
             catch (NumberOutOfRangeException ex) { MessageBox.Show(ex.Message); }
             catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
             catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }

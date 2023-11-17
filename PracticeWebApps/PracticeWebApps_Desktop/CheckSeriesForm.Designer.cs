@@ -28,7 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridView1 = new DataGridView();
+            lbSeries = new ListBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.Red;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(22, 22);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(745, 400);
+            dataGridView1.TabIndex = 0;
+            // 
+            // lbSeries
+            // 
+            lbSeries.FormattingEnabled = true;
+            lbSeries.ItemHeight = 20;
+            lbSeries.Location = new Point(43, 48);
+            lbSeries.Name = "lbSeries";
+            lbSeries.Size = new Size(700, 344);
+            lbSeries.TabIndex = 1;
             // 
             // CheckSeriesForm
             // 
@@ -36,11 +59,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbSeries);
+            Controls.Add(dataGridView1);
             Name = "CheckSeriesForm";
             Text = "CheckSeriesForm";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private ListBox lbSeries;
     }
 }

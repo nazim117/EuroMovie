@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/AddReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,8 +56,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/Shared/_LoggedInLayout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dnZWRJbkxheW91dC5jc2h0bWw=
+[C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/Shared/_ValidationScriptsPartial.cshtml]
