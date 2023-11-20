@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\OpenRating.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\css\LogIn.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\OpenRating.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +37,10 @@
 
   <ItemGroup>
     <Folder Include="Pages\Shared\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\OpenRating.js" />
   </ItemGroup>
 
 </Project>
