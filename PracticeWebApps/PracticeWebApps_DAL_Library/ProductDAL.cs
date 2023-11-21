@@ -1,4 +1,5 @@
-﻿using PracticeWebApps_Domain.Models;
+﻿using PracticeWebApps_Domain.Exceptions;
+using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
 using System.Data.SqlClient;
@@ -218,6 +219,55 @@ namespace PracticeWebApps_DAL_Library
         public bool EditObject(Product product, string previousName)
         {
             throw new NotImplementedException();
+        }
+
+        public bool IsObjectPresent(Product product)
+        {
+            try
+            {
+                using (GetSQLConnection())
+                {
+                    string sql = "SELECT COUNT(*) FROM [Product] WHERE Name = @name";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@name", product.Name);
+
+                        int count = (int)cmd.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
+                    }
+
+                }
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. :" + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. : " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete, and the timeout period is exceeded.  " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
         }
     }
 }

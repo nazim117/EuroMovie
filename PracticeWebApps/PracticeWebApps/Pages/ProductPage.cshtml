@@ -13,6 +13,7 @@
         <p class="card-text">Genre: @Model.Movie.Genre</p>
         <button id="showRatingButton">Rate Movie</button>
 
+        <form method="post">
             <div id="ratingSection" style="display:none;">
                 <label for="rating">Rating (1-10):</label>
                 <input type="number" id="rating" min="1" max="10"/>
@@ -23,5 +24,6 @@
                 <br />
                 <button id="submitRatingButton">Submit Rating</button>
             </div>
+        </form>
     </div>
 </div>

@@ -283,6 +283,7 @@
             Controls.Add(txtSeriesName);
             Controls.Add(dataGridView1);
             Name = "AddSeriesForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CheckSeriesForm";
             Load += CheckSeriesForm_Load;
             ((System.ComponentModel.ISupportInitialize)pbSeries).EndInit();

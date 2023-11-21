@@ -14,7 +14,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
         }
         public bool CreateObject(UserModel user, string salt)
         {
-            if (!LoadObjects().Any(u => u.Email.Equals(user.Email)))
+            if (!operationsRepository.IsUserPresent(user))
             {
                 return operationsRepository.CreateObject(user, salt);
             }

@@ -6,5 +6,6 @@
         public T GetObject(string stringForSearch);
         public bool CreateObject(T t);
         public bool EditObject(T t, string previousName);
+        public bool IsObjectPresent(T t);
     }
 }

@@ -28,56 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridView1 = new DataGridView();
             txtName = new TextBox();
             txtPassword = new TextBox();
             btnLogIn = new Button();
-            dataGridView1 = new DataGridView();
+            lblName = new Label();
+            lblPAssword = new Label();
+            lblWelcome = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(103, 80);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(251, 27);
-            txtName.TabIndex = 0;
-            txtName.Text = "Michael";
-            // 
-            // txtPassword
-            // 
-            txtPassword.Location = new Point(103, 140);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(251, 27);
-            txtPassword.TabIndex = 1;
-            txtPassword.Text = "Michael12345";
-            // 
-            // btnLogIn
-            // 
-            btnLogIn.Location = new Point(162, 202);
-            btnLogIn.Name = "btnLogIn";
-            btnLogIn.Size = new Size(136, 29);
-            btnLogIn.TabIndex = 2;
-            btnLogIn.Text = "Log in";
-            btnLogIn.UseVisualStyleBackColor = true;
-            btnLogIn.Click += btnLogIn_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = Color.Red;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(82, 41);
+            dataGridView1.Location = new Point(29, 28);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(300, 214);
-            dataGridView1.TabIndex = 3;
+            dataGridView1.Size = new Size(447, 321);
+            dataGridView1.TabIndex = 0;
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(135, 184);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(238, 27);
+            txtName.TabIndex = 1;
+            txtName.Text = "Michael";
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(135, 254);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(238, 27);
+            txtPassword.TabIndex = 2;
+            txtPassword.Text = "Michael12345";
+            // 
+            // btnLogIn
+            // 
+            btnLogIn.Location = new Point(181, 301);
+            btnLogIn.Name = "btnLogIn";
+            btnLogIn.Size = new Size(147, 29);
+            btnLogIn.TabIndex = 3;
+            btnLogIn.Text = "Log In";
+            btnLogIn.UseVisualStyleBackColor = true;
+            btnLogIn.Click += btnLogIn_Click_1;
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.BackColor = Color.Red;
+            lblName.ForeColor = Color.White;
+            lblName.Location = new Point(135, 161);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(49, 20);
+            lblName.TabIndex = 4;
+            lblName.Text = "Name";
+            // 
+            // lblPAssword
+            // 
+            lblPAssword.AutoSize = true;
+            lblPAssword.BackColor = Color.Red;
+            lblPAssword.ForeColor = Color.White;
+            lblPAssword.Location = new Point(135, 231);
+            lblPAssword.Name = "lblPAssword";
+            lblPAssword.Size = new Size(70, 20);
+            lblPAssword.TabIndex = 5;
+            lblPAssword.Text = "Password";
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.BackColor = Color.Red;
+            lblWelcome.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblWelcome.ForeColor = Color.White;
+            lblWelcome.Location = new Point(70, 51);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(385, 46);
+            lblWelcome.TabIndex = 6;
+            lblWelcome.Text = "Welcome to EuroMovies";
             // 
             // LogInForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(452, 323);
+            ClientSize = new Size(518, 389);
+            Controls.Add(lblWelcome);
+            Controls.Add(lblPAssword);
+            Controls.Add(lblName);
             Controls.Add(btnLogIn);
             Controls.Add(txtPassword);
             Controls.Add(txtName);
@@ -92,9 +132,12 @@
 
         #endregion
 
+        private DataGridView dataGridView1;
         private TextBox txtName;
         private TextBox txtPassword;
         private Button btnLogIn;
-        private DataGridView dataGridView1;
+        private Label lblName;
+        private Label lblPAssword;
+        private Label lblWelcome;
     }
 }

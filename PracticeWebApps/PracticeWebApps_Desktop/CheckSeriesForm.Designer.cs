@@ -62,6 +62,7 @@
             Controls.Add(lbSeries);
             Controls.Add(dataGridView1);
             Name = "CheckSeriesForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CheckSeriesForm";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

@@ -82,7 +82,7 @@ namespace PracticeWebApps_Desktop
                     seasons,
                     episodes));
 
-                MessageBox.Show("Movie added successfully");
+                MessageBox.Show("Series added successfully");
 
             }
             catch (ProductException ex) { MessageBox.Show(ex.Message); }

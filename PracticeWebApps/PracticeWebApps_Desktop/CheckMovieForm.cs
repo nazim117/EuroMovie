@@ -1,4 +1,5 @@
 ﻿using PracticeWebApps_DAL_Library;
+using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Managers;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,13 @@ namespace PracticeWebApps_Desktop
         {
             InitializeComponent();
             productManager = new ProductManager(new ProductDAL());
-            lbMovies.DataSource = productManager.LoadObjects();
+            foreach (var item in productManager.LoadObjects())
+            {
+                if (item is Movie)
+                {
+                    lbMovies.Items.Add(item);
+                }
+            }
         }
     }
 }

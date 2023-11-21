@@ -23,7 +23,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
         }
         public bool CreateObject(Product product)
         {
-            if (!LoadObjects().Any(u => u.Name.Equals(product.Name)))
+            if (!operationRepository.IsObjectPresent(product))
             {
                 return operationRepository.CreateObject(product);
             }

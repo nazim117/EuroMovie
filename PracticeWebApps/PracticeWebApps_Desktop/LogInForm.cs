@@ -12,6 +12,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PracticeWebApps_Desktop
 {
@@ -22,7 +23,7 @@ namespace PracticeWebApps_Desktop
             InitializeComponent();
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e)
+        private void btnLogIn_Click_1(object sender, EventArgs e)
         {
             LogInManager logInManager = new LogInManager(new LogInDAL());
             string salt = logInManager.GetSalt(txtName.Text);
@@ -33,15 +34,14 @@ namespace PracticeWebApps_Desktop
             if (passwordHashing.ValidatePassword(txtPassword.Text, salt, hashedPass))
             {
                 MainForm mainForm = new MainForm();
-                mainForm.ShowDialog();
                 this.Hide();
+                mainForm.ShowDialog();
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Invalid credentials");
             }
-
-
         }
     }
 }
