@@ -86,6 +86,16 @@ namespace PracticeWebApps_UnitTest
 
             Assert.IsTrue(edited);
         }
+        [TestMethod]
+        public void FindMovie_MovieExists_ReturnsTrue()
+        {
+            Product newProduct = new Movie("Transformers", "description1", Rating.G, Genre.Action, 120, "picturePath1");
+
+            bool found = _productManager.IsObjectPresent(newProduct);
+
+            Assert.IsTrue(found);
+        }
+
 
     }
 }

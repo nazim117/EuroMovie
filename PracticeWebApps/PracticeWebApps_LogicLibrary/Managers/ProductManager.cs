@@ -1,4 +1,5 @@
 ﻿using PracticeWebApps_Domain.Exceptions;
+using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
 
@@ -12,7 +13,6 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             this.operationRepository = operationRepository;
         }
-
         public Product[] LoadObjects()
         {
             return operationRepository.LoadObjects();
@@ -20,6 +20,10 @@ namespace PracticeWebApps_LogicLibrary.Managers
         public Product GetObject(string name)
         {
             return operationRepository.GetObject(name);
+        }
+        public int GetObjectId(string name)
+        {
+            return operationRepository.GetObjectId(name);
         }
         public bool CreateObject(Product product)
         {
@@ -32,9 +36,17 @@ namespace PracticeWebApps_LogicLibrary.Managers
                 throw new ProductException();
             }
         }
+        public bool IsObjectPresent(Product product)
+        {
+            return operationRepository.IsObjectPresent(product);
+        }
         public bool EditObject(Product product, string previousName)
         {
             return operationRepository.EditObject(product, previousName);
+        }
+        public void AddReview(Product product, Review review)
+        {
+            product.AddReview(review);
         }
         private List<Product> MergeSort(List<Product> products)
         {

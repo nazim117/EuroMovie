@@ -62,6 +62,16 @@ namespace PracticeWebApps_UnitTest.FakeDB
             return product;
 
         }
+//TODO: IMPLEMENT
+        public int GetObjectId(string stringForSearch)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsObjectPresent(Product t)
+        {
+            return _products.Any(n=>n.Name == t.Name);
+        }
 
         public Product[] LoadObjects()
         {

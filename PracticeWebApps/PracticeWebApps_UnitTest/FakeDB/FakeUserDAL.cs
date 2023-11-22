@@ -1,4 +1,5 @@
 ﻿using PracticeWebApps_Domain.Models;
+using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
 
 namespace PracticeWebApps_UnitTest.FakeDB
@@ -48,6 +49,11 @@ namespace PracticeWebApps_UnitTest.FakeDB
         public UserModel GetObject(string stringForSearch)
         {
             return users.Find(u=>u.Email == stringForSearch);
+        }
+
+        public bool IsUserPresent(UserModel t)
+        {
+            return users.Any(n => n.Email == t.Email);
         }
     }
 }

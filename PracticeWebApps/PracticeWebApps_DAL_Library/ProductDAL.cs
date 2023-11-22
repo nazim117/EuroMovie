@@ -4,6 +4,7 @@ using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.Xml.Linq;
 
 namespace PracticeWebApps_DAL_Library
 {
@@ -38,7 +39,7 @@ namespace PracticeWebApps_DAL_Library
             {
                 try
                 {
-                    string sql = $"SELECT * FROM [Product] WHERE Name = @name";
+                    string sql = $"SELECT * FROM [Product] WHERE Name = @Name";
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
                         command.Parameters.AddWithValue("@Name", name);
@@ -47,12 +48,80 @@ namespace PracticeWebApps_DAL_Library
                         {
                             if (reader.Read())
                             {
-                                return new Movie(reader.GetString(1),
-                                    reader.GetString(2),
-                                    (Rating)reader.GetInt32(3),
-                                    (Genre)reader.GetInt32(4),
-                                    reader.GetInt32(5),
-                                    reader.GetString(6)); ;
+                                if (reader.GetString(7) == "Movie")
+                                {
+
+                                    return new Movie(reader.GetString(1),
+                                        reader.GetString(2),
+                                        (Rating)reader.GetInt32(3),
+                                        (Genre)reader.GetInt32(4),
+                                        reader.GetInt32(5),
+                                        reader.GetString(6));
+                                }
+                                else
+                                {
+                                    int[] seasonsAndEpisodes = GetSeasonsAndEpisodes(reader.GetInt32(0));
+
+                                    return new Serie(reader.GetString(1),
+                                        reader.GetString(2),
+                                        (Rating)reader.GetInt32(3),
+                                        (Genre)reader.GetInt32(4),
+                                        reader.GetInt32(5),
+                                        reader.GetString(6),
+                                        seasonsAndEpisodes[0],
+                                        seasonsAndEpisodes[1]);
+                                }
+
+                            }
+                        }
+                    }
+                }
+                catch (SqlNullValueException ex)
+                {
+                    throw new SqlNullValueException("Error, reading null values. " + ex.ToString());
+
+                }
+                catch (InvalidOperationException ex)
+                {
+                    throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. " + ex.ToString());
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception("An error occured in the SQL Server database. " + ex.ToString());
+                }
+                catch (TimeoutException ex)
+                {
+                    throw new TimeoutException("Database operation takes too long to complete. " + ex.ToString());
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.ToString());
+                }
+            }
+            return null;
+        }
+        private int[] GetSeasonsAndEpisodes(int productId)
+        {
+            using (GetSQLConnection())
+            {
+                try
+                {
+                    string sql = $"SELECT * FROM [Serie] WHERE ProductId = @ProductId";
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@ProductId", productId);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+
+                                return new int[]
+                                {
+                                    reader.GetInt32(2),
+                                    reader.GetInt32(3)
+                                };
+
                             }
                         }
                     }
@@ -175,7 +244,6 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
-
         public bool CreateMovie()
         {
             try
@@ -214,13 +282,6 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
-
-//TODO: IMPLEMENT
-        public bool EditObject(Product product, string previousName)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool IsObjectPresent(Product product)
         {
             try
@@ -269,5 +330,55 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
+        public int GetObjectId(string stringForSearch)
+        {
+            using (GetSQLConnection())
+            {
+                try
+                {
+                    string sql = $"SELECT * FROM [Product] WHERE Name = @Name";
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@Name", stringForSearch);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                return reader.GetInt32(0);
+                            }
+                        }
+                    }
+                }
+                catch (SqlNullValueException ex)
+                {
+                    throw new SqlNullValueException("Error, reading null values. " + ex.ToString());
+
+                }
+                catch (InvalidOperationException ex)
+                {
+                    throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. " + ex.ToString());
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception("An error occured in the SQL Server database. " + ex.ToString());
+                }
+                catch (TimeoutException ex)
+                {
+                    throw new TimeoutException("Database operation takes too long to complete. " + ex.ToString());
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.ToString());
+                }
+            }
+            return 0;
+        }
+//TODO: IMPLEMENT
+        public bool EditObject(Product product, string previousName)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

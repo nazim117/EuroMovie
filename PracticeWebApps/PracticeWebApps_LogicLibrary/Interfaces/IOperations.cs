@@ -4,6 +4,7 @@
     {
         public T[] LoadObjects();
         public T GetObject(string stringForSearch);
+        public int GetObjectId(string stringForSearch);
         public bool CreateObject(T t);
         public bool EditObject(T t, string previousName);
         public bool IsObjectPresent(T t);

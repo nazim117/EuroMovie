@@ -38,6 +38,7 @@ namespace PracticeWebApps.Pages
                 _logger.LogError(ErrorMessage);
                 return Page();
             }
+
             LogInManager logInManager = new LogInManager(new LogInDAL());
             try
             {
@@ -70,8 +71,6 @@ namespace PracticeWebApps.Pages
             catch (TimeoutException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
 
             catch (Exception ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
-
-
 
             return Page();
 

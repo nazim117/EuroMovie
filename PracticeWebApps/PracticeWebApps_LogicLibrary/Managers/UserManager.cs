@@ -23,6 +23,10 @@ namespace PracticeWebApps_LogicLibrary.Managers
                 throw new UserException();
             }
         }
+        public bool IsUserPresent(UserModel user)
+        {
+            return operationsRepository.IsUserPresent(user);
+        }
         public UserModel[] LoadObjects()
         {
             return operationsRepository.LoadObjects();

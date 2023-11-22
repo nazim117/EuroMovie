@@ -1,29 +1,73 @@
 ﻿@page
+@using PracticeWebApps_Domain.Models.Products;
 @model PracticeWebApps.Pages.ProductPageModel
 @{
 }
 <link rel="stylesheet" href="/css/Product.css" asp-append-version="true" />
 
-<div class="content">
-    <img src="@Model.Movie.Picture" alt="">
-    <div class="card-body">
-        <h5 class="card-title">@Model.Movie.Name</h5>
-        <p class="card-text">Description: @Model.Movie.Description</p>
-        <p class="card-rating">Rating: @Model.Movie.MovieRating</p>
-        <p class="card-text">Genre: @Model.Movie.Genre</p>
-        <button id="showRatingButton">Rate Movie</button>
-
-        <form method="post">
-            <div id="ratingSection" style="display:none;">
-                <label for="rating">Rating (1-10):</label>
-                <input type="number" id="rating" min="1" max="10"/>
-                <br />
-
-                <label for="ratingDecription">Comment:</label>
-                <textarea id="ratingDescription"></textarea>
-                <br />
-                <button id="submitRatingButton">Submit Rating</button>
-            </div>
-        </form>
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
     </div>
+}
+
+<div class="content">
+    <div class="product-info">
+        <img src="@Model.Product.Picture" alt="" class="product-image">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Product.Name</h5>
+            <p class="card-text">Description: @Model.Product.Description</p>
+            <p class="card-rating">Rating: @Model.Product.MovieRating</p>
+            <p class="card-text">Genre: @Model.Product.Genre</p>
+            @if(Model.Product is Serie)
+            {
+                Serie serie = (Serie)Model.Product;
+                <p class="card-text">Seasons: @serie.Seasons</p>
+                <p class="card-text">Episodes: @serie.Episodes</p>
+            }
+            <button id="showRatingButton">Rate</button>
+
+            <form method="post">
+                <div id="ratingSection" style="display:none;">
+                    <label for="rating">Rating (1-10):</label>
+                    <span asp-validation-for="Review.Rating" class="text-white"></span>
+                    <input type="number" id="rating" min="1" max="10" asp-for="Review.Rating"/>
+                    <br />
+
+                    <label for="ratingDecription">Comment:</label>
+                    <span asp-validation-for="Review.Description" class="text-white"></span>
+                    <textarea id="ratingDescription" asp-for="Review.Description"></textarea>
+                    <br />
+
+                    <input type="hidden" name="productName" value="@Model.Product.Name" />
+
+                    <button id="submitRatingButton">Submit Rating</button>
+                </div>
+            </form>
+        </div>
+    </div>
+        <div class="review-section">
+            @if (Model.Reviews.Count > 0)
+            {
+                <h2>Reviews (@Model.Reviews.Count):</h2>
+                <ul>
+                    @foreach (var review in Model.Reviews)
+                    {
+                        <li>Rating: @review.Rating</li>
+                        <li>Comment: @review.Description</li>
+                        <hr />
+                    }
+                </ul>
+            }
+            else
+            {
+                <h2>No Reviews</h2>
+            }
+        </div>
 </div>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

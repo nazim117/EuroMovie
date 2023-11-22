@@ -1,27 +1,77 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PracticeWebApps.DTOs;
 using PracticeWebApps_DAL_Library;
+using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Managers;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Claims;
 
 namespace PracticeWebApps.Pages
 {
     public class ProductPageModel : PageModel
     {
-        public Movie Movie { get; private set; }
-        public Serie Series { get; private set; }
+        [BindProperty]
+        public ReviewDTO Review { get; set; }
+        public string ErrorMessage { get; private set; }
+        public Product Product { get; private set; }
+        public List<Review> Reviews { get; set; }
+
+        private readonly ILogger<ProductPageModel> _logger;
+        private ReviewManager reviewManager;
+
+        public ProductPageModel(ILogger<ProductPageModel> logger)
+        {
+            Review = new ReviewDTO();
+            ErrorMessage = string.Empty;
+            _logger = logger;
+            Reviews = new List<Review>();
+        }
+
         public IActionResult OnGet(string name)
         {
             ProductManager productManager = new ProductManager(new ProductDAL());
-            if (productManager.GetObject(name) is Movie)
+
+            int productId = productManager.GetObjectId(name);
+            Reviews = reviewManager.LoadReviewsForProduct(productId).ToList();
+            Product = productManager.GetObject(name);
+
+            return Page();
+        }
+        public IActionResult OnPost(string productName)
+        {
+
+            var userNameClaim = User.FindFirst(ClaimTypes.Name);
+
+            if (userNameClaim != null)
             {
-                Movie = (Movie)productManager.GetObject(name);
+                string userName = userNameClaim.Value;
+
+                try
+                {
+                    reviewManager.CreateReview(new Review(Review.Rating, Review.Description), userName, productName);
+                    _logger.LogInformation("Review Saved");
+                }
+                catch (SqlNullValueException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+                catch (InvalidOperationException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+                catch (SqlException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+                catch (TimeoutException ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
+
+                catch (Exception ex) { _logger.LogError(ex.Message); ErrorMessage = ex.Message; return Page(); }
             }
             else
             {
-                Series = (Serie)productManager.GetObject(name);
+                ErrorMessage = "Log in to give a rating.";
+                _logger.LogError("LogIn to give rating");
             }
-            return Page();
+
+            return RedirectToPage("/ProductPage", new { name = productName });
         }
     }
 }

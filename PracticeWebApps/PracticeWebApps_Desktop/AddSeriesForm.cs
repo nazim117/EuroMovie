@@ -10,7 +10,7 @@ namespace PracticeWebApps_Desktop
 {
     public partial class AddSeriesForm : Form
     {
-        string relativeDestinationFilePath;
+        private string relativeDestinationFilePath;
 
         public AddSeriesForm()
         {
@@ -66,7 +66,7 @@ namespace PracticeWebApps_Desktop
                 }
             }
 
-            ProductManager productManager;
+             ProductManager productManager;
 
             try
             {
@@ -117,6 +117,11 @@ namespace PracticeWebApps_Desktop
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void txtSeriesDuration_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

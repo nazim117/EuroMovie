@@ -56,10 +56,14 @@ namespace PracticeWebApps_UnitTest
 
             Assert.IsTrue(edited);
         }
-//TODO: ReviewManager Tests
-        // link between review and product
-        // get user review
-        // delete user review
-        // update user review
+        [TestMethod]
+        public void FindUser_UserExists_ReturnsTrue()
+        {
+            UserModel newUser = new UserModel("name1", "example1@gmail.com", "0684123452", "New12345");
+
+            bool isFound = userManager.IsUserPresent(newUser);
+
+            Assert.IsTrue(isFound);
+        }
     }
 }

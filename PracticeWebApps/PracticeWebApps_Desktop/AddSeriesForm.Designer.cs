@@ -170,6 +170,7 @@
             txtSeriesDuration.Name = "txtSeriesDuration";
             txtSeriesDuration.Size = new Size(319, 27);
             txtSeriesDuration.TabIndex = 21;
+            txtSeriesDuration.KeyPress += txtSeriesDuration_KeyPress;
             // 
             // txtSerieDescription
             // 
