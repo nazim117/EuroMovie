@@ -1,4 +1,5 @@
 ﻿using PracticeWebApps_DAL_Library;
+using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Managers;
 using System;
@@ -27,6 +28,14 @@ namespace PracticeWebApps_Desktop
                     lbMovies.Items.Add(item);
                 }
             }
+        }
+
+        private void lbMovies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MovieForm movieForm = new MovieForm(((Movie)lbMovies.SelectedItem).Name);
+            this.Hide();
+            movieForm.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿@page
+@using PracticeWebApps_Domain.Models;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -10,16 +11,15 @@
 <div class="featured-content">
     <img class="featured-title">
     <p class="featured-desc">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
-        deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
-        minima voluptatibus incidunt. Accusamus, provident.
+        With the help of a German bounty-hunter,
+        a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
     </p>
 </div>
 <div class="movie-list-container">
     <h1 class="movie-list-title">ACTION</h1>
     <div class="movie-list-wrapper">
         <div class="movie-list">
-            @foreach (var movie in Model.Movies.OrderBy(x=>x.Name).Take(5))
+            @foreach (var movie in Model.Movies.OrderBy(x=>x.Name).Where(p=>p.Genre == Genre.Action).Take(5))
             {
                 <div class="movie-list-item">
                     
@@ -30,104 +30,39 @@
                 </div>
             }
         </div>
+    </div>
+</div>
+<div class="movie-list-container">
+    <h1 class="movie-list-title">ADVENTURE</h1>
+    <div class="movie-list-wrapper">
         <div class="movie-list">
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="\images\Terminator.jpeg" alt="">
-                <span class="movie-list-item-title">Terminator</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="\images\Transformers.jpg" alt="">
-                <span class="movie-list-item-title">Transformers</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="\images\images.jpeg" alt="">
-                <span class="movie-list-item-title">65</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="\images\Flash.jpg" alt="">
-                <span class="movie-list-item-title">Flash</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="\images\Rambo.jpg" alt="">
-                <span class="movie-list-item-title">Rambo</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
+            @foreach (var movie in Model.Movies.OrderBy(x => x.Name).Where(p => p.Genre == Genre.Adventure).Take(5))
+            {
+                <div class="movie-list-item">
+
+                    <img class="movie-list-item-img" src="@movie.Picture" alt="">
+                    <span class="movie-list-item-title">@movie.Name</span>
+                    <p class="movie-list-item-desc">@movie.Description</p>
+                    <a asp-page="ProductPage" asp-route-name="@movie.Name" class="movie-list-item-button">Watch</a>
+                </div>
+            }
         </div>
     </div>
 </div>
 <div class="movie-list-container">
-    <h1 class="movie-list-title">NEW RELEASES</h1>
+    <h1 class="movie-list-title">Series</h1>
     <div class="movie-list-wrapper">
         <div class="movie-list">
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="~/images/FastX.jpg" alt="">
-                <span class="movie-list-item-title">Fast X</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="~/images/Avatar.jpg" alt="">
-                <span class="movie-list-item-title">Avatar</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="~/images/BlackPanther.jpg" alt="">
-                <span class="movie-list-item-title">Black Panther</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="~/images/Oppeheimer.jpg" alt="">
-                <span class="movie-list-item-title">Oppenheimer</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="~/images/Draculajpg.jpg" alt="">
-                <span class="movie-list-item-title">Dracula</span>
-                <p class="movie-list-item-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.
-                </p>
-                <a class="movie-list-item-button" href="/ProductPage">Watch</a>
-            </div>
+            @foreach (var movie in Model.Series.OrderBy(x => x.Name).Take(5))
+            {
+                <div class="movie-list-item">
+
+                    <img class="movie-list-item-img" src="@movie.Picture" alt="">
+                    <span class="movie-list-item-title">@movie.Name</span>
+                    <p class="movie-list-item-desc">@movie.Description</p>
+                    <a asp-page="ProductPage" asp-route-name="@movie.Name" class="movie-list-item-button">Watch</a>
+                </div>
+            }
         </div>
     </div>
 </div>

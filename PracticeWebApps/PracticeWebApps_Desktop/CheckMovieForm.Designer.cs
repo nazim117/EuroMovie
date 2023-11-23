@@ -52,6 +52,7 @@
             lbMovies.Name = "lbMovies";
             lbMovies.Size = new Size(591, 264);
             lbMovies.TabIndex = 3;
+            lbMovies.SelectedIndexChanged += lbMovies_SelectedIndexChanged;
             // 
             // CheckMovieForm
             // 

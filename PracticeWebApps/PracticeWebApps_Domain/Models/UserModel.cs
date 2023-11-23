@@ -4,6 +4,11 @@ namespace PracticeWebApps_Domain.Models
 {
     public class UserModel
     {
+        private string name;
+        private string email;
+        private string phone;
+        private string password;
+
         public UserModel()
         {
 
@@ -26,10 +31,50 @@ namespace PracticeWebApps_Domain.Models
             Reviews = new List<Review>();
             WatchList = new List<Product>();
         }
-        public string Name { get; private set; }
-        public string Email { get; private set; }
-        public string Phone { get; private set; }
-        public string Password { get; private set; }
+        public string Name 
+        {
+            get => name; private set
+            {
+                if (value.Length < 1)
+                {
+                    throw new ArgumentException("Invalid Name");
+                }
+                name = value;
+            }
+        }
+        public string Email 
+        {
+            get => email; private set
+            {
+                if (value.Length < 5)
+                {
+                    throw new ArgumentException("Invalid Email");
+                }
+                email = value;
+            }
+        }
+        public string Phone 
+        {
+            get => phone; private set
+            {
+                if (value.Length < 10)
+                {
+                    throw new ArgumentException("Invalid Phone");
+                }
+                phone = value;
+            }
+        }
+        public string Password 
+        {
+            get=> password; private set
+            {
+                if (value.Length < 8)
+                {
+                    throw new ArgumentException("Invalid Password");
+                }
+                password = value;
+            }
+        }
         public List<Review> Reviews { get; private set; }
         public List<Product> WatchList { get; private set; }
 

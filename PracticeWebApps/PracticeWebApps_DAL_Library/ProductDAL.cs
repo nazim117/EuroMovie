@@ -2,6 +2,7 @@
 using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
+using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Xml.Linq;
@@ -183,7 +184,6 @@ namespace PracticeWebApps_DAL_Library
             catch (SqlNullValueException ex)
             {
                 throw new SqlNullValueException("Error, reading null values. " + ex.ToString());
-
             }
             catch (InvalidOperationException ex)
             {
@@ -263,7 +263,6 @@ namespace PracticeWebApps_DAL_Library
             catch (SqlNullValueException ex)
             {
                 throw new SqlNullValueException("Error, reading null values. " + ex.ToString());
-
             }
             catch (InvalidOperationException ex)
             {
@@ -374,11 +373,226 @@ namespace PracticeWebApps_DAL_Library
             }
             return 0;
         }
-//TODO: IMPLEMENT
         public bool EditObject(Product product, string previousName)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (product is Serie)
+                {
+                    EditSerie((Serie)product);
+                }
+                using (GetSQLConnection())
+                {
+                    string sql = $"UPDATE [Product] " +
+                        $"SET Name = @Name, Description = @Description, Rating = @Rating, Genre = @Genre, Duration = @Duration " +
+                        $"WHERE Name = @previousName";
+
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@Name", product.Name);
+                        command.Parameters.AddWithValue("@Description", product.Description);
+                        command.Parameters.AddWithValue("@Rating", product.MovieRating);
+                        command.Parameters.AddWithValue("@Genre", product.Genre);
+                        command.Parameters.AddWithValue("@Duration", product.Duration);
+                        command.Parameters.AddWithValue("@previousName", previousName);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                return true;
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. :" + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. : " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete, and the timeout period is exceeded.  " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+        public void EditSerie(Serie serie)
+        {
+            try
+            {
+                int productId = GetObjectId(serie.Name);
+
+                if (productId > 0)
+                {
+
+                    using (GetSQLConnection())
+                    {
+                        string sql = $"UPDATE [Serie] " +
+                            $"SET Seasons = @Seasons, Episodes = @Episodes " +
+                            $"WHERE ProductId = @ProductId";
+
+                        using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                        {
+                            command.Parameters.AddWithValue("@Seasons", serie.Seasons);
+                            command.Parameters.AddWithValue("@Episodes", serie.Episodes);
+                            command.Parameters.AddWithValue("@ProductId", productId);
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. :" + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. : " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete, and the timeout period is exceeded.  " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+
         }
 
+        public bool DeleteObject(Product product)
+        {
+            try
+            {
+                using (GetSQLConnection())
+                {
+
+                    if (product is Movie)
+                    {
+                        DeleteMovie((Movie)product);
+                    }
+                    if (product is Serie)
+                    {
+                        DeleteSerie((Serie)product);
+                    }
+
+                    string sql = $"DELETE FROM [Product] WHERE Name = @Name";
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@Name", product.Name);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                return true;
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. :" + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. : " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete, and the timeout period is exceeded.  " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+        private void DeleteSerie(Serie product)
+        {
+            try
+            {
+                using (GetSQLConnection())
+                {
+                    string sql = $"DELETE FROM [Serie] WHERE ProductId = (SELECT Id FROM [Product] WHERE Name = @ProductName)";
+
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@ProductName", product.Name);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values. " + ex.ToString());
+
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. " + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete. " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+        private void DeleteMovie(Movie product)
+        {
+            try
+            {
+                using (GetSQLConnection())
+                {
+                    string sql = $"DELETE FROM [Movie] WHERE ProductId = (SELECT Id FROM [Product] WHERE Name = @ProductName)";
+
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@ProductName", product.Name);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values. " + ex.ToString());
+
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. " + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete. " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
     }
 }

@@ -32,24 +32,34 @@ namespace PracticeWebApps_Desktop
                 MessageBox.Show("Select a Picture for the movie/serie");
                 return;
             }
-            if (int.TryParse(txtDuration.Text, out int duration))
-            {
-                duration = int.Parse(txtDuration.Text);
-                if (duration < 0 || duration > 1000)
-                {
-                    throw new NumberOutOfRangeException("Number out of range. Please enter a number between 0 and 1000.");
-                }
-            }
+            
             ProductManager productManager = new ProductManager(new ProductDAL());
+            string[] movieRatingValues = Enum.GetNames(typeof(Rating));
+            string[] movieGenreValues = Enum.GetNames(typeof(Genre));
+
             try
             {
+
+                if (!int.TryParse(txtDuration.Text, out int duration))
+                {
+                    throw new ArgumentException("Invalid duration");
+                }
+                if (!movieRatingValues.Contains(cbbMovieRating.SelectedItem))
+                {
+                    throw new ArgumentException("Invalid rating");
+                }
+                if (!movieGenreValues.Contains(cbbGenre.SelectedItem))
+                {
+                    throw new ArgumentException("Invalid rating");
+                }
+
                 productManager.CreateObject(
-                    new Movie(txtName.Text,
-                    txtDescription.Text,
-                    (Rating)cbbMovieRating.SelectedItem,
-                    (Genre)cbbGenre.SelectedItem,
-                    duration,
-                    relativeDestinationFilePath));
+                new Movie(txtName.Text,
+                txtDescription.Text,
+                (Rating)cbbMovieRating.SelectedItem,
+                (Genre)cbbGenre.SelectedItem,
+                duration,
+                relativeDestinationFilePath));
 
                 MessageBox.Show("Movie added successfully");
 

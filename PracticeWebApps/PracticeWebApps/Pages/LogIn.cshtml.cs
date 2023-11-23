@@ -55,7 +55,16 @@ namespace PracticeWebApps.Pages
                     claims.Add(new Claim("id", "1"));
 
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity));
+
+                    var authenticationProperties = new AuthenticationProperties
+                    {
+                        IsPersistent = true,
+                        ExpiresUtc = DateTime.UtcNow.AddMinutes(20),
+                        RedirectUri = "/Index"
+                    };
+
+                    HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authenticationProperties);
+                    //HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity));
 
                     return Redirect("/Index");
                 }

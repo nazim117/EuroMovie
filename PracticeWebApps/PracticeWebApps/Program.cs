@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +13,12 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 	options.LoginPath = "/Pages/LogIn";
 	options.LogoutPath = "/Pages/LogOut";
 });
-
+builder.Services.Configure<CookiePolicyOptions>(options =>
+{
+	options.MinimumSameSitePolicy = SameSiteMode.None;
+	options.HttpOnly = HttpOnlyPolicy.Always;
+	options.Secure = CookieSecurePolicy.Always;
+});
 builder.Services.AddSession(options => {
 	options.IdleTimeout = TimeSpan.FromMinutes(10);
 }) ;

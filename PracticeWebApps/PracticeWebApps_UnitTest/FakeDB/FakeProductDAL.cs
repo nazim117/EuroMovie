@@ -37,6 +37,11 @@ namespace PracticeWebApps_UnitTest.FakeDB
             return false;
         }
 
+        public bool DeleteObject(Product t)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool EditObject(Product product, string previousName)
         {
             int index = _products.FindIndex(p => p.Name == previousName);

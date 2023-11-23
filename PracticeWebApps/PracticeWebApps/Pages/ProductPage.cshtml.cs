@@ -22,18 +22,19 @@ namespace PracticeWebApps.Pages
 
         private readonly ILogger<ProductPageModel> _logger;
         private ReviewManager reviewManager;
-
+        private ProductManager productManager;
         public ProductPageModel(ILogger<ProductPageModel> logger)
         {
             Review = new ReviewDTO();
             ErrorMessage = string.Empty;
             _logger = logger;
+            reviewManager = new ReviewManager(new ReviewDAL());
+            productManager = new ProductManager(new ProductDAL());
             Reviews = new List<Review>();
         }
 
         public IActionResult OnGet(string name)
         {
-            ProductManager productManager = new ProductManager(new ProductDAL());
 
             int productId = productManager.GetObjectId(name);
             Reviews = reviewManager.LoadReviewsForProduct(productId).ToList();
@@ -67,11 +68,16 @@ namespace PracticeWebApps.Pages
             }
             else
             {
-                ErrorMessage = "Log in to give a rating.";
+                ErrorMessage = "LogIn to give rating";
                 _logger.LogError("LogIn to give rating");
             }
 
-            return RedirectToPage("/ProductPage", new { name = productName });
+            int productId = productManager.GetObjectId(productName);
+            Reviews = reviewManager.LoadReviewsForProduct(productId).ToList();
+            Product = productManager.GetObject(productName);
+
+            return Page();
+            //return RedirectToPage("/ProductPage", new { name = productName });
         }
     }
 }

@@ -58,30 +58,13 @@ namespace PracticeWebApps_Desktop
                 }
 
             }
-            catch (SqlNullValueException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (TimeoutException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (UserException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (ProductException ex) { MessageBox.Show(ex.Message); }
+            catch (NumberOutOfRangeException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
+            catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
             this.Close();
         }
     }

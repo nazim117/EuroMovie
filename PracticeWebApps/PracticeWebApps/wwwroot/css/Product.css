@@ -1,7 +1,11 @@
 ﻿body{
     background-color:black;
 }
-
+.alert {
+    width: 370px;
+    margin: 10px auto;
+    padding: 20px;
+}
 .content {
     max-width:600px;
     margin:auto;

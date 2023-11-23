@@ -49,31 +49,13 @@ namespace PracticeWebApps_Desktop
                 }
 
             }
-            catch (SqlNullValueException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (TimeoutException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (UserException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            this.Close();
+            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
+            catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (UserException ex) { MessageBox.Show(ex.Message); }
+            catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
@@ -88,30 +70,12 @@ namespace PracticeWebApps_Desktop
                     Console.WriteLine("Problem occurred. User was not deleted");
                 }
             }
-            catch (SqlNullValueException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (TimeoutException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (UserException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
+            catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
             this.Close();
         }
         private void UserForm_Load(object sender, EventArgs e)

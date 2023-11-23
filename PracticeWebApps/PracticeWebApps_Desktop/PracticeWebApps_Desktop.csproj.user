@@ -25,6 +25,9 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>

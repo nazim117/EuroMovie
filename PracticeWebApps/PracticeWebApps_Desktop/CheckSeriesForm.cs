@@ -22,7 +22,7 @@ namespace PracticeWebApps_Desktop
             productManager = new ProductManager(new ProductDAL());
             foreach (var item in productManager.LoadObjects())
             {
-                if (item is Movie)
+                if (item is Serie)
                 {
                     lbSeries.Items.Add(item);
                 }

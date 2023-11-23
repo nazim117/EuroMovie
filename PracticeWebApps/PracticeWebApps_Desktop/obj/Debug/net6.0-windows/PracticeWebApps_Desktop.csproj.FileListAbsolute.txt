@@ -74,3 +74,4 @@ C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\P
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\net6.0-windows\ref\PracticeWebApps_Desktop.dll
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\net6.0-windows\PracticeWebApps_Desktop.AddSeriesForm.resources
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\net6.0-windows\PracticeWebApps_Desktop.CheckSeriesForm.resources
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps_Desktop\obj\Debug\net6.0-windows\PracticeWebApps_Desktop.MovieForm.resources

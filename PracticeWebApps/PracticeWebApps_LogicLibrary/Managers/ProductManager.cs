@@ -44,6 +44,10 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationRepository.EditObject(product, previousName);
         }
+        public bool DeleteObject(Product product)
+        {
+            return operationRepository.DeleteObject(product);
+        }
         public void AddReview(Product product, Review review)
         {
             product.AddReview(review);
