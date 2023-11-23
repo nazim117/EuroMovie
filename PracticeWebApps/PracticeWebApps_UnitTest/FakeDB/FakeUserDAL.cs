@@ -55,5 +55,10 @@ namespace PracticeWebApps_UnitTest.FakeDB
         {
             return users.Any(n => n.Email == t.Email);
         }
+//TODO: IMPLEMENT
+        public int GetUserId(string searchString)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

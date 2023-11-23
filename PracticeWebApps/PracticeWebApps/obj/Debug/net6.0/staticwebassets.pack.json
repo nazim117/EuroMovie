@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\Product.css"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\css\\UserProfile.css",
+      "PackagePath": "staticwebassets\\css\\UserProfile.css"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

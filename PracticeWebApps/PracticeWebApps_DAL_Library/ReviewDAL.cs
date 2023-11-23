@@ -1,13 +1,7 @@
 ﻿using PracticeWebApps_Domain.Models;
 using PracticeWebApps_LogicLibrary.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace PracticeWebApps_DAL_Library
 {
@@ -114,6 +108,29 @@ namespace PracticeWebApps_DAL_Library
                 using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                 {
                     command.Parameters.AddWithValue("@ProductId", productId);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            reviews.Add(new Review(
+                                reader.GetInt32(1),
+                                reader.GetString(2)));
+                        }
+                    }
+                }
+            }
+            return reviews.ToArray();
+        }
+        public Review[] LoadReviewsForUser(int userId)
+        {
+            List<Review> reviews = new List<Review>();
+            using (GetSQLConnection())
+            {
+                string sql = $"SELECT * FROM [Review] WHERE UserId = @userId";
+                using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                {
+                    command.Parameters.AddWithValue("@userId", userId);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {

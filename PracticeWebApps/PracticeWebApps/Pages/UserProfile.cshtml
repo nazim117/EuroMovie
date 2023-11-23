@@ -2,36 +2,37 @@
 @model PracticeWebApps.Pages.UserProfileModel
 @{
 }
-<link rel="stylesheet" href="/css/Product.css" asp-append-version="true" />
+<link rel="stylesheet" href="/css/UserProfile.css" asp-append-version="true" />
 
 <h1>@Model.User.Name's Profile</h1>
 
-<form method="post" asp-page-handler="OnPost">
+<form method="post" asp-page-handler="OnPost" class="container">
     <div>
-        <lable for="Name">Name:</lable>
+        <label for="User_Name">Name:</label>
         <input type="text" id="User_Name" name="name" value="@Model.User.Name" asp-for="User.Name"/>
     </div>
     <div>
-        <lable for="Email">Email:</lable>
+        <label for="User_Email">Email:</label>
         <input type="text" id="User_Email" name="email" value="@Model.User.Email" asp-for="User.Email" />
     </div>
     <div>
-        <lable for="Phone">Phone:</lable>
+        <label for="User_Phone">Phone:</label>
         <input type="text" id="User_Phone" name="phone" value="@Model.User.Phone" asp-for="User.Phone" />
     </div>
 
     <input type="hidden" name="previousEmail" value="@Model.User.Email"/>
-    <button type="submit">Save Changes</button>
+    <button type="submit">Save Changes</button>  
 </form>
 
-@if (Model.User.Reviews.Count > 0)
+@if (Model.Reviews.Count > 0)
 {
     <h2>Reviews:</h2>
     <ul>
-        @foreach(var review in Model.User.Reviews)
+        @foreach(var review in Model.Reviews)
         {
-            <li>@review.Rating</li>
-            <li>@review.Description</li>
+            <li>Rating: @review.Rating</li>
+            <li>Comment: @review.Description</li>
+            <hr />
         }
     </ul>
 }

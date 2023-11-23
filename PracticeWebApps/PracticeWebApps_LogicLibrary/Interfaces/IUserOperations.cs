@@ -14,5 +14,6 @@ namespace PracticeWebApps_LogicLibrary.Interfaces
         public bool EditObject(T t, string previousEmail);
         public bool DeleteObject(T t);
         public bool IsUserPresent(T t);
+        public int GetUserId(string searchString);
     }
 }

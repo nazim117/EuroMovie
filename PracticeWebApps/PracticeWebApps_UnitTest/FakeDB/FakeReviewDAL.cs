@@ -25,5 +25,10 @@ namespace PracticeWebApps_UnitTest.FakeDB
         {
             throw new NotImplementedException();
         }
+
+        public Review[] LoadReviewsForUser(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

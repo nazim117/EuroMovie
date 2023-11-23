@@ -22,8 +22,10 @@ namespace PracticeWebApps.Pages
         public string InfoMessage { get; private set; }
         [BindProperty]
         public UserModel User { get; private set; }
+        public List<Review> Reviews { get; private set; }
 
         private UserManager _userManager;
+        private ReviewManager _reviewManager;
 
         private readonly ILogger<UserProfileModel> _logger;
         public UserProfileModel(ILogger<UserProfileModel> logger)
@@ -31,9 +33,13 @@ namespace PracticeWebApps.Pages
             _logger = logger;
             ErrorMessage = string.Empty;
             _userManager = new UserManager(new UserDAL());
+            Reviews = new List<Review>();
+            _reviewManager = new ReviewManager(new ReviewDAL());
         }
         public IActionResult OnGet(string name)
         {
+            int userId = _userManager.GetUserId(name);
+            Reviews = _reviewManager.LoadReviewsForUser(userId).ToList();
             User = _userManager.GetObject(name);
 
             return Page();

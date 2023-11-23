@@ -11,6 +11,7 @@ namespace PracticeWebApps_LogicLibrary.Interfaces
         public bool CreateReview(T t, string userName, string productName);
         public T GetReviewForProduct(int id);
         public T[] LoadReviewsForProduct(int id);
+        public T[] LoadReviewsForUser(int id);
 
     }
 }

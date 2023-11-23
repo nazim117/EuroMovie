@@ -265,5 +265,49 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
+        public int GetUserId(string stringForSearch)
+        {
+            using (GetSQLConnection())
+            {
+                try
+                {
+                    string sql = $"SELECT * FROM [User] WHERE Name = @Name";
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        command.Parameters.AddWithValue("@Name", stringForSearch);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                return reader.GetInt32(0);
+                            }
+                        }
+                    }
+                }
+                catch (SqlNullValueException ex)
+                {
+                    throw new SqlNullValueException("Error, reading null values. " + ex.ToString());
+
+                }
+                catch (InvalidOperationException ex)
+                {
+                    throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. " + ex.ToString());
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception("An error occured in the SQL Server database. " + ex.ToString());
+                }
+                catch (TimeoutException ex)
+                {
+                    throw new TimeoutException("Database operation takes too long to complete. " + ex.ToString());
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.ToString());
+                }
+            }
+            return 0;
+        }
     }
 }

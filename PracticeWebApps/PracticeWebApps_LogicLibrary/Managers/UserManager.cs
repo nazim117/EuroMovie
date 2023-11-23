@@ -43,6 +43,9 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationsRepository.DeleteObject(user);
         }
-
+        public int GetUserId(string searchString)
+        {
+            return operationsRepository.GetUserId(searchString);
+        }
     }
 }

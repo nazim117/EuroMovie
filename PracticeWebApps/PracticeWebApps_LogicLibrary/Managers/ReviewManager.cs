@@ -28,5 +28,9 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationsRepository.LoadReviewsForProduct(productId);
         }
+        public Review[] LoadReviewsForUser(int userId)
+        {
+            return operationsRepository.LoadReviewsForUser(userId);
+        }
     }
 }
