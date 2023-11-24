@@ -53,7 +53,6 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
-
         public Review GetReviewForProduct(int id)
         {
             using (GetSQLConnection())
@@ -99,7 +98,6 @@ namespace PracticeWebApps_DAL_Library
             }
             return null;
         }
-
         public Review[] LoadReviewsForProduct(int productId)
         {
             List<Review> reviews = new List<Review>();

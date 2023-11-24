@@ -48,10 +48,6 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationRepository.DeleteObject(product);
         }
-        public void AddReview(Product product, Review review)
-        {
-            product.AddReview(review);
-        }
         private List<Product> MergeSort(List<Product> products)
         {
             if (products.Count <= 1)

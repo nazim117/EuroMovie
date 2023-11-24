@@ -89,7 +89,6 @@ namespace PracticeWebApps_DAL_Library
             }
             return null;
         }
-
         public bool CreateObject(UserModel user, string salt)
         {
             try
@@ -133,7 +132,6 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
-
         public bool EditObject(UserModel user, string previousEmail)
         {
             try
@@ -177,7 +175,6 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
-
         public bool DeleteObject(UserModel user)
         {
             try
@@ -216,7 +213,6 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
-
         public bool IsUserPresent(UserModel user)
         {
             try

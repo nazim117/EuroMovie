@@ -98,10 +98,6 @@ namespace PracticeWebApps_Domain.Models.Products
         public List<string> StreamedPlatform { get; protected set; }
         public List<Review> Reviews { get; protected set; }
 
-        public void AddReview(Review review)
-        {
-            Reviews.Add(review);
-        }
         public override string ToString()
         {
             return $"{Name} | Genre: {Genre} | Rating: {MovieRating} | Duration: {Duration}";

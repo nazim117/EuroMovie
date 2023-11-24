@@ -470,7 +470,6 @@ namespace PracticeWebApps_DAL_Library
             }
 
         }
-
         public bool DeleteObject(Product product)
         {
             try

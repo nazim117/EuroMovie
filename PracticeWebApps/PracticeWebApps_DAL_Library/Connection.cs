@@ -9,7 +9,7 @@ namespace PracticeWebApps_DAL_Library
 {
     public class Connection
     {
-        public const string connect = "Server=mssqlstud.fhict.local;Database=dbi499773;User Id=dbi499773;Password=Fml01HwD33;";
+        private const string connect = "Server=mssqlstud.fhict.local;Database=dbi499773;User Id=dbi499773;Password=Fml01HwD33;";
 
         public SqlConnection GetSQLConnection()
         {
