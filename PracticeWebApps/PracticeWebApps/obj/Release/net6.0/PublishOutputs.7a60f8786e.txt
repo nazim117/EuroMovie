@@ -10,6 +10,7 @@ C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\P
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps\obj\Release\net6.0\PubTmp\Out\appsettings.json
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps\obj\Release\net6.0\PubTmp\Out\wwwroot\css\LogIn.css
+C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps\obj\Release\net6.0\PubTmp\Out\wwwroot\js\OpenRating.js
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps\obj\Release\net6.0\PubTmp\Out\PracticeWebApps.dll
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps\obj\Release\net6.0\PubTmp\Out\PracticeWebApps.runtimeconfig.json
 C:\Sem2-project-repository\individual-project-nazim-ahmedov-s2\PracticeWebApps\PracticeWebApps\obj\Release\net6.0\PubTmp\Out\PracticeWebApps.pdb

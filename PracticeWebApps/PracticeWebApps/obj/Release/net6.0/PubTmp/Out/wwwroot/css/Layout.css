@@ -37,11 +37,6 @@ main{
 }
 footer {
     color: white;
-    /*line-height: 50px;
-    background-color: black;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align:center;*/
     padding:10px;
 }
 button {
@@ -62,7 +57,7 @@ button {
 }
 .custom-search-input{
     border:none;
-    box-shadow:none;]
+    box-shadow:none;
     width:600px;
 }
 .custom-search-button{
@@ -74,11 +69,11 @@ button {
 
 }
 .custom-search-button:hover {
-    background-color: cornflowerblue;
+    background-color: red;
 }
 
 .nav-link:hover {
-    background-color: cornflowerblue;
+    background-color: darkred;
     color: white;
     border-radius: 5px;
 }

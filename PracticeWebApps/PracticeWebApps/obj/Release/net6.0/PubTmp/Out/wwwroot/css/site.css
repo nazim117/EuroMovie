@@ -23,7 +23,7 @@ body {
 }
 
 .featured-button {
-    background-color: cornflowerblue;
+    background-color: red;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
@@ -102,7 +102,7 @@ body {
 
 .movie-list-item-button {
     padding: 10px;
-    background-color:cornflowerblue;
+    background-color:red;
     color: white;
     border-radius: 10px;
     outline: none;

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using PracticeWebApps_DAL_Library;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Managers;
+using PracticeWebApps_LogicLibrary.SortTypes;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace PracticeWebApps.Pages
@@ -20,7 +21,7 @@ namespace PracticeWebApps.Pages
         }
         public IActionResult OnGet(string query)
         {
-            SearchResults = _productManager.Search(query);
+            SearchResults = _productManager.Search(query, new SortByName());
             searchQuery = query;
             return Page();
         }

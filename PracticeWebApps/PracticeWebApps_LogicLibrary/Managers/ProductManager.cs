@@ -2,16 +2,18 @@
 using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
+using PracticeWebApps_LogicLibrary.SortTypes;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {
     public class ProductManager
     {
         private IOperations<Product> operationRepository;
-
+        private List<Product> products;
         public ProductManager(IOperations<Product> operationRepository)
         {
             this.operationRepository = operationRepository;
+            products = LoadObjects().ToList();
         }
         public Product[] LoadObjects()
         {
@@ -48,7 +50,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationRepository.DeleteObject(product);
         }
-        private List<Product> MergeSort(List<Product> products)
+        private List<Product> MergeSort(List<Product> products, IComparer<Product> comparer)
         {
             if (products.Count <= 1)
             {
@@ -60,14 +62,14 @@ namespace PracticeWebApps_LogicLibrary.Managers
             List<Product> left = new List<Product>(products.GetRange(0, middle));
             List<Product> right = new List<Product>(products.GetRange(middle, products.Count - middle));
 
-            left = MergeSort(left);
-            right = MergeSort(right);
+            left = MergeSort(left, comparer);
+            right = MergeSort(right, comparer);
 
             int i = 0, j = 0, k = 0;
 
             while (i < left.Count && j < right.Count)
             {
-                if (string.Compare(left[i].Name, right[i].Name, StringComparison.OrdinalIgnoreCase) < 0)
+                if (comparer.Compare(left[i], right[j]) < 0)
                 {
                     products[k] = left[i];
                     i++;
@@ -94,15 +96,17 @@ namespace PracticeWebApps_LogicLibrary.Managers
             return products;
 
         }
-        public HashSet<Product> Search(string searchQuery)
+        public HashSet<Product> Search(string searchQuery, IComparer<Product> comparer)
         {
             HashSet<Product> result = new HashSet<Product>();
-            result = MergeSort(LoadObjects().ToList()).ToHashSet();
+            
+            result = MergeSort(products, comparer).ToHashSet();
 
             if (searchQuery == null)
             {
                 return new HashSet<Product>();
             }
+
             foreach (var product in result)
             {
                 if (!product.Name.StartsWith(searchQuery,StringComparison.OrdinalIgnoreCase))
