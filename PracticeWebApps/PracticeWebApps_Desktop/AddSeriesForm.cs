@@ -105,7 +105,7 @@ namespace PracticeWebApps_Desktop
                 try
                 {
                     FileManager fileManager = new FileManager();
-                    relativeDestinationFilePath = fileManager.SaveFilePath(openFileDialog.FileName);
+                    relativeDestinationFilePath = fileManager.SaveFile(openFileDialog.FileName);
 
                     pbSeries.Image = Image.FromFile(relativeDestinationFilePath);
                     pbSeries.SizeMode = PictureBoxSizeMode.StretchImage;

@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\images\\Avatar.jpg"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\AvatarOG.jpg",
+      "PackagePath": "staticwebassets\\images\\AvatarOG.jpg"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Avengers.jpeg",
       "PackagePath": "staticwebassets\\images\\Avengers.jpeg"
     },
@@ -45,8 +49,8 @@
       "PackagePath": "staticwebassets\\images\\BlackPanther.jpg"
     },
     {
-      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Draculajpg.jpg",
-      "PackagePath": "staticwebassets\\images\\Draculajpg.jpg"
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Dracula.jpg",
+      "PackagePath": "staticwebassets\\images\\Dracula.jpg"
     },
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\FastX.jpg",
@@ -55,6 +59,14 @@
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Flash.jpg",
       "PackagePath": "staticwebassets\\images\\Flash.jpg"
+    },
+    {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Fontys.jpg",
+      "PackagePath": "staticwebassets\\images\\Fontys.jpg"
+    },
+    {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Monarch.jpg",
+      "PackagePath": "staticwebassets\\images\\Monarch.jpg"
     },
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Oppeheimer.jpg",
@@ -69,12 +81,24 @@
       "PackagePath": "staticwebassets\\images\\Terminator.jpeg"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\TheMandalorian.jpeg",
+      "PackagePath": "staticwebassets\\images\\TheMandalorian.jpeg"
+    },
+    {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\TheWitcher.jpeg",
+      "PackagePath": "staticwebassets\\images\\TheWitcher.jpeg"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Transformers.jpg",
       "PackagePath": "staticwebassets\\images\\Transformers.jpg"
     },
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Transformers2.jpg",
       "PackagePath": "staticwebassets\\images\\Transformers2.jpg"
+    },
+    {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\WandaVision.jpeg",
+      "PackagePath": "staticwebassets\\images\\WandaVision.jpeg"
     },
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\f-1.jpg",
@@ -87,6 +111,10 @@
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\images.jpeg",
       "PackagePath": "staticwebassets\\images\\images.jpeg"
+    },
+    {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\napoleon.jpg",
+      "PackagePath": "staticwebassets\\images\\napoleon.jpg"
     },
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\js\\site.js",

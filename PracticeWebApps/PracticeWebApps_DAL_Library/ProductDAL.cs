@@ -157,8 +157,8 @@ namespace PracticeWebApps_DAL_Library
             {
                 using (GetSQLConnection())
                 {
-                    string sql = $"INSERT INTO [Product](Name, Description, Rating, Genre, Duration, Picture) " +
-                        $"values(@Name, @Description, @Rating, @Genre, @Duration, @Picture)";
+                    string sql = $"INSERT INTO [Product](Name, Description, Rating, Genre, Duration, Picture, ProductType) " +
+                        $"values(@Name, @Description, @Rating, @Genre, @Duration, @Picture, @ProductType)";
 
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
@@ -168,6 +168,15 @@ namespace PracticeWebApps_DAL_Library
                         command.Parameters.AddWithValue("@Genre", (int)product.Genre);
                         command.Parameters.AddWithValue("@Duration", product.Duration);
                         command.Parameters.AddWithValue("@Picture", product.Picture);
+
+                        if (product is Movie)
+                        {
+                            command.Parameters.AddWithValue("@ProductType", "Movie");
+                        }
+                        if (product is Serie)
+                        {
+                            command.Parameters.AddWithValue("@ProductType", "Serie");
+                        }
 
                         command.ExecuteNonQuery();
                     }

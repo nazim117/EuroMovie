@@ -36,10 +36,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Shared\images\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Include="wwwroot\images\AvatarOG.jpg" />
+    <None Include="wwwroot\images\Fontys.jpg" />
+    <None Include="wwwroot\images\Monarch.jpg" />
+    <None Include="wwwroot\images\TheMandalorian.jpeg" />
+    <None Include="wwwroot\images\TheWitcher.jpeg" />
+    <None Include="wwwroot\images\WandaVision.jpeg" />
     <None Include="wwwroot\js\OpenRating.js" />
   </ItemGroup>
 

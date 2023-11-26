@@ -10,11 +10,11 @@ namespace PracticeWebApps_Desktop
 {
     public partial class AddMovieForm : Form
     {
-        string relativeDestinationFilePath;
+        string destinationFilePath;
         public AddMovieForm()
         {
             InitializeComponent();
-            relativeDestinationFilePath = string.Empty;
+            destinationFilePath = string.Empty;
             foreach (var item in Enum.GetValues(typeof(Rating)))
             {
                 cbbMovieRating.Items.Add(item);
@@ -27,15 +27,13 @@ namespace PracticeWebApps_Desktop
 
         private void btnAddMovie_Click(object sender, EventArgs e)
         {
-            if (relativeDestinationFilePath == string.Empty)
+            if (destinationFilePath == string.Empty)
             {
                 MessageBox.Show("Select a Picture for the movie/serie");
                 return;
             }
             
             ProductManager productManager = new ProductManager(new ProductDAL());
-            string[] movieRatingValues = Enum.GetNames(typeof(Rating));
-            string[] movieGenreValues = Enum.GetNames(typeof(Genre));
 
             try
             {
@@ -44,14 +42,6 @@ namespace PracticeWebApps_Desktop
                 {
                     throw new ArgumentException("Invalid duration");
                 }
-                if (!movieRatingValues.Contains(cbbMovieRating.SelectedItem))
-                {
-                    throw new ArgumentException("Invalid rating");
-                }
-                if (!movieGenreValues.Contains(cbbGenre.SelectedItem))
-                {
-                    throw new ArgumentException("Invalid rating");
-                }
 
                 productManager.CreateObject(
                 new Movie(txtName.Text,
@@ -59,7 +49,7 @@ namespace PracticeWebApps_Desktop
                 (Rating)cbbMovieRating.SelectedItem,
                 (Genre)cbbGenre.SelectedItem,
                 duration,
-                relativeDestinationFilePath));
+                destinationFilePath));
 
                 MessageBox.Show("Movie added successfully");
 
@@ -84,14 +74,17 @@ namespace PracticeWebApps_Desktop
                 try
                 {
                     FileManager fileManager = new FileManager();
-                    relativeDestinationFilePath = fileManager.SaveFilePath(openFileDialog.FileName);
 
-                    pbMovie.Image = Image.FromFile(relativeDestinationFilePath);
+                    string filePath = fileManager.SaveFile(openFileDialog.FileName);
+                    string fileName = fileManager.GetFileName();
+                    destinationFilePath = fileManager.CreateRelativePath(fileName, "images");
+
+                    pbMovie.Image = Image.FromFile(filePath);
                     pbMovie.SizeMode = PictureBoxSizeMode.StretchImage;
 
                     MessageBox.Show("File selected successfully");
                 }
-                catch (Exception ex)
+                catch (ArgumentException ex)
                 {
                     MessageBox.Show(ex.Message);
                 }

@@ -8,32 +8,57 @@ namespace PracticeWebApps_LogicLibrary.Managers
 {
     public class FileManager
     {
-        public string SaveFilePath(string selectedFilePath)
+        string originalFileName;
+        public string SaveFile(string selectedFilePath)
         {
-            string currentDirectory = Environment.CurrentDirectory;
+            if (string.IsNullOrEmpty(selectedFilePath) && File.Exists(selectedFilePath))
+            {
+                throw new ArgumentException("Select a file before saving");
+            }
 
-            string relativeFileLocation = Path.GetRelativePath(currentDirectory, selectedFilePath);
-
-            string destinationFolderPath = Path.GetRelativePath(currentDirectory,
-                "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\Pages\\Shared\\images\\");
-
-            return CopyFilePath(selectedFilePath, relativeFileLocation, destinationFolderPath);
-        }
-        private string CopyFilePath(string selectedFilePath, string relativeFileLocation, string destinationFolderPath)
-        {
-            string relativeDestinationFilePath;
             try
             {
-                string fileName = Path.GetFileName(relativeFileLocation);
-                relativeDestinationFilePath = Path.Combine(destinationFolderPath, fileName);
-                File.Copy(selectedFilePath, relativeDestinationFilePath, true);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"An error occured: {ex.Message}");
-            }
+                string wwwrootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
 
-            return relativeDestinationFilePath;
+                string destinationFolder = Path.Combine(wwwrootPath, "images");
+
+                if (!Directory.Exists(destinationFolder))
+                {
+                    Directory.CreateDirectory(destinationFolder);
+                }
+
+                originalFileName = Path.GetFileName(selectedFilePath);
+
+                string destinationPath = Path.Combine(destinationFolder, originalFileName);
+
+                File.Copy(selectedFilePath, destinationPath, true);
+
+                return destinationPath;
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException($"An error occured: {ex.Message}");
+            }
+            
+        }
+        public string GetFileName()
+        {
+            return originalFileName;
+        }
+        public string CreateRelativePath(string originalFileName, string subfolder)
+        {
+            try
+            {
+
+                string relativePath = Path.Combine(subfolder, originalFileName).Replace('\\', '/'); ;
+
+                return $"~/{relativePath}";
+
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException($"An error occured: {ex.Message}");
+            }
         }
     }
 }

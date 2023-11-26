@@ -8,7 +8,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <EncryptedPassword>
     </EncryptedPassword>
     <_PublishTargetUrl>ftps://luna.fhict.nl/domains/i499773.luna.fhict.nl</_PublishTargetUrl>
-    <History>True|2023-11-24T11:27:19.0473706Z;True|2023-11-17T11:23:44.2046627+01:00;False|2023-11-17T11:20:29.7199275+01:00;False|2023-11-17T11:17:57.7283347+01:00;True|2023-11-17T10:51:40.1027631+01:00;True|2023-10-06T12:41:04.4508174+02:00;False|2023-10-06T12:39:46.8912178+02:00;False|2023-10-05T13:42:28.5992596+02:00;False|2023-10-05T13:35:10.1836239+02:00;False|2023-10-05T13:33:08.8798255+02:00;</History>
+    <History>True|2023-11-26T19:26:12.6249316Z;False|2023-11-26T20:23:00.6017018+01:00;True|2023-11-24T12:27:19.0473706+01:00;True|2023-11-17T11:23:44.2046627+01:00;False|2023-11-17T11:20:29.7199275+01:00;False|2023-11-17T11:17:57.7283347+01:00;True|2023-11-17T10:51:40.1027631+01:00;True|2023-10-06T12:41:04.4508174+02:00;False|2023-10-06T12:39:46.8912178+02:00;False|2023-10-05T13:42:28.5992596+02:00;False|2023-10-05T13:35:10.1836239+02:00;False|2023-10-05T13:33:08.8798255+02:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -268,25 +268,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/21/2023 09:19:00</publishTime>
     </File>
     <File Include="PracticeWebApps.deps.json">
-      <publishTime>11/24/2023 12:26:58</publishTime>
+      <publishTime>11/26/2023 20:25:59</publishTime>
     </File>
     <File Include="PracticeWebApps.dll">
-      <publishTime>11/24/2023 12:26:41</publishTime>
+      <publishTime>11/26/2023 20:25:58</publishTime>
     </File>
     <File Include="PracticeWebApps.exe">
-      <publishTime>11/24/2023 12:26:42</publishTime>
+      <publishTime>11/26/2023 20:25:58</publishTime>
     </File>
     <File Include="PracticeWebApps.pdb">
-      <publishTime>11/24/2023 12:26:41</publishTime>
+      <publishTime>11/26/2023 20:25:58</publishTime>
     </File>
     <File Include="PracticeWebApps.runtimeconfig.json">
       <publishTime>10/06/2023 12:40:44</publishTime>
     </File>
     <File Include="PracticeWebApps_DAL_Library.dll">
-      <publishTime>11/24/2023 12:26:38</publishTime>
+      <publishTime>11/26/2023 20:20:48</publishTime>
     </File>
     <File Include="PracticeWebApps_DAL_Library.pdb">
-      <publishTime>11/24/2023 12:26:38</publishTime>
+      <publishTime>11/26/2023 20:20:48</publishTime>
     </File>
     <File Include="PracticeWebApps_Domain.dll">
       <publishTime>11/24/2023 12:26:38</publishTime>
@@ -295,19 +295,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/24/2023 12:26:38</publishTime>
     </File>
     <File Include="PracticeWebApps_LogicLibrary.dll">
-      <publishTime>11/17/2023 11:15:38</publishTime>
+      <publishTime>11/26/2023 20:20:47</publishTime>
     </File>
     <File Include="PracticeWebApps_LogicLibrary.pdb">
-      <publishTime>11/17/2023 11:15:38</publishTime>
+      <publishTime>11/26/2023 20:20:47</publishTime>
     </File>
     <File Include="PracticeWebApps_UnitTest.deps.json">
       <publishTime>10/06/2023 12:40:41</publishTime>
     </File>
     <File Include="PracticeWebApps_UnitTest.dll">
-      <publishTime>11/24/2023 12:26:39</publishTime>
+      <publishTime>11/26/2023 20:20:48</publishTime>
     </File>
     <File Include="PracticeWebApps_UnitTest.pdb">
-      <publishTime>11/24/2023 12:26:39</publishTime>
+      <publishTime>11/26/2023 20:20:48</publishTime>
     </File>
     <File Include="PracticeWebApps_UnitTest.runtimeconfig.json">
       <publishTime>10/06/2023 12:40:41</publishTime>
@@ -454,13 +454,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/21/2023 09:18:56</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/24/2023 12:26:58</publishTime>
+      <publishTime>11/26/2023 20:25:59</publishTime>
     </File>
     <File Include="wwwroot/css/Layout.css">
       <publishTime>11/23/2023 23:40:03</publishTime>
     </File>
     <File Include="wwwroot/css/LogIn.css">
-      <publishTime>10/05/2023 22:28:53</publishTime>
+      <publishTime>11/06/2023 17:33:53</publishTime>
     </File>
     <File Include="wwwroot/css/Product.css">
       <publishTime>11/23/2023 16:40:15</publishTime>
@@ -503,6 +503,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="wwwroot/images/images.jpeg">
       <publishTime>09/24/2023 21:12:06</publishTime>
+    </File>
+    <File Include="wwwroot/images/napoleon.jpg">
+      <publishTime>11/26/2023 19:15:59</publishTime>
     </File>
     <File Include="wwwroot/images/Oppeheimer.jpg">
       <publishTime>10/05/2023 22:05:57</publishTime>

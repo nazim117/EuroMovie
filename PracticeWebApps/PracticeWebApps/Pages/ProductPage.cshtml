@@ -14,7 +14,7 @@
 
 <div class="content">
     <div class="product-info">
-        <img src="@Model.Product.Picture" alt="" class="product-image">
+        <img src="@Url.Content(Model.Product.Picture)" alt="@Model.Product.Name" class="product-image">
         <div class="card-body">
             <h5 class="card-title">@Model.Product.Name</h5>
             <p class="card-text">Description: @Model.Product.Description</p>

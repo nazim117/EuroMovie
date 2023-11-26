@@ -33,10 +33,13 @@ if (!app.Environment.IsDevelopment())
 	app.UseHsts();
 }
 
+app.UseDeveloperExceptionPage();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 
 app.UseAuthorization();
 app.UseAuthentication();

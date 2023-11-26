@@ -10,7 +10,7 @@
     @foreach (var movie in Model.SearchResults)
     {
         <div class="movie-list-item">
-            <img class="movie-list-item-img" src="@movie.Picture" alt="">
+            <img class="movie-list-item-img" src="@Url.Content(movie.Picture)" alt="@movie.Name">
             <span class="movie-list-item-title">@movie.Name</span>
             <p class="movie-list-item-desc">@movie.Description</p>
             <a asp-page="ProductPage" asp-route-name="@movie.Name" class="movie-list-item-button">Watch</a>

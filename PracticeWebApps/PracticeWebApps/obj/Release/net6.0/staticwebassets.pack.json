@@ -89,6 +89,10 @@
       "PackagePath": "staticwebassets\\images\\images.jpeg"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\napoleon.jpg",
+      "PackagePath": "staticwebassets\\images\\napoleon.jpg"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

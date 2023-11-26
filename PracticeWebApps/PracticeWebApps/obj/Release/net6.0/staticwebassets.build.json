@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "72nB/CLhg9w/6y1m96/CeIhy3nvu5SAWpMWwcItMrvw=",
+  "Hash": "rIsczugaKl+ikY9yFL80I//Fp2w09etupLFr8wp0B8o=",
   "Source": "PracticeWebApps",
   "BasePath": "_content/PracticeWebApps",
   "Mode": "Default",
@@ -321,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\images.jpeg"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\napoleon.jpg",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/napoleon.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\napoleon.jpg"
     },
     {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Oppeheimer.jpg",
