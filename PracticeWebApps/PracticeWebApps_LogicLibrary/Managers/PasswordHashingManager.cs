@@ -15,7 +15,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             
         }
-        public string GetSalt()
+        public string GenerateSalt()
         {
             var salt = new byte[30];
             using (var random = new RNGCryptoServiceProvider())
@@ -26,7 +26,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
             return Convert.ToBase64String(salt);
         }
 
-        public string GetHash(string password, string salt)
+        public string GenerateHash(string password, string salt)
         {
             return BCrypt.Net.BCrypt.HashPassword(password + salt);
         }

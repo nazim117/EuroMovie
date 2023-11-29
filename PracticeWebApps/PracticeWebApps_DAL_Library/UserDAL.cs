@@ -305,5 +305,99 @@ namespace PracticeWebApps_DAL_Library
             }
             return 0;
         }
+        public bool FindEmail(string email)
+        {
+            try
+            {
+                using (GetSQLConnection())
+                {
+                    string sql = "SELECT COUNT(*) FROM [User] WHERE Email = @email";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@email", email);
+
+                        int count = (int)cmd.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
+                    }
+
+                }
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. :" + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. : " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete, and the timeout period is exceeded.  " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        public bool ChangePassword(string email, string password, string salt)
+        {
+            try
+            {
+                using (GetSQLConnection())
+                {
+                    string sql = "UPDATE [User] " +
+                        "SET Password = @password, Salt = @salt " +
+                        "WHERE Email = @email";
+
+                    using (SqlCommand cmd = new SqlCommand(sql, GetSQLConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@password", password);
+                        cmd.Parameters.AddWithValue("@salt", salt);
+                        cmd.Parameters.AddWithValue("@email", email);
+
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result < 0) return false;
+                    }
+
+                }
+                return true;
+            }
+            catch (SqlNullValueException ex)
+            {
+                throw new SqlNullValueException("Error, reading null values :" + ex.ToString());
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. :" + ex.ToString());
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("An error occured in the SQL Server database. : " + ex.ToString());
+            }
+            catch (TimeoutException ex)
+            {
+                throw new TimeoutException("Database operation takes too long to complete, and the timeout period is exceeded.  " + ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
     }
 }

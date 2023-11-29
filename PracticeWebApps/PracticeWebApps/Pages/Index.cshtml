@@ -16,6 +16,22 @@
     </p>
 </div>
 <div class="movie-list-container">
+    <h1 class="movie-list-title">New Releases</h1>
+    <div class="movie-list-wrapper">
+        <div class="movie-list">
+            @foreach (var movie in Model.Movies.OrderByDescending(x=>x.Name).Take(5))
+            {
+                <div class="movie-list-item">
+
+                    <img class="movie-list-item-img" src="@Url.Content(movie.Picture)" alt="@movie.Name">
+                    <span class="movie-list-item-title">@movie.Name</span>
+                    <p class="movie-list-item-desc">@movie.Description</p>
+                    <a asp-page="ProductPage" asp-route-name="@movie.Name" class="movie-list-item-button">Watch</a>
+                </div>
+            }
+        </div>
+    </div>
+<div class="movie-list-container">
     <h1 class="movie-list-title">ACTION</h1>
     <div class="movie-list-wrapper">
         <div class="movie-list">
@@ -31,6 +47,7 @@
             }
         </div>
     </div>
+</div>
 </div>
 <div class="movie-list-container">
     <h1 class="movie-list-title">ADVENTURE</h1>

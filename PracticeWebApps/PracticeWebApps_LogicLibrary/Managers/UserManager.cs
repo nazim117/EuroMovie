@@ -47,5 +47,13 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationsRepository.GetUserId(searchString);
         }
+        public bool FindEmail(string email)
+        {
+            return operationsRepository.FindEmail(email);
+        }
+        public bool ChangePassword(string email, string password, string salt)
+        {
+            return operationsRepository.ChangePassword(email, password, salt);
+        }
     }
 }

@@ -60,5 +60,15 @@ namespace PracticeWebApps_UnitTest.FakeDB
         {
             throw new NotImplementedException();
         }
+
+        public bool FindEmail(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ChangePassword(string email, string password, string salt)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

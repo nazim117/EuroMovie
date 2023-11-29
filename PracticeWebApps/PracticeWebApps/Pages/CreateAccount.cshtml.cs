@@ -42,8 +42,8 @@ namespace PracticeWebApps.Pages
             }
             UserManager userManager = new UserManager( new UserDAL());
             PasswordHashingManager passwordHashing = new PasswordHashingManager();
-            string salt = passwordHashing.GetSalt();
-            string passHash = passwordHashing.GetHash(CreateAccountDTO.Password, salt);
+            string salt = passwordHashing.GenerateSalt();
+            string passHash = passwordHashing.GenerateHash(CreateAccountDTO.Password, salt);
 
             try
             {

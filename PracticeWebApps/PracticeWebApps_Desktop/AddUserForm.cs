@@ -38,8 +38,8 @@ namespace PracticeWebApps_Desktop
             }
             UserManager userManager = new UserManager(new UserDAL());
             PasswordHashingManager passwordHashing = new PasswordHashingManager();
-            string salt = passwordHashing.GetSalt();
-            string passHash = passwordHashing.GetHash(txtPassword.Text, salt);
+            string salt = passwordHashing.GenerateSalt();
+            string passHash = passwordHashing.GenerateHash(txtPassword.Text, salt);
 
             try
             {

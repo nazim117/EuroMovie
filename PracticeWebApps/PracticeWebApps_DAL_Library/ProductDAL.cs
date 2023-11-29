@@ -1,11 +1,8 @@
-﻿using PracticeWebApps_Domain.Exceptions;
-using PracticeWebApps_Domain.Models;
+﻿using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
-using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Xml.Linq;
 
 namespace PracticeWebApps_DAL_Library
 {

@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/ConfirmCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmlybUNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/Index.cshtml]
@@ -58,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/UpdatePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBkYXRlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Sem2-project-repository/individual-project-nazim-ahmedov-s2/PracticeWebApps/PracticeWebApps/Pages/UserProfile.cshtml]
