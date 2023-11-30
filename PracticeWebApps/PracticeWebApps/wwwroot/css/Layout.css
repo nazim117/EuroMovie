@@ -49,6 +49,12 @@ button {
     color:black;
 }
 
+.radio-button{
+    color:white;
+    -webkit-appearance:none;
+    appearance:none;
+}
+
 .custom-search-form{
     display:flex;
     border-radius:5px; 

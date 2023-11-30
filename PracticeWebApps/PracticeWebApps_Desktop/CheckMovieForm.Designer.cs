@@ -84,11 +84,13 @@
             // 
             rbName.AutoSize = true;
             rbName.BackColor = Color.Red;
+            rbName.Checked = true;
             rbName.ForeColor = Color.White;
             rbName.Location = new Point(323, 419);
             rbName.Name = "rbName";
             rbName.Size = new Size(70, 24);
             rbName.TabIndex = 6;
+            rbName.TabStop = true;
             rbName.Text = "Name";
             rbName.UseVisualStyleBackColor = false;
             rbName.CheckedChanged += rbName_CheckedChanged;

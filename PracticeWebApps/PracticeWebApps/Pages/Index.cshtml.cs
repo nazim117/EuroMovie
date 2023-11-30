@@ -11,7 +11,9 @@ namespace PracticeWebApps.Pages
 	{
 		[BindProperty]
         public string searchQuery { get; set; }
-        public List<Movie> Movies { get; private set; }
+		[BindProperty]
+		public string sortingAlgo { get; set; }
+		public List<Movie> Movies { get; private set; }
         public List<Serie> Series { get; private set; }
 		private ProductManager productManager;
 
@@ -42,7 +44,7 @@ namespace PracticeWebApps.Pages
         }
 		public IActionResult OnPost()
 		{
-            return RedirectToPage("/Search", new { query = searchQuery});
+            return RedirectToPage("/Search", new { query = searchQuery, algorithm = sortingAlgo });
 		}
 	}
 }

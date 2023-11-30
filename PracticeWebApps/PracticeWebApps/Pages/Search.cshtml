@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
 
 <h1> Search results for: "@Model.searchQuery"</h1>
+<h1>Time Elapsed: @Model.TimeTaken</h1>
 <br />
 <div class="movie-list">
     @foreach (var movie in Model.SearchResults)

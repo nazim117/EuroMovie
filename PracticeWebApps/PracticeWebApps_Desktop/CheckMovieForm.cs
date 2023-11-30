@@ -24,13 +24,7 @@ namespace PracticeWebApps_Desktop
             InitializeComponent();
             productManager = new ProductManager(new ProductDAL());
 
-            foreach (var item in productManager.LoadObjects())
-            {
-                if (item is Movie)
-                {
-                    lbMovies.Items.Add(item);
-                }
-            }
+            PopulateList();
         }
 
         private void lbMovies_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,7 +37,33 @@ namespace PracticeWebApps_Desktop
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            PopulateList();
+            IComparer<Product> comparer = new SortByName();
+
+            if (rbName.Checked)
+            {
+                comparer = new SortByName();
+            }
+            else if (rbRating.Checked)
+            {
+                comparer = new SortByRating();
+            }
+            else if (rbGenre.Checked)
+            {
+                comparer = new SortByGenre();
+            }
+            else if (rbDuration.Checked)
+            {
+                comparer = new SortByDuration();
+            }
+
+            lbMovies.Items.Clear();
+            foreach (var item in productManager.Search(txtNameSearch.Text, comparer))
+            {
+                if (item is Movie)
+                {
+                    lbMovies.Items.Add(item);
+                }
+            }
         }
 
         private void rbName_CheckedChanged(object sender, EventArgs e)
@@ -87,7 +107,7 @@ namespace PracticeWebApps_Desktop
             }
 
             lbMovies.Items.Clear();
-            foreach (var item in productManager.Search(txtNameSearch.Text, comparer))
+            foreach (var item in productManager.MergeSort(productManager.LoadObjects().ToList(), comparer))
             {
                 if (item is Movie)
                 {

@@ -95,6 +95,7 @@
             // 
             rbName.AutoSize = true;
             rbName.BackColor = Color.Red;
+            rbName.Checked = true;
             rbName.ForeColor = Color.White;
             rbName.Location = new Point(333, 486);
             rbName.Name = "rbName";
@@ -114,7 +115,6 @@
             rbMovieRating.Name = "rbMovieRating";
             rbMovieRating.Size = new Size(118, 24);
             rbMovieRating.TabIndex = 6;
-            rbMovieRating.TabStop = true;
             rbMovieRating.Text = "Movie Rating";
             rbMovieRating.UseVisualStyleBackColor = false;
             rbMovieRating.CheckedChanged += rbMovieRating_CheckedChanged;
@@ -128,7 +128,6 @@
             rbGenre.Name = "rbGenre";
             rbGenre.Size = new Size(69, 24);
             rbGenre.TabIndex = 7;
-            rbGenre.TabStop = true;
             rbGenre.Text = "Genre";
             rbGenre.UseVisualStyleBackColor = false;
             rbGenre.CheckedChanged += rbGenre_CheckedChanged;
@@ -142,7 +141,6 @@
             rbDuration.Name = "rbDuration";
             rbDuration.Size = new Size(88, 24);
             rbDuration.TabIndex = 8;
-            rbDuration.TabStop = true;
             rbDuration.Text = "Duration";
             rbDuration.UseVisualStyleBackColor = false;
             rbDuration.CheckedChanged += rbDuration_CheckedChanged;
@@ -165,6 +163,7 @@
             Name = "CheckSeriesForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CheckSeriesForm";
+            Load += CheckSeriesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

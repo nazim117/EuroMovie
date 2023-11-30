@@ -12,22 +12,39 @@ namespace PracticeWebApps.Pages
     {
         [BindProperty]
         public string searchQuery { get; set; }
+        [BindProperty]
+        public string sortingAlgo { get; set; }
+        public long TimeTaken { get; set; }
         public HashSet<Product> SearchResults { get; private set; }
+        public List<Product> SortResults { get; private set; }
+        private AlgorithmManager _algomanager;
         private ProductManager _productManager;
         public SearchModel()
         {
+            _algomanager = new AlgorithmManager();
             _productManager = new ProductManager(new ProductDAL());
             SearchResults = new HashSet<Product>();
         }
-        public IActionResult OnGet(string query)
+        public IActionResult OnGet(string query, string algorithm)
         {
-            SearchResults = _productManager.Search(query, new SortByName());
+            _algomanager.StartTimer();
+            if (algorithm == "mergeSort")
+            {
+                SortResults = _algomanager.MergeSort(_productManager.LoadObjects().ToList(), new SortByName());
+            }
+            if (algorithm == "quickSort")
+            {
+                SortResults = _algomanager.QuickSort(_productManager.LoadObjects().ToList(), new SortByName());
+            }
+            SearchResults = _algomanager.Search(query, SortResults);
+            TimeTaken = _algomanager.StopTimer();
             searchQuery = query;
+
             return Page();
         }
         public IActionResult OnPost()
         {
-            return RedirectToPage("/Search",new { query = searchQuery });
+            return RedirectToPage("/Search",new { query = searchQuery, algorithm = sortingAlgo });
         }
     }
 }
