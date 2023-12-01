@@ -3,7 +3,7 @@
     public class CodeController
     {
         private int randomCode;
-        Random random;
+        private Random random;
         public CodeController()
         {
             randomCode = 0;
