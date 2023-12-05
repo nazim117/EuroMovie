@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w4gb/oJdcnQ2AVhqpzzSb3Yb5bi4vCcRI99Ql7sX7io=",
+  "Hash": "ul4Z3dDC6N7OZFhz7ZfKuz0dfnnx6UWD1sHrdHhyJYA=",
   "Source": "PracticeWebApps",
   "BasePath": "_content/PracticeWebApps",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeWebApps.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\css\\AutoCompletion.css",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "css/AutoCompletion.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AutoCompletion.css"
     },
     {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\css\\Layout.css",
@@ -423,6 +440,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\WandaVision.jpeg"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\js\\AutoCompletion.js",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "js/AutoCompletion.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\AutoCompletion.js"
     },
     {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\js\\site.js",

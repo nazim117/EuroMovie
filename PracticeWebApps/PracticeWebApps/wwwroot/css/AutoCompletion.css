@@ -1,0 +1,18 @@
+﻿.ui-autocomplete{
+    max-height:200px;
+    overflow-y:auto;
+    border:1px solid #ccc;
+    background-color:#fff;
+    width:200px;
+    margin-left:-100px;
+    left:50%;
+}
+
+.ui-manu-item{
+    padding:8px;
+    cursor:pointer;
+}
+
+.ui-menu-item:hover{
+    background-color:#f0f0f0;
+}

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Managers;
 using PracticeWebApps_DAL_Library;
+using System.Globalization;
 
 namespace PracticeWebApps.Pages
 {
@@ -15,19 +16,23 @@ namespace PracticeWebApps.Pages
 		public string sortingAlgo { get; set; }
 		public List<Movie> Movies { get; private set; }
         public List<Serie> Series { get; private set; }
-		private ProductManager productManager;
+        private ProductManager productManager;
+		private AlgorithmManager algorithmManager;
 
         public IndexModel()
         {
 			Movies = new List<Movie>();
 			Series = new List<Serie>();
 			productManager = new ProductManager(new ProductDAL());
+			algorithmManager = new AlgorithmManager();
         }
+
         public void OnGet()
 		{
             string cookieValue = Request.Cookies["MyCookie"];
 
             ViewData["CookieValue"] = cookieValue;
+
 
 			foreach (Product movie in productManager.LoadObjects())
 			{
@@ -40,8 +45,8 @@ namespace PracticeWebApps.Pages
 					Series.Add((Serie)movie);
 				}
 			}
-
         }
+        
 		public IActionResult OnPost()
 		{
             return RedirectToPage("/Search", new { query = searchQuery, algorithm = sortingAlgo });

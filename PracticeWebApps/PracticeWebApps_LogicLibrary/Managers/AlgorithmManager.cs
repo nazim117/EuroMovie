@@ -113,7 +113,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
 
             result = products.ToHashSet();
 
-            if (searchQuery == null)
+            if (string.IsNullOrWhiteSpace(searchQuery))
             {
                 return new HashSet<Product>();
             }

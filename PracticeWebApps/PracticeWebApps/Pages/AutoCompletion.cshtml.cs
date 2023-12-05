@@ -1,0 +1,30 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.IdentityModel.Tokens;
+using PracticeWebApps_DAL_Library;
+using PracticeWebApps_Domain.Models.Products;
+using PracticeWebApps_LogicLibrary.Managers;
+
+namespace PracticeWebApps.Pages
+{
+    public class AutoCompletionModel : PageModel
+    {
+        public JsonResult OnGet(string term)
+        {
+            ProductManager productManager = new ProductManager(new ProductDAL());
+            AlgorithmManager algorithmManager = new AlgorithmManager();
+
+            List<Product> matchingMovies = new List<Product>();
+            List<string> matchingMovieNames = new List<string>();
+
+            matchingMovies = algorithmManager.Search(term, productManager.LoadObjects().ToList()).ToList();
+
+            foreach (var item in matchingMovies)
+            {
+                matchingMovieNames.Add(item.Name);
+            }
+
+            return new JsonResult(matchingMovieNames);
+        }
+    }
+}

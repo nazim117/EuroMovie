@@ -24,7 +24,6 @@ namespace PracticeWebApps_DAL_Library
                         command.Parameters.AddWithValue("@Rating", review.Rating);
                         command.Parameters.AddWithValue("@Description", review.Description);
                         command.Parameters.AddWithValue("@UserName", userName);
-                        command.Parameters.AddWithValue("@UserName", userName);
                         command.Parameters.AddWithValue("@ProductName", productName);
 
                         command.ExecuteNonQuery();

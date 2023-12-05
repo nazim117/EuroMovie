@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/PracticeWebApps.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/AutoCompletion.css" asp-append-version="true" />
 
 </head>
 <body>
@@ -24,6 +25,7 @@
                 <input id="searchQuery" name="searchQuery" class="form-control me-2 custom-search-input" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn custom-search-button" type="submit" name="handler">Search</button>
             </form>
+
             @if (User.Identity.IsAuthenticated)
             {
                 <ul class="navbar-nav">
@@ -53,9 +55,11 @@
         &copy; 2023 - PracticeWebApps - <a class="text-white" asp-area="" asp-page="/Privacy">Privacy</a>
         <a class="text-white" asp-area="" asp-page="/About">About</a>
         <a class="text-white" asp-area="" asp-page="/Contact">Contact</a>
-    </footer>
+    </footer> 
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="~/js/AutoCompletion.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/OpenRating.js"></script>

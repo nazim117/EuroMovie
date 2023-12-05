@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\PracticeWebApps.bundle.scp.css"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\css\\AutoCompletion.css",
+      "PackagePath": "staticwebassets\\css\\AutoCompletion.css"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\css\\Layout.css",
       "PackagePath": "staticwebassets\\css\\Layout.css"
     },
@@ -91,6 +95,10 @@
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\napoleon.jpg",
       "PackagePath": "staticwebassets\\images\\napoleon.jpg"
+    },
+    {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\js\\AutoCompletion.js",
+      "PackagePath": "staticwebassets\\js\\AutoCompletion.js"
     },
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\js\\site.js",
