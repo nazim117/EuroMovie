@@ -1,18 +1,13 @@
-﻿using PracticeWebApps_Domain.Models.Products;
-using System;
-using System.Collections.Generic;
+﻿using PracticeWebApps_Domain.Models;
+using PracticeWebApps_Domain.Models.Products;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PracticeWebApps_LogicLibrary.Managers
 {
-    public class AlgorithmManager
+    public class AlgorithmManager<T> where T : class
     {
         private Stopwatch stopwatch;
         public long ElapsedTime { get; private set; }
-
         public void StartTimer()
         {
             stopwatch = new Stopwatch();
@@ -23,7 +18,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return ElapsedTime = stopwatch.ElapsedMilliseconds;
         }
-        public List<Product> MergeSort(List<Product> products, IComparer<Product> comparer)
+        public List<T> MergeSort(List<T> products, IComparer<T> comparer)
         {
             if (products.Count <= 1)
             {
@@ -33,8 +28,8 @@ namespace PracticeWebApps_LogicLibrary.Managers
 
             int middle = products.Count / 2;
 
-            List<Product> left = new List<Product>(products.GetRange(0, middle));
-            List<Product> right = new List<Product>(products.GetRange(middle, products.Count - middle));
+            List<T> left = new List<T>(products.GetRange(0, middle));
+            List<T> right = new List<T>(products.GetRange(middle, products.Count - middle));
 
             left = MergeSort(left, comparer);
             right = MergeSort(right, comparer);
@@ -70,7 +65,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
 
             return products;
         }
-        public List<Product> QuickSort(List<Product> products, IComparer<Product> comparer)
+        public List<T> QuickSort(List<T> products, IComparer<T> comparer)
         {
             if (products.Count <= 1)
             {
@@ -78,10 +73,10 @@ namespace PracticeWebApps_LogicLibrary.Managers
             }
 
             int pivotIndex = products.Count / 2;
-            Product pivot = products[pivotIndex];
+            T pivot = products[pivotIndex];
 
-            List<Product> left = new List<Product>();
-            List<Product> right = new List<Product>();
+            List<T> left = new List<T>();
+            List<T> right = new List<T>();
 
             for (int i = 0; i < products.Count; i++)
             {
@@ -100,14 +95,14 @@ namespace PracticeWebApps_LogicLibrary.Managers
                 }
             }
 
-            List<Product> sortedList = new List<Product>();
+            List<T> sortedList = new List<T>();
             sortedList.AddRange(QuickSort(left, comparer));
             sortedList.Add(pivot);
             sortedList.AddRange(QuickSort(right, comparer));
 
             return sortedList;
         }
-        public HashSet<Product> Search(string searchQuery, List<Product> products)
+        public HashSet<Product> SearchProduct(string searchQuery, List<Product> products)
         {
             HashSet<Product> result = new HashSet<Product>();
 
@@ -123,6 +118,27 @@ namespace PracticeWebApps_LogicLibrary.Managers
                 if (!product.Name.StartsWith(searchQuery, StringComparison.OrdinalIgnoreCase))
                 {
                     result.Remove(product);
+                }
+            }
+
+            return result;
+        }
+        public HashSet<UserModel> SearchUser(string searchQuery, List<UserModel> users)
+        {
+            HashSet<UserModel> result = new HashSet<UserModel>();
+
+            result = users.ToHashSet();
+
+            if (string.IsNullOrWhiteSpace(searchQuery))
+            {
+                return new HashSet<UserModel>();
+            }
+
+            foreach (UserModel user in result)
+            {
+                if (!user.Name.StartsWith(searchQuery, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.Remove(user);
                 }
             }
 

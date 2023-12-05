@@ -80,7 +80,7 @@ namespace PracticeWebApps_Domain.Models
 
         public override string ToString()
         {
-            return $"Name: {Name} | Email: {Email} | Phone: {Phone}";
+            return $"{Name} | {Email} | {Phone}";
         }
     }
 }

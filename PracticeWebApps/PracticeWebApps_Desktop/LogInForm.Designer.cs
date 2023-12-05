@@ -31,6 +31,7 @@
             dataGridView1 = new DataGridView();
             txtName = new TextBox();
             txtPassword = new TextBox();
+            txtPassword.PasswordChar = '*';
             btnLogIn = new Button();
             lblName = new Label();
             lblPAssword = new Label();

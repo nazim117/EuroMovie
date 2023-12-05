@@ -60,6 +60,7 @@
             lbSeries.Name = "lbSeries";
             lbSeries.Size = new Size(691, 344);
             lbSeries.TabIndex = 1;
+            lbSeries.SelectedIndexChanged += lbSeries_SelectedIndexChanged;
             // 
             // txtSearchName
             // 
@@ -78,7 +79,7 @@
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(117, 20);
             lblSearch.TabIndex = 3;
-            lblSearch.Text = "Search By Name";
+            lblSearch.Text = "SearchProduct By Name";
             // 
             // lblSortBy
             // 

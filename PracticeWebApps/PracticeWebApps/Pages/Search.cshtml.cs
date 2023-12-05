@@ -17,11 +17,11 @@ namespace PracticeWebApps.Pages
         public long TimeTaken { get; set; }
         public HashSet<Product> SearchResults { get; private set; }
         public List<Product> SortResults { get; private set; }
-        private AlgorithmManager _algomanager;
+        private AlgorithmManager<Product> _algomanager;
         private ProductManager _productManager;
         public SearchModel()
         {
-            _algomanager = new AlgorithmManager();
+            _algomanager = new AlgorithmManager<Product>();
             _productManager = new ProductManager(new ProductDAL());
             SearchResults = new HashSet<Product>();
         }
@@ -36,7 +36,7 @@ namespace PracticeWebApps.Pages
             {
                 SortResults = _algomanager.QuickSort(_productManager.LoadObjects().ToList(), new SortByName());
             }
-            SearchResults = _algomanager.Search(query, SortResults);
+            SearchResults = _algomanager.SearchProduct(query, SortResults);
             TimeTaken = _algomanager.StopTimer();
             searchQuery = query;
 
@@ -44,7 +44,7 @@ namespace PracticeWebApps.Pages
         }
         public IActionResult OnPost()
         {
-            return RedirectToPage("/Search",new { query = searchQuery, algorithm = sortingAlgo });
+            return RedirectToPage("/SearchProduct",new { query = searchQuery, algorithm = sortingAlgo });
         }
     }
 }

@@ -17,14 +17,14 @@ namespace PracticeWebApps.Pages
 		public List<Movie> Movies { get; private set; }
         public List<Serie> Series { get; private set; }
         private ProductManager productManager;
-		private AlgorithmManager algorithmManager;
+		private AlgorithmManager<Product> algorithmManager;
 
         public IndexModel()
         {
 			Movies = new List<Movie>();
 			Series = new List<Serie>();
 			productManager = new ProductManager(new ProductDAL());
-			algorithmManager = new AlgorithmManager();
+			algorithmManager = new AlgorithmManager<Product>();
         }
 
         public void OnGet()

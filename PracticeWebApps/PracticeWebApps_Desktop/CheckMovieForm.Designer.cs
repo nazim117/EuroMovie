@@ -143,7 +143,7 @@
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(117, 20);
             lblSearch.TabIndex = 10;
-            lblSearch.Text = "Search By Name";
+            lblSearch.Text = "SearchProduct By Name";
             // 
             // CheckMovieForm
             // 
