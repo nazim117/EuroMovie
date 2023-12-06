@@ -250,7 +250,7 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
-        public bool CreateMovie()
+        private bool CreateMovie()
         {
             try
             {
@@ -390,7 +390,7 @@ namespace PracticeWebApps_DAL_Library
                 using (GetSQLConnection())
                 {
                     string sql = $"UPDATE [Product] " +
-                        $"SET Name = @Name, Description = @Description, Rating = @Rating, Genre = @Genre, Duration = @Duration " +
+                        $"SET Name = @Name, Description = @Description, Rating = @Rating, Genre = @Genre, Duration = @Duration, Picture = @Picture " +
                         $"WHERE Name = @previousName";
 
                     using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
@@ -400,6 +400,7 @@ namespace PracticeWebApps_DAL_Library
                         command.Parameters.AddWithValue("@Rating", product.MovieRating);
                         command.Parameters.AddWithValue("@Genre", product.Genre);
                         command.Parameters.AddWithValue("@Duration", product.Duration);
+                        command.Parameters.AddWithValue("@Picture", product.Picture);
                         command.Parameters.AddWithValue("@previousName", previousName);
 
                         command.ExecuteNonQuery();
@@ -428,7 +429,7 @@ namespace PracticeWebApps_DAL_Library
                 throw new Exception(ex.ToString());
             }
         }
-        public void EditSerie(Serie serie)
+        private void EditSerie(Serie serie)
         {
             try
             {

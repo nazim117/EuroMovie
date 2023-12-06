@@ -97,7 +97,17 @@ namespace PracticeWebApps_Desktop
 
         private void lbSeries_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lbSeries.SelectedItem == null)
+            {
+                MessageBox.Show("Select a movie to edit/delete");
+                return;
+            }
 
+            SeriesForm seriesForm = new SeriesForm(((Serie)lbSeries.SelectedItem).Name);
+            this.Hide();
+            seriesForm.ShowDialog();
+            PopulateList();
+            this.Show();
         }
     }
 }

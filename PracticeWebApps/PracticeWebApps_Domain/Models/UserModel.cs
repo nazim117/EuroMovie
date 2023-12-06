@@ -35,7 +35,7 @@ namespace PracticeWebApps_Domain.Models
         {
             get => name; private set
             {
-                if (value.Length < 1)
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Invalid Name");
                 }

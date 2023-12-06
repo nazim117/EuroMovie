@@ -32,10 +32,8 @@ namespace PracticeWebApps.Pages
             productManager = new ProductManager(new ProductDAL());
             Reviews = new List<Review>();
         }
-
         public IActionResult OnGet(string name)
         {
-
             int productId = productManager.GetObjectId(name);
             Reviews = reviewManager.LoadReviewsForProduct(productId).ToList();
             Product = productManager.GetObject(name);

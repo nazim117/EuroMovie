@@ -5,6 +5,7 @@ using PracticeWebApps_Domain.Models;
 using PracticeWebApps_LogicLibrary.Managers;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.Net.Http.Headers;
 
 namespace PracticeWebApps_Desktop
 {
@@ -33,43 +34,39 @@ namespace PracticeWebApps_Desktop
 
         private void btnAddSerie_Click(object sender, EventArgs e)
         {
-            if (relativeDestinationFilePath == string.Empty)
-            {
-                MessageBox.Show("Select a Picture for the movie/serie");
-                return;
-            }
+            string[] movieRatingValues = Enum.GetNames(typeof(Rating));
+            string[] movieGenreValues = Enum.GetNames(typeof(Genre));
 
-            if (int.TryParse(txtSeriesDuration.Text, out int duration))
-            {
-                duration = int.Parse(txtSeriesDuration.Text);
-                if (duration < 0 || duration > 1000)
-                {
-                    throw new NumberOutOfRangeException("Number out of range. Please enter a number between 0 and 1000.");
-                }
-            }
 
-            if (int.TryParse(txtSeasons.Text, out int seasons))
-            {
-                seasons = int.Parse(txtSeasons.Text);
-                if (seasons < 0 || seasons > 100)
-                {
-                    throw new NumberOutOfRangeException("Number out of range. Please enter a number between 0 and 100.");
-                }
-            }
-
-            if (int.TryParse(txtEpisodes.Text, out int episodes))
-            {
-                episodes = int.Parse(txtEpisodes.Text);
-                if (episodes < 0 || episodes > 700)
-                {
-                    throw new NumberOutOfRangeException("Number out of range. Please enter a number between 0 and 700.");
-                }
-            }
-
-             ProductManager productManager;
+            ProductManager productManager;
 
             try
             {
+                if (!int.TryParse(txtSeriesDuration.Text, out int duration))
+                {
+                    throw new ArgumentException("Invalid duration");
+                }
+                if (!movieRatingValues.Contains(cbbSeriesRating.Text))
+                {
+                    throw new ArgumentException("Invalid rating");
+                }
+                if (!movieGenreValues.Contains(cbbSeriesGenre.Text))
+                {
+                    throw new ArgumentException("Invalid rating");
+                }
+                if (string.IsNullOrWhiteSpace(relativeDestinationFilePath))
+                {
+                    throw new ArgumentException("Invalid picture");
+                }
+                if (!int.TryParse(txtSeasons.Text, out int seasons))
+                {
+                    throw new ArgumentException("Invalid seasons");
+                }
+                if (!int.TryParse(txtEpisodes.Text, out int episodes))
+                {
+                    throw new ArgumentException("Invalid episodes");
+                }
+
                 productManager = new ProductManager(new ProductDAL());
 
                 productManager.CreateObject(
@@ -91,6 +88,7 @@ namespace PracticeWebApps_Desktop
             catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 

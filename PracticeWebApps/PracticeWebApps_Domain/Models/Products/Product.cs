@@ -42,7 +42,7 @@ namespace PracticeWebApps_Domain.Models.Products
                     throw new ArgumentException("Name is too short");
                 }
                 name = value;
-            } 
+            }
         }
         public string Description { get => description; protected set
             {

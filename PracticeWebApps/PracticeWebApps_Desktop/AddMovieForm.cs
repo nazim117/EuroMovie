@@ -76,8 +76,7 @@ namespace PracticeWebApps_Desktop
                     FileManager fileManager = new FileManager();
 
                     string filePath = fileManager.SaveFile(openFileDialog.FileName);
-                    string fileName = fileManager.GetFileName();
-                    destinationFilePath = fileManager.CreateRelativePath(fileName, "images");
+                    destinationFilePath = fileManager.CreateRelativePath("images");
 
                     pbMovie.Image = Image.FromFile(filePath);
                     pbMovie.SizeMode = PictureBoxSizeMode.StretchImage;

@@ -41,18 +41,21 @@
             lblMovieRating = new Label();
             lblMovieGenre = new Label();
             lblMovieDuration = new Label();
+            pbMovie = new PictureBox();
+            btnSelectFile = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbMovie).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = Color.Red;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 24);
+            dataGridView1.Location = new Point(12, 12);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(598, 393);
+            dataGridView1.Size = new Size(845, 393);
             dataGridView1.TabIndex = 0;
             // 
             // txtName
@@ -72,7 +75,7 @@
             // 
             // txtDuration
             // 
-            txtDuration.Location = new Point(349, 286);
+            txtDuration.Location = new Point(349, 277);
             txtDuration.Name = "txtDuration";
             txtDuration.Size = new Size(197, 27);
             txtDuration.TabIndex = 3;
@@ -164,18 +167,40 @@
             lblMovieDuration.AutoSize = true;
             lblMovieDuration.BackColor = Color.Red;
             lblMovieDuration.ForeColor = SystemColors.ButtonHighlight;
-            lblMovieDuration.Location = new Point(349, 263);
+            lblMovieDuration.Location = new Point(349, 254);
             lblMovieDuration.Name = "lblMovieDuration";
             lblMovieDuration.Size = new Size(108, 20);
             lblMovieDuration.TabIndex = 14;
             lblMovieDuration.Text = "MovieDuration";
+            // 
+            // pbMovie
+            // 
+            pbMovie.BackColor = Color.Red;
+            pbMovie.Location = new Point(584, 57);
+            pbMovie.Name = "pbMovie";
+            pbMovie.Size = new Size(254, 256);
+            pbMovie.TabIndex = 15;
+            pbMovie.TabStop = false;
+            pbMovie.Click += pictureBox1_Click;
+            // 
+            // btnSelectFile
+            // 
+            btnSelectFile.Location = new Point(650, 350);
+            btnSelectFile.Name = "btnSelectFile";
+            btnSelectFile.Size = new Size(114, 29);
+            btnSelectFile.TabIndex = 16;
+            btnSelectFile.Text = "Browse...";
+            btnSelectFile.UseVisualStyleBackColor = true;
+            btnSelectFile.Click += btnSelectFile_Click;
             // 
             // MovieForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(652, 450);
+            ClientSize = new Size(885, 430);
+            Controls.Add(btnSelectFile);
+            Controls.Add(pbMovie);
             Controls.Add(lblMovieDuration);
             Controls.Add(lblMovieGenre);
             Controls.Add(lblMovieRating);
@@ -192,6 +217,7 @@
             Name = "MovieForm";
             Text = "MovieForm";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbMovie).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,5 +237,7 @@
         private Label lblMovieRating;
         private Label lblMovieGenre;
         private Label lblMovieDuration;
+        private PictureBox pbMovie;
+        private Button btnSelectFile;
     }
 }

@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\images\\Rambo.jpg"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\SiteMap.png",
+      "PackagePath": "staticwebassets\\images\\SiteMap.png"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\TheMandalorian.jpeg",
       "PackagePath": "staticwebassets\\images\\TheMandalorian.jpeg"
     },

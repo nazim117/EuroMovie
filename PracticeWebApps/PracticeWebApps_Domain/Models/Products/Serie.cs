@@ -1,7 +1,13 @@
-﻿namespace PracticeWebApps_Domain.Models.Products
+﻿using PracticeWebApps_Domain.Exceptions;
+using System.Xml.Linq;
+
+namespace PracticeWebApps_Domain.Models.Products
 {
     public class Serie:Product
     {
+        private int seasons;
+        private int episodes;
+
         public Serie()
         {
             
@@ -13,7 +19,27 @@
             Episodes = episodes;
         }
 
-        public int Seasons { get; private set; }
-        public int Episodes { get; private set; }
+        public int Seasons {
+            get => seasons; 
+            protected set
+            {
+                if (value < 0 || value > 100)
+                {
+                    throw new NumberOutOfRangeException("Number out of range. Please enter a number between 0 and 100.");
+                }
+                seasons = value;
+            }
+        }
+        public int Episodes {
+            get => episodes; 
+            protected set
+            {
+                if (value < 0 || value > 700)
+                {
+                    throw new NumberOutOfRangeException("Number out of range. Please enter a number between 0 and 700.");
+                }
+                episodes = value;
+            }
+        }
     }
 }

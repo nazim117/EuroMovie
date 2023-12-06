@@ -13,6 +13,7 @@ namespace PracticeWebApps_Desktop
         private ProductManager productManager;
         private string _productName;
         private Product product;
+        private string destinationFilePath;
         public MovieForm(string productName)
         {
             InitializeComponent();
@@ -35,6 +36,15 @@ namespace PracticeWebApps_Desktop
             cbbMovieGenre.SelectedItem = product.Genre;
 
             _productName = productName;
+
+            string imagePath = Path.Combine("C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\", product.Picture);
+
+            destinationFilePath = imagePath.Replace("~", "");
+            Image image = Image.FromFile(imagePath.Replace("~", ""));
+
+            pbMovie.Image = image;
+            pbMovie.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
 
         private void btnEditMovie_Click(object sender, EventArgs e)
@@ -57,6 +67,10 @@ namespace PracticeWebApps_Desktop
                 {
                     throw new ArgumentException("Invalid rating");
                 }
+                if (string.IsNullOrWhiteSpace(destinationFilePath))
+                {
+                    throw new ArgumentException("Invalid picture");
+                }
 
                 if (productManager.EditObject(new Movie(
                         txtName.Text,
@@ -64,9 +78,10 @@ namespace PracticeWebApps_Desktop
                         (Rating)cbbMovieRating.SelectedItem,
                         (Genre)cbbMovieGenre.SelectedItem,
                         duration,
-                        product.Picture), previousName))
+                        destinationFilePath), previousName))
                 {
                     MessageBox.Show("Edit was successful");
+                    this.Close();
                 }
                 else
                 {
@@ -82,7 +97,6 @@ namespace PracticeWebApps_Desktop
             catch (ProductException ex) { MessageBox.Show(ex.Message); }
             catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-            this.Close();
         }
 
         private void btnDeleteMovie_Click(object sender, EventArgs e)
@@ -92,6 +106,7 @@ namespace PracticeWebApps_Desktop
                 if (productManager.DeleteObject(product))
                 {
                     Console.WriteLine("User deleted successfully");
+                    this.Close();
                 }
                 else
                 {
@@ -103,7 +118,36 @@ namespace PracticeWebApps_Desktop
             catch (SqlException ex) { MessageBox.Show(ex.Message); }
             catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSelectFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files (*.*)|*.*";
+            openFileDialog.Title = "Select a File";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    FileManager fileManager = new FileManager();
+
+                    string filePath = fileManager.SaveFile(openFileDialog.FileName);
+                    destinationFilePath = fileManager.CreateRelativePath("images");
+
+                    pbMovie.Image = Image.FromFile(filePath);
+                    pbMovie.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    MessageBox.Show("File selected successfully");
+                }
+                catch (ArgumentException ex){MessageBox.Show(ex.Message); }
+                catch(Exception ex){MessageBox.Show(ex.Message);}
+            }
         }
     }
 }
