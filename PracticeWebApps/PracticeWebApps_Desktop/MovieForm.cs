@@ -39,7 +39,7 @@ namespace PracticeWebApps_Desktop
 
             string imagePath = Path.Combine("C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\", product.Picture);
 
-            destinationFilePath = imagePath.Replace("~", "");
+            destinationFilePath = product.Picture;
             Image image = Image.FromFile(imagePath.Replace("~", ""));
 
             pbMovie.Image = image;

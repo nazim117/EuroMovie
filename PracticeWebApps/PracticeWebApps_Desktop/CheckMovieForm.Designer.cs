@@ -37,6 +37,14 @@
             rbGenre = new RadioButton();
             rbDuration = new RadioButton();
             lblSearch = new Label();
+            chbAction = new CheckBox();
+            chbDrama = new CheckBox();
+            chbComedy = new CheckBox();
+            chbHorror = new CheckBox();
+            chbDocumentary = new CheckBox();
+            chbEducational = new CheckBox();
+            chbAdventure = new CheckBox();
+            btnFilter = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,8 +56,9 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(736, 438);
+            dataGridView1.Size = new Size(924, 438);
             dataGridView1.TabIndex = 2;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // lbMovies
             // 
@@ -141,16 +150,125 @@
             lblSearch.ForeColor = Color.White;
             lblSearch.Location = new Point(105, 385);
             lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(117, 20);
+            lblSearch.Size = new Size(168, 20);
             lblSearch.TabIndex = 10;
             lblSearch.Text = "SearchProduct By Name";
+            // 
+            // chbAction
+            // 
+            chbAction.AutoSize = true;
+            chbAction.BackColor = Color.Red;
+            chbAction.ForeColor = SystemColors.ButtonFace;
+            chbAction.Location = new Point(837, 139);
+            chbAction.Name = "chbAction";
+            chbAction.Size = new Size(74, 24);
+            chbAction.TabIndex = 11;
+            chbAction.Text = "Action";
+            chbAction.UseVisualStyleBackColor = false;
+            chbAction.CheckedChanged += chbAction_CheckedChanged;
+            // 
+            // chbDrama
+            // 
+            chbDrama.AutoSize = true;
+            chbDrama.BackColor = Color.Red;
+            chbDrama.ForeColor = SystemColors.ButtonFace;
+            chbDrama.Location = new Point(837, 182);
+            chbDrama.Name = "chbDrama";
+            chbDrama.Size = new Size(76, 24);
+            chbDrama.TabIndex = 12;
+            chbDrama.Text = "Drama";
+            chbDrama.UseVisualStyleBackColor = false;
+            chbDrama.CheckedChanged += chbDrama_CheckedChanged;
+            // 
+            // chbComedy
+            // 
+            chbComedy.AutoSize = true;
+            chbComedy.BackColor = Color.Red;
+            chbComedy.ForeColor = SystemColors.ButtonFace;
+            chbComedy.Location = new Point(837, 229);
+            chbComedy.Name = "chbComedy";
+            chbComedy.Size = new Size(86, 24);
+            chbComedy.TabIndex = 13;
+            chbComedy.Text = "Comedy";
+            chbComedy.UseVisualStyleBackColor = false;
+            chbComedy.CheckedChanged += chbComedy_CheckedChanged;
+            // 
+            // chbHorror
+            // 
+            chbHorror.AutoSize = true;
+            chbHorror.BackColor = Color.Red;
+            chbHorror.ForeColor = SystemColors.ButtonFace;
+            chbHorror.Location = new Point(838, 277);
+            chbHorror.Name = "chbHorror";
+            chbHorror.Size = new Size(75, 24);
+            chbHorror.TabIndex = 14;
+            chbHorror.Text = "Horror";
+            chbHorror.UseVisualStyleBackColor = false;
+            chbHorror.CheckedChanged += chbHorror_CheckedChanged;
+            // 
+            // chbDocumentary
+            // 
+            chbDocumentary.AutoSize = true;
+            chbDocumentary.BackColor = Color.Red;
+            chbDocumentary.ForeColor = SystemColors.ButtonFace;
+            chbDocumentary.Location = new Point(837, 320);
+            chbDocumentary.Name = "chbDocumentary";
+            chbDocumentary.Size = new Size(120, 24);
+            chbDocumentary.TabIndex = 15;
+            chbDocumentary.Text = "Documentary";
+            chbDocumentary.UseVisualStyleBackColor = false;
+            chbDocumentary.CheckedChanged += chbDocumentary_CheckedChanged;
+            // 
+            // chbEducational
+            // 
+            chbEducational.AutoSize = true;
+            chbEducational.BackColor = Color.Red;
+            chbEducational.ForeColor = SystemColors.ButtonFace;
+            chbEducational.Location = new Point(838, 368);
+            chbEducational.Name = "chbEducational";
+            chbEducational.Size = new Size(109, 24);
+            chbEducational.TabIndex = 16;
+            chbEducational.Text = "Educational";
+            chbEducational.UseVisualStyleBackColor = false;
+            chbEducational.CheckedChanged += chbEducational_CheckedChanged;
+            // 
+            // chbAdventure
+            // 
+            chbAdventure.AutoSize = true;
+            chbAdventure.BackColor = Color.Red;
+            chbAdventure.ForeColor = SystemColors.ButtonFace;
+            chbAdventure.Location = new Point(837, 90);
+            chbAdventure.Name = "chbAdventure";
+            chbAdventure.Size = new Size(99, 24);
+            chbAdventure.TabIndex = 17;
+            chbAdventure.Text = "Adventure";
+            chbAdventure.UseVisualStyleBackColor = false;
+            chbAdventure.CheckedChanged += chbAdventure_CheckedChanged;
+            // 
+            // btnFilter
+            // 
+            btnFilter.Location = new Point(829, 414);
+            btnFilter.Name = "btnFilter";
+            btnFilter.Size = new Size(94, 29);
+            btnFilter.TabIndex = 18;
+            btnFilter.Text = "Filter";
+            btnFilter.UseVisualStyleBackColor = true;
+            btnFilter.Click += btnFilter_Click;
             // 
             // CheckMovieForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(862, 536);
+            ClientSize = new Size(1041, 536);
+            Controls.Add(btnFilter);
+            Controls.Add(chbAdventure);
+            Controls.Add(chbEducational);
+            Controls.Add(chbDocumentary);
+            Controls.Add(chbHorror);
+            Controls.Add(chbComedy);
+            Controls.Add(chbDrama);
+            Controls.Add(chbAction);
             Controls.Add(lblSearch);
             Controls.Add(rbDuration);
             Controls.Add(rbGenre);
@@ -179,5 +297,13 @@
         private RadioButton rbGenre;
         private RadioButton rbDuration;
         private Label lblSearch;
+        private CheckBox chbAction;
+        private CheckBox chbDrama;
+        private CheckBox chbComedy;
+        private CheckBox chbHorror;
+        private CheckBox chbDocumentary;
+        private CheckBox chbEducational;
+        private CheckBox chbAdventure;
+        private Button btnFilter;
     }
 }

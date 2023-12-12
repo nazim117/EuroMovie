@@ -1,30 +1,31 @@
-﻿using Microsoft.VisualBasic.Logging;
-using PracticeWebApps_DAL_Library;
+﻿using PracticeWebApps_DAL_Library;
 using PracticeWebApps_LogicLibrary.Managers;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace PracticeWebApps_Desktop
 {
+    //Authentication with Dictionary
     public partial class LogInForm : Form
     {
+        Dictionary<string, bool> admins;
         public LogInForm()
         {
             InitializeComponent();
+            admins = new Dictionary<string, bool>
+            {
+                { "Michael", true },
+                { "Sterling", true },
+                { "Joe", true }
+            };
         }
 
         private void btnLogIn_Click_1(object sender, EventArgs e)
         {
+            if (!admins.ContainsKey(txtName.Text))
+            {
+                MessageBox.Show("User does not have permission for this application");
+                return;
+            }
+
             LogInManager logInManager = new LogInManager(new LogInDAL());
             string salt = logInManager.GetSalt(txtName.Text);
             string hashedPass = logInManager.GetHashedPassword(txtName.Text);

@@ -41,6 +41,7 @@ namespace PracticeWebApps_Desktop
             if (string.IsNullOrWhiteSpace(txtSearchName.Text))
             {
                 PopulateList();
+                return;
             }
 
             foreach (var item in algorithmManager.SearchUser(txtSearchName.Text, userManager.LoadObjects().ToList()))

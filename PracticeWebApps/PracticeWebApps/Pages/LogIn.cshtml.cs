@@ -6,7 +6,6 @@ using System.Security.Claims;
 using PracticeWebApps.DTOs;
 using PracticeWebApps_LogicLibrary.Managers;
 using PracticeWebApps_DAL_Library;
-using PracticeWebApps_Domain.Exceptions;
 using System.Data.SqlTypes;
 using System.Data.SqlClient;
 

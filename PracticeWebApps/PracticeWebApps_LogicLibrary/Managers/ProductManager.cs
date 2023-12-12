@@ -6,6 +6,7 @@ namespace PracticeWebApps_LogicLibrary.Managers
 {
     public class ProductManager
     {
+        private const int MAX_RECENTLY_VIEWED_SIZE = 5;
         private IOperations<Product> operationRepository;
         public ProductManager(IOperations<Product> operationRepository)
         {
@@ -46,5 +47,6 @@ namespace PracticeWebApps_LogicLibrary.Managers
         {
             return operationRepository.DeleteObject(product);
         }
+
     } 
 }

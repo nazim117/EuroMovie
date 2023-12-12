@@ -3,17 +3,8 @@ using PracticeWebApps_Domain.Exceptions;
 using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Managers;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PracticeWebApps_Desktop
 {
@@ -48,7 +39,7 @@ namespace PracticeWebApps_Desktop
 
             string imagePath = Path.Combine("C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\", product.Picture);
 
-            destinationFilePath = imagePath.Replace("~", "");
+            destinationFilePath = product.Picture;
             Image image = Image.FromFile(imagePath.Replace("~", ""));
 
             pbSeries.Image = image;

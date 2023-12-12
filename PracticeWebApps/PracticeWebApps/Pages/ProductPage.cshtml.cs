@@ -22,7 +22,7 @@ namespace PracticeWebApps.Pages
 
         private readonly ILogger<ProductPageModel> _logger;
         private ReviewManager reviewManager;
-        private ProductManager productManager;
+        private readonly ProductManager productManager;
         public ProductPageModel(ILogger<ProductPageModel> logger)
         {
             Review = new ReviewDTO();
@@ -40,6 +40,7 @@ namespace PracticeWebApps.Pages
 
             return Page();
         }
+        public ProductManager GetProductManager() => productManager;
         public IActionResult OnPost(string productName)
         {
 

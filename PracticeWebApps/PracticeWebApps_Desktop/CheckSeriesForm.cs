@@ -24,6 +24,7 @@ namespace PracticeWebApps_Desktop
             if (string.IsNullOrWhiteSpace(txtSearchName.Text))
             {
                 PopulateList();
+                return;
             }
 
             foreach (var item in algorithmManager.SearchProduct(txtSearchName.Text, productManager.LoadObjects().ToList()))

@@ -7,7 +7,6 @@ namespace PracticeWebApps_LogicLibrary.Managers
     public class UserManager
     {
         private IUserOperations<UserModel> operationsRepository;
-
         public UserManager(IUserOperations<UserModel> operationsRepository)
         {
             this.operationsRepository = operationsRepository;

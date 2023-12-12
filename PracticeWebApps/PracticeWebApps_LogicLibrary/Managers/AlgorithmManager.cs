@@ -144,5 +144,23 @@ namespace PracticeWebApps_LogicLibrary.Managers
 
             return result;
         }
+
+        public Queue<Product> FilterByGenre(Queue<Genre> filterByGenre, List<Product> products)
+        {
+            Queue<Product> result = new Queue<Product>();
+
+            foreach (var genre in filterByGenre)
+            {
+                foreach (var product in products)
+                {
+                    if (product.Genre == genre)
+                    {
+                        result.Enqueue(product);
+                    }
+                }
+            }
+
+            return result;
+        }
     }
 }
