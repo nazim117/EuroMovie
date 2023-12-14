@@ -1,8 +1,11 @@
 ﻿using PracticeWebApps_DAL_Library;
+using PracticeWebApps_Domain.Exceptions;
 using PracticeWebApps_Domain.Models;
 using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Managers;
 using PracticeWebApps_LogicLibrary.SortTypes;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
 
 namespace PracticeWebApps_Desktop
 {
@@ -39,13 +42,25 @@ namespace PracticeWebApps_Desktop
                 return;
             }
 
-            foreach (var item in algorithmManager.SearchProduct(txtNameSearch.Text, productManager.LoadObjects().ToList()))
+            try
             {
-                if (item is Movie)
+                foreach (var item in algorithmManager.SearchProduct(txtNameSearch.Text, productManager.LoadObjects().ToList()))
                 {
-                    lbMovies.Items.Add(item);
+                    if (item is Movie)
+                    {
+                        lbMovies.Items.Add(item);
+                    }
                 }
+                Thread.Sleep(300);
             }
+            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
+            catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (NumberOutOfRangeException ex) { MessageBox.Show(ex.Message); }
+            catch (ProductException ex) { MessageBox.Show(ex.Message); }
+            catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void rbName_CheckedChanged(object sender, EventArgs e)
@@ -69,6 +84,7 @@ namespace PracticeWebApps_Desktop
         }
         private void PopulateList()
         {
+
             IComparer<Product> comparer = new SortByName();
 
             if (rbName.Checked)
@@ -89,13 +105,42 @@ namespace PracticeWebApps_Desktop
             }
 
             lbMovies.Items.Clear();
-            foreach (var item in algorithmManager.MergeSort(productManager.LoadObjects().ToList(), comparer))
+
+            try
             {
-                if (item is Movie)
+                if (filterByGenre.Count == 0)
                 {
-                    lbMovies.Items.Add(item);
+
+                    foreach (var item in algorithmManager.MergeSort(productManager.LoadObjects().ToList(), comparer))
+                    {
+                        if (item is Movie)
+                        {
+                            lbMovies.Items.Add(item);
+                        }
+                    }
                 }
+                else
+                {
+                    foreach (var item in algorithmManager.MergeSort(
+                        algorithmManager.FilterByGenre(filterByGenre, productManager.LoadObjects().ToList()).ToList(), comparer))
+                    {
+                        if (item is Movie)
+                        {
+                            lbMovies.Items.Add(item);
+                        }
+                    }
+                }
+                Thread.Sleep(300);
             }
+            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
+            catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (NumberOutOfRangeException ex) { MessageBox.Show(ex.Message); }
+            catch (ProductException ex) { MessageBox.Show(ex.Message); }
+            catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
         }
 
         private void chbAdventure_CheckedChanged(object sender, EventArgs e)
@@ -103,6 +148,10 @@ namespace PracticeWebApps_Desktop
             if (chbAdventure.Checked)
             {
                 filterByGenre.Enqueue(Genre.Adventure);
+            }
+            else
+            {
+                filterByGenre = algorithmManager.RemoveGenreFromQueue(Genre.Adventure, filterByGenre);
             }
         }
 
@@ -112,6 +161,10 @@ namespace PracticeWebApps_Desktop
             {
                 filterByGenre.Enqueue(Genre.Action);
             }
+            else
+            {
+                filterByGenre = algorithmManager.RemoveGenreFromQueue(Genre.Action, filterByGenre);
+            }
         }
 
         private void chbDrama_CheckedChanged(object sender, EventArgs e)
@@ -119,6 +172,10 @@ namespace PracticeWebApps_Desktop
             if (chbDrama.Checked)
             {
                 filterByGenre.Enqueue(Genre.Drama);
+            }
+            else
+            {
+                filterByGenre = algorithmManager.RemoveGenreFromQueue(Genre.Drama, filterByGenre);
             }
         }
 
@@ -128,6 +185,10 @@ namespace PracticeWebApps_Desktop
             {
                 filterByGenre.Enqueue(Genre.Comedy);
             }
+            else
+            {
+                filterByGenre = algorithmManager.RemoveGenreFromQueue(Genre.Comedy, filterByGenre);
+            }
         }
 
         private void chbHorror_CheckedChanged(object sender, EventArgs e)
@@ -135,6 +196,10 @@ namespace PracticeWebApps_Desktop
             if (chbHorror.Checked)
             {
                 filterByGenre.Enqueue(Genre.Horror);
+            }
+            else
+            {
+                filterByGenre = algorithmManager.RemoveGenreFromQueue(Genre.Horror, filterByGenre);
             }
         }
 
@@ -144,6 +209,10 @@ namespace PracticeWebApps_Desktop
             {
                 filterByGenre.Enqueue(Genre.Documentary);
             }
+            else
+            {
+                filterByGenre = algorithmManager.RemoveGenreFromQueue(Genre.Documentary, filterByGenre);
+            }
         }
 
         private void chbEducational_CheckedChanged(object sender, EventArgs e)
@@ -151,6 +220,10 @@ namespace PracticeWebApps_Desktop
             if (chbEducational.Checked)
             {
                 filterByGenre.Enqueue(Genre.Educational);
+            }
+            else
+            {
+                filterByGenre = algorithmManager.RemoveGenreFromQueue(Genre.Educational, filterByGenre);
             }
         }
 
@@ -161,12 +234,57 @@ namespace PracticeWebApps_Desktop
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
+            Filter();
+        }
+
+        private void Filter()
+        {
             lbMovies.Items.Clear();
 
-            foreach (var item in algorithmManager.FilterByGenre(filterByGenre, productManager.LoadObjects().ToList()))
+
+            try
             {
-                lbMovies.Items.Add(item);
+                foreach (var item in algorithmManager.FilterByGenre(filterByGenre, productManager.LoadObjects().ToList()))
+                {
+                    if (item is Movie)
+                    {
+                        lbMovies.Items.Add(item);
+                    }
+                }
             }
+            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
+            catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (NumberOutOfRangeException ex) { MessageBox.Show(ex.Message); }
+            catch (ProductException ex) { MessageBox.Show(ex.Message); }
+            catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnResetFilters_Click(object sender, EventArgs e)
+        {
+            lbMovies.Items.Clear();
+            try
+            {
+
+                foreach (var item in productManager.LoadObjects())
+                {
+                    if (item is Movie)
+                    {
+                        lbMovies.Items.Add(item);
+                    }
+                }
+            }
+            catch (SqlNullValueException ex) { MessageBox.Show(ex.Message); }
+            catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
+            catch (SqlException ex) { MessageBox.Show(ex.Message); }
+            catch (TimeoutException ex) { MessageBox.Show(ex.Message); }
+            catch (NumberOutOfRangeException ex) { MessageBox.Show(ex.Message); }
+            catch (ProductException ex) { MessageBox.Show(ex.Message); }
+            catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
         }
     }
 }

@@ -18,6 +18,7 @@ namespace PracticeWebApps.Pages
             List<Product> matchingMovies = new List<Product>();
             List<string> matchingMovieNames = new List<string>();
 
+            //Complexity - O(n)
             matchingMovies = algorithmManager.SearchProduct(term, productManager.LoadObjects().ToList()).ToList();
 
             foreach (var item in matchingMovies)

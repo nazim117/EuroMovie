@@ -144,11 +144,14 @@ namespace PracticeWebApps_LogicLibrary.Managers
 
             return result;
         }
-
         public Queue<Product> FilterByGenre(Queue<Genre> filterByGenre, List<Product> products)
         {
-            Queue<Product> result = new Queue<Product>();
+            if (filterByGenre.Count == 0)
+            {
+                return new Queue<Product>();
+            }
 
+            Queue<Product> result = new Queue<Product>();
             foreach (var genre in filterByGenre)
             {
                 foreach (var product in products)
@@ -161,6 +164,28 @@ namespace PracticeWebApps_LogicLibrary.Managers
             }
 
             return result;
+        }
+        public Queue<Genre> RemoveGenreFromQueue(Genre genre, Queue<Genre> filterByGenre)
+        {
+            Queue<Genre> tempGenreQueue = new Queue<Genre>();
+
+            while (filterByGenre.Count > 0)
+            {
+                Genre currGenre = filterByGenre.Dequeue();
+
+                if (currGenre != genre)
+                {
+                    tempGenreQueue.Enqueue(currGenre);
+                }
+            }
+
+            while (tempGenreQueue.Count > 0)
+            {
+                filterByGenre.Enqueue(tempGenreQueue.Dequeue());
+            }
+
+
+            return filterByGenre;
         }
     }
 }

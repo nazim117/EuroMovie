@@ -13,24 +13,71 @@ namespace PracticeWebApps_DAL_Library
             List<Product> products = new List<Product>();
             using (GetSQLConnection())
             {
-                string sql = $"SELECT * FROM [Product]";
-                using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
+                try
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    string sql = $"SELECT * FROM [Product]";
+                    using (SqlCommand command = new SqlCommand(sql, GetSQLConnection()))
                     {
-                        while (reader.Read())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            Product product = GetObject(reader.GetString(1));
-                            if (product != null)
+                            while (reader.Read())
                             {
-                                products.Add(product);
+                                Product product;
+                                if (reader.GetString(7) == "Movie")
+                                {
+
+                                    product = new Movie(reader.GetString(1),
+                                        reader.GetString(2),
+                                        (Rating)reader.GetInt32(3),
+                                        (Genre)reader.GetInt32(4),
+                                        reader.GetInt32(5),
+                                        reader.GetString(6));
+                                }
+                                else
+                                {
+                                    int[] seasonsAndEpisodes = GetSeasonsAndEpisodes(reader.GetInt32(0));
+
+                                    product = new Serie(reader.GetString(1),
+                                        reader.GetString(2),
+                                        (Rating)reader.GetInt32(3),
+                                        (Genre)reader.GetInt32(4),
+                                        reader.GetInt32(5),
+                                        reader.GetString(6),
+                                        seasonsAndEpisodes[0],
+                                        seasonsAndEpisodes[1]);
+                                }
+                                if (product != null)
+                                {
+                                    products.Add(product);
+                                }
                             }
                         }
                     }
+                    return products.ToArray();
+                }
+                catch (SqlNullValueException ex)
+                {
+                    throw new SqlNullValueException("Error, reading null values. " + ex.ToString());
+                }
+                catch (InvalidOperationException ex)
+                {
+                    throw new InvalidOperationException("An operation is attempted that is not valid for the current state of the database connection. " + ex.ToString());
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception("An error occured in the SQL Server database. " + ex.ToString());
+                }
+                catch (TimeoutException ex)
+                {
+                    throw new TimeoutException("Database operation takes too long to complete. " + ex.ToString());
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.ToString());
                 }
             }
-            return products.ToArray();
         }
+        
         public Product GetObject(string name)
         {
             using (GetSQLConnection())
