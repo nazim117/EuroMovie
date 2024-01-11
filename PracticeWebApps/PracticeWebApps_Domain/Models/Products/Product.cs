@@ -29,9 +29,6 @@ namespace PracticeWebApps_Domain.Models.Products
             Genre = genre;
             Duration = duration;
             Picture = picture;
-
-            StreamedPlatform = new List<string>();
-            Reviews = new List<Review>();
         }
         public string Name 
         { 
@@ -95,9 +92,6 @@ namespace PracticeWebApps_Domain.Models.Products
                 picture = value;
             }
         }
-        public List<string> StreamedPlatform { get; protected set; }
-        public List<Review> Reviews { get; protected set; }
-
         public override string ToString()
         {
             return $"{Name} | Genre: {Genre} | Rating: {MovieRating} | Duration: {Duration}";

@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\images\\AvatarOG.jpg"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Avengers.jpeg",
+      "PackagePath": "staticwebassets\\images\\Avengers.jpeg"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\BlackPanther.jpg",
       "PackagePath": "staticwebassets\\images\\BlackPanther.jpg"
     },
@@ -49,12 +53,24 @@
       "PackagePath": "staticwebassets\\images\\Dracula.jpg"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Euro-sign.png",
+      "PackagePath": "staticwebassets\\images\\Euro-sign.png"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\FastX.jpg",
       "PackagePath": "staticwebassets\\images\\FastX.jpg"
     },
     {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Flash.jpg",
+      "PackagePath": "staticwebassets\\images\\Flash.jpg"
+    },
+    {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Fontys.jpg",
       "PackagePath": "staticwebassets\\images\\Fontys.jpg"
+    },
+    {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\GxKjpeg.jpeg",
+      "PackagePath": "staticwebassets\\images\\GxKjpeg.jpeg"
     },
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\MainPageWinForms.png",
@@ -99,6 +115,10 @@
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\gantt-1.png",
       "PackagePath": "staticwebassets\\images\\gantt-1.png"
+    },
+    {
+      "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\gantt-2.png",
+      "PackagePath": "staticwebassets\\images\\gantt-2.png"
     },
     {
       "Id": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\images.jpeg",

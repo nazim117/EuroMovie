@@ -30,7 +30,6 @@ namespace PracticeWebApps_Desktop
             string[] movieRatingValues = Enum.GetNames(typeof(Rating));
             string[] movieGenreValues = Enum.GetNames(typeof(Genre));
 
-            
             ProductManager productManager = new ProductManager(new ProductDAL());
 
             try
@@ -53,14 +52,12 @@ namespace PracticeWebApps_Desktop
                 }
                 if (string.IsNullOrEmpty(destinationFilePath))
                 {
-                    MessageBox.Show("Select a Picture for the movie/serie");
-                    return;
+                    throw new ArgumentException("Select a Picture for the movie/serie");
                 }
                 if (!int.TryParse(txtDuration.Text, out int duration))
                 {
                     throw new ArgumentException("Invalid duration");
                 }
-
                 productManager.CreateObject(
                 new Movie(txtName.Text,
                 txtDescription.Text,

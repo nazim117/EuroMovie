@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pXUHYKbAo1nZlLYNDi5K9NMwXAZxk1c6PkZ4ZH5bxCg=",
+  "Hash": "hFlmezmVtLC66xGezPJYT9z5L0b34sqpqa32DpxusFc=",
   "Source": "PracticeWebApps",
   "BasePath": "_content/PracticeWebApps",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\PracticeWebApps.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\css\\AutoCompletion.css",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "css/AutoCompletion.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AutoCompletion.css"
     },
     {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\css\\Layout.css",
@@ -187,6 +204,23 @@
       "OriginalItemSpec": "wwwroot\\images\\AvatarOG.jpg"
     },
     {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Avengers.jpeg",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/Avengers.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Avengers.jpeg"
+    },
+    {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\BlackPanther.jpg",
       "SourceId": "PracticeWebApps",
       "SourceType": "Discovered",
@@ -219,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Dracula.jpg"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Euro-sign.png",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/Euro-sign.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Euro-sign.png"
     },
     {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\f-1.jpg",
@@ -255,6 +306,23 @@
       "OriginalItemSpec": "wwwroot\\images\\FastX.jpg"
     },
     {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Flash.jpg",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/Flash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Flash.jpg"
+    },
+    {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Fontys.jpg",
       "SourceId": "PracticeWebApps",
       "SourceType": "Discovered",
@@ -289,6 +357,57 @@
       "OriginalItemSpec": "wwwroot\\images\\f-t-1.png"
     },
     {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\gantt-1.png",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/gantt-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\gantt-1.png"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\gantt-2.png",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/gantt-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\gantt-2.png"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\GxKjpeg.jpeg",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/GxKjpeg.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\GxKjpeg.jpeg"
+    },
+    {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\images.jpeg",
       "SourceId": "PracticeWebApps",
       "SourceType": "Discovered",
@@ -304,6 +423,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\images.jpeg"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\MainPageWinForms.png",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/MainPageWinForms.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\MainPageWinForms.png"
     },
     {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\Monarch.jpg",
@@ -374,6 +510,23 @@
       "OriginalItemSpec": "wwwroot\\images\\Rambo.jpg"
     },
     {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\SiteMap.png",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "images/SiteMap.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\SiteMap.png"
+    },
+    {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\images\\TheMandalorian.jpeg",
       "SourceId": "PracticeWebApps",
       "SourceType": "Discovered",
@@ -423,6 +576,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\WandaVision.jpeg"
+    },
+    {
+      "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\js\\AutoCompletion.js",
+      "SourceId": "PracticeWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\",
+      "BasePath": "_content/PracticeWebApps",
+      "RelativePath": "js/AutoCompletion.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\AutoCompletion.js"
     },
     {
       "Identity": "C:\\Sem2-project-repository\\individual-project-nazim-ahmedov-s2\\PracticeWebApps\\PracticeWebApps\\wwwroot\\js\\site.js",

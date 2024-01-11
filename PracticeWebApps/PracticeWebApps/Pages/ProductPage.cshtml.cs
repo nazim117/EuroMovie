@@ -14,6 +14,11 @@ namespace PracticeWebApps.Pages
 {
     public class ProductPageModel : PageModel
     {
+
+        [BindProperty]
+        public string searchQuery { get; set; }
+        [BindProperty]
+        public string sortingAlgo { get; set; }
         [BindProperty]
         public ReviewDTO Review { get; set; }
         public string ErrorMessage { get; private set; }
@@ -77,6 +82,10 @@ namespace PracticeWebApps.Pages
 
             return Page();
             //return RedirectToPage("/ProductPage", new { name = productName });
+        }
+        public IActionResult OnPostSearch()
+        {
+            return RedirectToPage("/Search", new { query = searchQuery, algorithm = sortingAlgo });
         }
     }
 }

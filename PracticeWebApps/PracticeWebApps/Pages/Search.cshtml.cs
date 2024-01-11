@@ -44,7 +44,7 @@ namespace PracticeWebApps.Pages
         }
         public IActionResult OnPost()
         {
-            return RedirectToPage("/SearchProduct",new { query = searchQuery, algorithm = sortingAlgo });
+            return RedirectToPage("/Search",new { query = searchQuery, algorithm = sortingAlgo });
         }
     }
 }

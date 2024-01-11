@@ -104,14 +104,15 @@ namespace PracticeWebApps_LogicLibrary.Managers
         }
         public HashSet<Product> SearchProduct(string searchQuery, List<Product> products)
         {
-            HashSet<Product> result = new HashSet<Product>();
 
-            result = products.ToHashSet();
 
             if (string.IsNullOrWhiteSpace(searchQuery))
             {
                 return new HashSet<Product>();
             }
+
+            HashSet<Product> result = new HashSet<Product>();
+            result = products.ToHashSet();
 
             foreach (var product in result)
             {
