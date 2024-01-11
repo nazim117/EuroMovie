@@ -41,7 +41,6 @@ namespace PracticeWebApps_LogicLibrary.Managers
             smtpClient.Credentials = new NetworkCredential(emailFrom, emailPass);
         }
         public int GetGeneratedCode()=> code;
-
         public bool SendEmail()
         {
             try
