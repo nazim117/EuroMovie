@@ -33,6 +33,8 @@
             txtSearchName = new TextBox();
             rbName = new RadioButton();
             rbEmail = new RadioButton();
+            lblSearch = new Label();
+            lblSortBy = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -44,7 +46,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(816, 435);
+            dataGridView1.Size = new Size(716, 435);
             dataGridView1.TabIndex = 1;
             // 
             // lbUsers
@@ -69,8 +71,9 @@
             // 
             rbName.AutoSize = true;
             rbName.BackColor = Color.Red;
+            rbName.Checked = true;
             rbName.ForeColor = SystemColors.ButtonFace;
-            rbName.Location = new Point(309, 412);
+            rbName.Location = new Point(336, 412);
             rbName.Name = "rbName";
             rbName.Size = new Size(70, 24);
             rbName.TabIndex = 4;
@@ -88,17 +91,40 @@
             rbEmail.Name = "rbEmail";
             rbEmail.Size = new Size(67, 24);
             rbEmail.TabIndex = 5;
-            rbEmail.TabStop = true;
             rbEmail.Text = "Email";
             rbEmail.UseVisualStyleBackColor = false;
             rbEmail.CheckedChanged += rbEmail_CheckedChanged;
+            // 
+            // lblSearch
+            // 
+            lblSearch.AutoSize = true;
+            lblSearch.BackColor = Color.Red;
+            lblSearch.ForeColor = SystemColors.ButtonFace;
+            lblSearch.Location = new Point(83, 386);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(117, 20);
+            lblSearch.TabIndex = 6;
+            lblSearch.Text = "Search by Name";
+            // 
+            // lblSortBy
+            // 
+            lblSortBy.AutoSize = true;
+            lblSortBy.BackColor = Color.Red;
+            lblSortBy.ForeColor = SystemColors.ButtonFace;
+            lblSortBy.Location = new Point(336, 386);
+            lblSortBy.Name = "lblSortBy";
+            lblSortBy.Size = new Size(56, 20);
+            lblSortBy.TabIndex = 7;
+            lblSortBy.Text = "Sort by";
             // 
             // CheckUserForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(934, 501);
+            ClientSize = new Size(819, 501);
+            Controls.Add(lblSortBy);
+            Controls.Add(lblSearch);
             Controls.Add(rbEmail);
             Controls.Add(rbName);
             Controls.Add(txtSearchName);
@@ -118,5 +144,7 @@
         private TextBox txtSearchName;
         private RadioButton rbName;
         private RadioButton rbEmail;
+        private Label lblSearch;
+        private Label lblSortBy;
     }
 }

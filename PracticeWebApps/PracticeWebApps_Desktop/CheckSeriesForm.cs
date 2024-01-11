@@ -173,6 +173,14 @@ namespace PracticeWebApps_Desktop
 
         private void btnResetFilters_Click(object sender, EventArgs e)
         {
+            chbAction.Checked = false;
+            chbAdventure.Checked = false;
+            chbComedy.Checked = false;
+            chbDocumentary.Checked = false;
+            chbDrama.Checked = false;
+            chbEducational.Checked = false;
+            chbHorror.Checked = false;
+            
             lbSeries.Items.Clear();
 
             try
@@ -193,6 +201,7 @@ namespace PracticeWebApps_Desktop
             catch (ProductException ex) { MessageBox.Show(ex.Message); }
             catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+
         }
 
         private void chbAdventure_CheckedChanged(object sender, EventArgs e)

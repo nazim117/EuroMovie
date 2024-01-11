@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeWebApps_DAL_Library
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeWebApps_Desktop", "PracticeWebApps_Desktop\PracticeWebApps_Desktop.csproj", "{B2FF41A5-1386-40FE-A850-BD57F3FD3024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRecommender", "MovieRecommender\MovieRecommender.csproj", "{1CA81B5E-7095-4F6C-A390-8C5F66EFF5FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{B2FF41A5-1386-40FE-A850-BD57F3FD3024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2FF41A5-1386-40FE-A850-BD57F3FD3024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2FF41A5-1386-40FE-A850-BD57F3FD3024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA81B5E-7095-4F6C-A390-8C5F66EFF5FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA81B5E-7095-4F6C-A390-8C5F66EFF5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA81B5E-7095-4F6C-A390-8C5F66EFF5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA81B5E-7095-4F6C-A390-8C5F66EFF5FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

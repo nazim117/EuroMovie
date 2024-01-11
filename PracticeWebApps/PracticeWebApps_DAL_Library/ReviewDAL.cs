@@ -1,4 +1,5 @@
 ﻿using PracticeWebApps_Domain.Models;
+using PracticeWebApps_Domain.Models.Products;
 using PracticeWebApps_LogicLibrary.Interfaces;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
@@ -143,5 +144,6 @@ namespace PracticeWebApps_DAL_Library
             }
             return reviews.ToArray();
         }
+        
     }
 }

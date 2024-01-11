@@ -27,17 +27,35 @@ namespace PracticeWebApps_Desktop
 
         private void btnAddMovie_Click(object sender, EventArgs e)
         {
-            if (destinationFilePath == string.Empty)
-            {
-                MessageBox.Show("Select a Picture for the movie/serie");
-                return;
-            }
+            string[] movieRatingValues = Enum.GetNames(typeof(Rating));
+            string[] movieGenreValues = Enum.GetNames(typeof(Genre));
+
             
             ProductManager productManager = new ProductManager(new ProductDAL());
 
             try
             {
-
+                if (!movieRatingValues.Contains(cbbMovieRating.Text))
+                {
+                    throw new ArgumentException("Invalid rating");
+                }
+                if (!movieGenreValues.Contains(cbbGenre.Text))
+                {
+                    throw new ArgumentException("Invalid rating");
+                }
+                if (string.IsNullOrEmpty(txtName.Text))
+                {
+                    throw new ArgumentException("Invalid name");
+                }
+                if (string.IsNullOrEmpty(txtDescription.Text))
+                {
+                    throw new ArgumentException("Invalid duration");
+                }
+                if (string.IsNullOrEmpty(destinationFilePath))
+                {
+                    MessageBox.Show("Select a Picture for the movie/serie");
+                    return;
+                }
                 if (!int.TryParse(txtDuration.Text, out int duration))
                 {
                     throw new ArgumentException("Invalid duration");

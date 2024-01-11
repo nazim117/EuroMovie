@@ -16,10 +16,7 @@ namespace PracticeWebApps_Desktop
             InitializeComponent();
             userManager = new UserManager(new UserDAL());
             algorithmManager = new AlgorithmManager<UserModel>();
-            foreach (var item in userManager.LoadObjects())
-            {
-                lbUsers.Items.Add(item);
-            }
+            PopulateList();
         }
 
         private void lbUsers_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,7 +69,7 @@ namespace PracticeWebApps_Desktop
             foreach (var item in algorithmManager.MergeSort(userManager.LoadObjects().ToList(), comparer))
             {
                 lbUsers.Items.Add(item);
-                
+
             }
         }
 

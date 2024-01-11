@@ -26,11 +26,18 @@ namespace PracticeWebApps_Desktop
 
         private void lbMovies_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MovieForm movieForm = new MovieForm(((Movie)lbMovies.SelectedItem).Name);
-            this.Hide();
-            movieForm.ShowDialog();
-            PopulateList();
-            this.Show();
+            if (lbMovies.SelectedItem != null)
+            {
+                MovieForm movieForm = new MovieForm(((Movie)lbMovies.SelectedItem).Name);
+                this.Hide();
+                movieForm.ShowDialog();
+                PopulateList();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Select a movie");
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -264,6 +271,14 @@ namespace PracticeWebApps_Desktop
 
         private void btnResetFilters_Click(object sender, EventArgs e)
         {
+            chbAction.Checked = false;
+            chbAdventure.Checked = false;
+            chbComedy.Checked = false;
+            chbDocumentary.Checked = false;
+            chbDrama.Checked = false;
+            chbEducational.Checked = false;
+            chbHorror.Checked = false;
+            
             lbMovies.Items.Clear();
             try
             {
@@ -284,6 +299,7 @@ namespace PracticeWebApps_Desktop
             catch (ProductException ex) { MessageBox.Show(ex.Message); }
             catch (ArgumentException ex) { MessageBox.Show(ex.Message); }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+
 
         }
     }
