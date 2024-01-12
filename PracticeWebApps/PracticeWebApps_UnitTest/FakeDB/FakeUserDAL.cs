@@ -55,20 +55,40 @@ namespace PracticeWebApps_UnitTest.FakeDB
         {
             return users.Any(n => n.Email == t.Email);
         }
-//TODO: IMPLEMENT
         public int GetUserId(string searchString)
         {
-            throw new NotImplementedException();
+            UserModel user = users.FirstOrDefault(u => u.Name == searchString);
+
+            if (user is not null)
+            {
+                return users.IndexOf(user);
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public bool FindEmail(string email)
         {
-            throw new NotImplementedException();
+            return users.Any(u=>u.Email == email);
         }
 
         public bool ChangePassword(string email, string password, string salt)
         {
-            throw new NotImplementedException();
+            UserModel userToupdate = users.FirstOrDefault(u=>u.Email == email);
+
+            if (userToupdate is not null)
+            {
+                UserModel updatedUser = new UserModel(userToupdate.Name,userToupdate.Email,userToupdate.Phone, password + salt);
+                users.RemoveAt(0);
+                users.Add(updatedUser);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

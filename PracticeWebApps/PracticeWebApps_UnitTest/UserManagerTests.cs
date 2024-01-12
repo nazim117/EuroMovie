@@ -65,5 +65,37 @@ namespace PracticeWebApps_UnitTest
 
             Assert.IsTrue(isFound);
         }
+        [TestMethod]
+        public void GetUserId_UserExists_ReturnsUserId()
+        {
+            int userId = userManager.GetUserId("name1");
+
+            Assert.AreEqual(userId, 0);
+        }
+        [TestMethod]
+        public void FindEmail_EmailExists_ReturnsTrue()
+        {
+            bool emailExists = userManager.FindEmail("example1@gmail.com");
+
+            Assert.IsTrue(emailExists);
+        }
+        [TestMethod]
+        public void FindEmail_EmailDoesNotExist_ReturnsFalse()
+        {
+            bool emailExists = userManager.FindEmail("nonExistent@gmail.com");
+
+            Assert.IsFalse(emailExists);
+        }
+        [TestMethod]
+        public void ChangePassword_UserExists_PasswordChanged_ReturnsTrue()
+        {
+            bool passwordChanged = userManager.ChangePassword("example1@gmail.com", "newPassword12345", "newSalt123");
+
+            Assert.IsTrue(passwordChanged);
+
+            UserModel updatedUser = userManager.GetObject("example1@gmail.com");
+
+            Assert.AreEqual("newPassword12345newSalt123", updatedUser.Password);
+        }
     }
 }

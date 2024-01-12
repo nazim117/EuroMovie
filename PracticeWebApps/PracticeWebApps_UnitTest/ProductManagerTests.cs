@@ -95,5 +95,23 @@ namespace PracticeWebApps_UnitTest
 
             Assert.IsTrue(found);
         }
+        [TestMethod]
+        public void GetObjectId_ExistingObject_ReturnsCorrectId()
+        {
+            string productName = "Transformers";
+
+            int objId = _productManager.GetObjectId(productName);
+
+            Assert.AreEqual(objId, 0);
+        }
+        [TestMethod]
+        public void DeleteObject_ExistingObject_RemovesObjectFromList()
+        {
+            Product movie = _productManager.GetObject("Transformers");
+
+            bool isDeleted = _productManager.DeleteObject(movie);
+
+            Assert.IsTrue(isDeleted);
+        }
     }
 }

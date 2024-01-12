@@ -39,7 +39,7 @@ namespace PracticeWebApps_UnitTest.FakeDB
 
         public bool DeleteObject(Product t)
         {
-            throw new NotImplementedException();
+            return _products.Remove(t);
         }
 
         public bool EditObject(Product product, string previousName)
@@ -67,10 +67,18 @@ namespace PracticeWebApps_UnitTest.FakeDB
             return product;
 
         }
-//TODO: IMPLEMENT
         public int GetObjectId(string stringForSearch)
         {
-            throw new NotImplementedException();
+            Product product = _products.FirstOrDefault(p => p.Name == stringForSearch);
+
+            if(product is not null) 
+            {
+                return _products.IndexOf(product);
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public bool IsObjectPresent(Product t)
